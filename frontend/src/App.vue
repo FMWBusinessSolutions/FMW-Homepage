@@ -1,30 +1,67 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="header">
+    <img
+      src="/logo-transparent-png.png"
+      alt="FMW Business Solutions"
+      class="logo"
+    />
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <div class="header">
+    <img
+      src="/under_construction.png"
+      alt="Under Construction"
+      class="logo_small"
+    />
+  </div>
+
+  <div class="card">
+    <h3>Kontakt:</h3>
+    <h5>Florian Mitter</h5>
+    <h5>Geschäftsführer</h5>
+    <h5>office@fmw-solutions.at</h5>
+    <h5>+43 699 14079312</h5>
+  </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+
+</script>
+
+<style>
+body {
+  background-color: #f0f8ff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0.5rem;
+  max-width: 300px;
+  margin: 0.5rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h5 {
+  margin: 2px 0;
+  line-height: 1.2;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  width: 500px;
+  margin-bottom: 1rem;
+  align-self: left;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.logo_small {
+  width: 400px;
+  margin-bottom: 1rem;
+  align-self: left;
 }
 </style>
