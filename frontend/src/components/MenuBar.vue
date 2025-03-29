@@ -13,11 +13,17 @@
       </template>
 
       <template #item="{ item, props }">
-        <a v-ripple class="menu-item" v-bind="props.action">
-          <i :class="item.icon"></i>
-          <span class="ml-2">{{ item.label }}</span>
-        </a>
-      </template>
+  <router-link
+    v-ripple
+    class="menu-item flex items-center"
+    v-bind="props.action"
+    :to="item.to"
+  >
+    <i :class="item.icon"></i>
+    <span class="ml-2">{{ item.label }}</span>
+  </router-link>
+</template>
+
     </Menubar>
   </div>
 </template>
@@ -26,10 +32,11 @@
 import { ref } from "vue";
 
 const items = ref([
-  { label: "Home", icon: "pi pi-home" },
-  { label: "Über uns", icon: "pi pi-book" },
-  { label: "Kontakt", icon: "pi pi-envelope" },
+  { label: 'Home', icon: 'pi pi-home', to: '/' },
+  { label: 'Über uns', icon: 'pi pi-book', to: '/about' },
+  { label: 'Kontakt', icon: 'pi pi-envelope', to: '/contact' }
 ]);
+
 </script>
 
 <style scoped>
