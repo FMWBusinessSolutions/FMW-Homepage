@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <img
-      src="/logo-transparent-png.png"
+      src="/logo-transparent-small.png"
       alt="FMW Business Solutions"
       class="logo"
     />
@@ -41,14 +41,14 @@ body {
 .card {
   background-color: white;
   border-radius: 20px;
-  padding: 0.5rem;
+  padding: 0.1em;
   max-width: 300px;
   margin: 0.5rem auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .card h5 {
-  margin: 2px 0;
+  margin: 1px 0;
   line-height: 1.2;
 }
 
