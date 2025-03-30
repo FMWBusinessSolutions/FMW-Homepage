@@ -1,30 +1,28 @@
 <template>
   <div class="menu-container">
-    <Menubar :model="items" class="custom-menubar">
-      <template #start>
-        <svg
-          width="55"
-          height="60"
-          viewBox="0 0 35 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="logo-icon"
-        ></svg>
-      </template>
+    <div class="menubar-content">
+      <img
+        src="@/components/logo-transparent-small.png"
+        alt="Logo"
+        class="logo-img"
+      />
 
-      <template #item="{ item, props }">
-  <router-link
-    v-ripple
-    class="menu-item flex items-center"
-    v-bind="props.action"
-    :to="item.to"
-  >
-    <i :class="item.icon"></i>
-    <span class="ml-2">{{ item.label }}</span>
-  </router-link>
-</template>
+      <Menubar :model="items" class="menubar">
+        <template #start> </template>
 
-    </Menubar>
+        <template #item="{ item, props }">
+          <router-link
+            v-ripple
+            class="menu-item"
+            v-bind="props.action"
+            :to="item.to"
+          >
+            <i :class="item.icon"></i>
+            <span>{{ item.label }}</span>
+          </router-link>
+        </template>
+      </Menubar>
+    </div>
   </div>
 </template>
 
@@ -32,11 +30,10 @@
 import { ref } from "vue";
 
 const items = ref([
-  { label: 'Home', icon: 'pi pi-home', to: '/' },
-  { label: 'Über uns', icon: 'pi pi-book', to: '/about' },
-  { label: 'Kontakt', icon: 'pi pi-envelope', to: '/contact' }
+  { label: "Home", icon: "pi pi-home", to: "/" },
+  { label: "Leistungen & Preise", icon: "pi pi-book", to: "/about" },
+  { label: "Kontakt & Impressum", icon: "pi pi-envelope", to: "/contact" },
 ]);
-
 </script>
 
 <style scoped>
@@ -46,26 +43,45 @@ const items = ref([
   left: 0;
   width: 100vw;
   z-index: 1000;
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(240, 248, 255, 1);
+  border-bottom: 1px solid black;
 }
 
-.custom-menubar {
+.menubar-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 1rem 2vw;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  height: 100px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.menubar {
+  flex: 1;
+  min-width: 250px;
   border: none;
-  padding: 0.5rem 1rem;
+  background-color: transparent;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.p-menubar-root > .p-menubar-end {
-  margin-left: auto;
+.menu-item i {
+  font-size: 2.2rem;
 }
 </style>
