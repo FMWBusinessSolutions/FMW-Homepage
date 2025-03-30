@@ -1,19 +1,19 @@
 <template>
   <div class="app-container">
     <section class="intro">
-      <h1><u>Willkommen bei FMW - Business Solutions</u></h1>
       <h2>
-        Ihr Partner im Bereich Hardware, Software, IT-Infrastruktur,
-        Digitalisierung und KI.
+        <u><strong>Willkommen bei FMW – Business Solutions</strong></u>
       </h2>
       <h3>
-        Für Privatpersonen, Einzelunternehmer:innen und kleine bis mittelgroße
+        Ihr Partner im Bereich Hardware, Software, IT-Infrastruktur,
+        Digitalisierung und KI.<br />
+        Für Privatpersonen, Einzelunternehmer und kleine bis mittelgroße
         Unternehmen.
       </h3>
     </section>
 
     <Accordion>
-      <AccordionTab :headerStyle="{ fontSize: '1.4rem', fontWeight: 'bold' }">
+      <AccordionTab :headerStyle="{ fontSize: '1.3rem', fontWeight: 'bold' }">
         <template #header>
           <span>Für Privatpersonen</span>
         </template>
@@ -64,15 +64,14 @@
           </p>
           <br />
           <p>
-            <i class="pi pi-chevron-right"></i>
-            <i class="pi pi-chevron-right"></i>
-            Wir beraten persönlich & individuell und finden für Sie die passende
-            Lösung.
+            <i class="pi pi-chevron-right"></i
+            ><i class="pi pi-chevron-right"></i> Wir beraten persönlich &
+            individuell und finden für Sie die passende Lösung.
           </p>
         </div>
       </AccordionTab>
 
-      <AccordionTab :headerStyle="{ fontSize: '1.4rem', fontWeight: 'bold' }">
+      <AccordionTab :headerStyle="{ fontSize: '1.3rem', fontWeight: 'bold' }">
         <template #header>
           <span>Für Selbstständige und Ein-Personen-Unternehmen (EPU)</span>
         </template>
@@ -109,8 +108,8 @@
           </p>
           <br />
           <p>
-            <i class="pi pi-chevron-right"></i>
-            <i class="pi pi-chevron-right"></i> Wir bieten Ihnen das
+            <i class="pi pi-chevron-right"></i
+            ><i class="pi pi-chevron-right"></i> Wir bieten Ihnen das
             IT-Komplettpaket für Ihren erfolgreichen Start
           </p>
           <p>
@@ -122,7 +121,7 @@
         </div>
       </AccordionTab>
 
-      <AccordionTab :headerStyle="{ fontSize: '1.4rem', fontWeight: 'bold' }">
+      <AccordionTab :headerStyle="{ fontSize: '1.3rem', fontWeight: 'bold' }">
         <template #header>
           <span>Für kleine und mittlere Unternehmen (KMU)</span>
         </template>
@@ -171,30 +170,14 @@
       </AccordionTab>
     </Accordion>
 
-    <div class="cta-container">
-      <section class="cta-section">
-        <p>
-          Kontaktieren Sie uns jetzt gleich für ein unverbindliches
-          Erstgespräch.
-        </p>
-        <div class="cta-buttons">
-          <a href="mailto:office@fmw-solutions.at" class="btn"
-            >E-Mail schreiben</a
-          >
-          <a href="tel:+4369914079312" class="btn">Jetzt anrufen</a>
-        </div>
-        <div class="cta-contact-details">
-          <p>Florian Mitter / office@fmw-solutions.at / +43 699 14079312</p>
-          <p></p>
-        </div>
-      </section>
-    </div>
+    <CallToAction />
   </div>
 </template>
 
 <script setup>
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
+import CallToAction from "@/components/CallToAction.vue";
 </script>
 
 <style scoped>
@@ -210,22 +193,7 @@ import AccordionTab from "primevue/accordiontab";
   margin-bottom: 3rem;
 }
 
-.intro h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.intro h2,
-.intro h3,
-.target-group h2,
-.cta-section h2 {
-  margin: 0.5rem 0;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.target-group,
-.cta-section {
+.target-group {
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -233,62 +201,10 @@ import AccordionTab from "primevue/accordiontab";
   margin-bottom: 2.5rem;
 }
 
-.cta-section {
-  text-align: center;
-  background-color: #f0f8ff;
-}
-
-.target-group p,
-.cta-section p {
+.target-group p {
   margin: 0 0 0.4rem;
   font-size: 1.1rem;
   line-height: 1.5;
-}
-
-.cta-section p:last-child {
-  margin-bottom: 0;
-}
-
-.cta-section h2 {
-  margin-bottom: 0.5rem;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-
-.cta-contact-details p {
-  font-size: 1rem;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.btn.secondary {
-  background-color: #6c757d;
-}
-
-.btn.secondary:hover {
-  background-color: #495057;
 }
 
 .p-accordion-header-text {
@@ -312,21 +228,12 @@ import AccordionTab from "primevue/accordiontab";
     font-size: 1.1rem;
   }
 
-  .target-group,
-  .cta-section {
+  .target-group {
     padding: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .intro h2,
-  .intro h3,
-  .target-group h2,
-  .cta-section h2 {
-    font-size: 1.2rem;
-  }
-
-  .target-group p,
-  .cta-section p {
+  .target-group p {
     font-size: 1rem;
   }
 }

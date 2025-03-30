@@ -2,9 +2,7 @@
   <div class="app-container">
     <div class="content">
       <div class="card">
-        <h1>Kontakt & Impressum</h1>
-
-        <h3>FMW – Business Solutions</h3>
+        <h2>FMW – Business Solutions</h2>
         <p>Gewerbeberechtigte Person</p>
         <p>Florian Mitter</p>
         <p>Hausleiten 58, A-4730 Waizenkirchen</p>
@@ -17,7 +15,7 @@
         <p>
           Web:
           <a href="https://fmw-solutions.at/" target="_blank"
-            >www.fmw-solutions.at</a
+            >fmw-solutions.at</a
           >
         </p>
         <p>
@@ -32,7 +30,7 @@
 
         <p>
           Mitglied der Wirtschaftskammer Oberösterreich in der Fachgruppe
-          Unternehmensberatung und Informationstechnologie
+          Unternehmensberatung und Informationstechnologie.
         </p>
 
         <p>
@@ -96,8 +94,11 @@
             <p>
               Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
               Einschränkung, Datenübertragbarkeit und Widerspruch. Bei
-              Beschwerden können Sie sich an die Datenschutzbehörde wenden.
-              <a href="https://www.dsb.gv.at" target="_blank">www.dsb.gv.at</a>
+              Beschwerden können Sie sich an
+              <a href="mailto:office@fmw-solutions.at"
+                >office@fmw-solutions.at</a
+              >
+              oder die Datenschutzbehörde wenden.
             </p>
           </section>
 

@@ -61,10 +61,10 @@ const items = ref([
 
 .logo-wrapper {
   flex: 0 1 auto;
-  border-right: 1px solid black; /* ⬅️ neue Trennlinie rechts */
+  border-right: 1px solid black;
 
-  padding-right: 2rem; /* ⬅️ etwas Abstand zum Menü */
-  margin-right: 2rem; /* ⬅️ optische Trennung */
+  padding-right: 2rem;
+  margin-right: 2rem;
 }
 
 .logo-img {
@@ -87,7 +87,7 @@ const items = ref([
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem;
-  font-size: 120%;
+  font-size: 150%;
   color: black;
   text-decoration: none;
   white-space: nowrap;
