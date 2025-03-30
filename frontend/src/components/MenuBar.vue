@@ -31,7 +31,7 @@ import { ref } from "vue";
 
 const items = ref([
   { label: "Home", icon: "pi pi-home", to: "/" },
-  { label: "Leistungen & Preise", icon: "pi pi-book", to: "/about" },
+  { label: "Leistungen & Preise", icon: "pi pi-book", to: "/offer" },
   { label: "Kontakt & Impressum", icon: "pi pi-envelope", to: "/contact" },
 ]);
 </script>
