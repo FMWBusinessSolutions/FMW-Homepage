@@ -28,8 +28,11 @@
         <p>
           Je nach Projektumfang bieten wir flexible Modelle:
           <strong>Stundensatz</strong>, <strong>Tagessatz</strong> oder
-          <strong>Pauschalpakete</strong>.   <p>Kontaktieren Sie uns gerne – wir
-          erstellen Ihnen ein <strong>maßgeschneidertes Angebot</strong>.</p>
+          <strong>Pauschalpakete</strong>.
+        </p>
+        <p>
+          Kontaktieren Sie uns gerne – wir erstellen Ihnen ein
+          <strong>maßgeschneidertes Angebot</strong>.
         </p>
       </div>
 
