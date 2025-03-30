@@ -1,27 +1,28 @@
 <template>
   <div class="menu-container">
     <div class="menubar-content">
-      <img
-        src="@/components/logo-transparent-small.png"
-        alt="Logo"
-        class="logo-img"
-      />
+      <div class="logo-wrapper">
+        <img
+          src="@/components/logo-transparent-small.png"
+          alt="Logo"
+          class="logo-img"
+        />
+      </div>
 
-      <Menubar :model="items" class="menubar">
-        <template #start> </template>
-
-        <template #item="{ item, props }">
-          <router-link
-            v-ripple
-            class="menu-item"
-            v-bind="props.action"
-            :to="item.to"
-          >
-            <i :class="item.icon"></i>
-            <span>{{ item.label }}</span>
-          </router-link>
-        </template>
-      </Menubar>
+      <nav class="menu-links">
+        <router-link to="/" class="menu-item">
+          <i class="pi pi-home"></i>
+          <span>Home</span>
+        </router-link>
+        <router-link to="/offer" class="menu-item">
+          <i class="pi pi-book"></i>
+          <span>Leistungen & Preise</span>
+        </router-link>
+        <router-link to="/contact" class="menu-item">
+          <i class="pi pi-envelope"></i>
+          <span>Kontakt & Impressum</span>
+        </router-link>
+      </nav>
     </div>
   </div>
 </template>
@@ -38,7 +39,7 @@ const items = ref([
 
 <style scoped>
 .menu-container {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
@@ -51,37 +52,49 @@ const items = ref([
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  width: 100%;
+  gap: 1rem;
   padding: 1rem 2vw;
   box-sizing: border-box;
 }
 
+.logo-wrapper {
+  flex: 0 1 auto;
+  border-right: 1px solid black;
+
+  padding-right: 2rem;
+  margin-right: 2rem;
+}
+
 .logo-img {
-  height: 100px;
-  max-width: 100%;
+  height: 20vw;
+  max-height: 120px;
+  width: auto;
   object-fit: contain;
 }
 
-.menubar {
-  flex: 1;
-  min-width: 250px;
-  border: none;
-  background-color: transparent;
+.menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem 1.5rem;
+  flex: 1 1 300px;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  font-size: 150%;
   color: black;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 1;
 }
 
 .menu-item i {
-  font-size: 2.2rem;
+  font-size: 120%;
 }
 </style>
