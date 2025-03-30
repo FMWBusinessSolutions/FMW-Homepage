@@ -118,16 +118,19 @@
 
     <div class="cta-container">
       <section class="cta-section">
-        <h2>Bereit für den nächsten Schritt?</h2>
-        <p>Kontaktieren Sie uns für ein unverbindliches Erstgespräch.</p>
+        <p>
+          Kontaktieren Sie uns jetzt gleich für ein unverbindliches
+          Erstgespräch.
+        </p>
         <div class="cta-buttons">
-          <a href="mailto:office@fmw-solutions.at" class="btn secondary"
+          <a href="mailto:office@fmw-solutions.at" class="btn"
             >E-Mail schreiben</a
           >
           <a href="tel:+4369914079312" class="btn">Jetzt anrufen</a>
         </div>
         <div class="cta-contact-details">
-          <p>office@fmw-solutions.at / +43 699 14079312</p>
+          <p>Florian Mitter / office@fmw-solutions.at / +43 699 14079312</p>
+          <p></p>
         </div>
       </section>
     </div>
