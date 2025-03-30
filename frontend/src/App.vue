@@ -19,6 +19,6 @@ body {
 }
 
 .content-container {
-  padding-top: 120px;
+  padding-top: 3px;
 }
 </style>

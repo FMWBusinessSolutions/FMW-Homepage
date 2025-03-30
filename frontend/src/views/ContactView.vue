@@ -157,7 +157,6 @@
   text-align: center;
 }
 
-/* Sicherstellen, dass alle Absätze und Abschnitte im DSGVO-Bereich zentriert sind */
 .privacy-section p,
 .privacy-section section {
   text-align: center;

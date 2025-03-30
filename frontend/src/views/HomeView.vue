@@ -12,24 +12,55 @@
       </h3>
     </section>
 
-    <Accordion :multiple="true">
-      <AccordionTab :headerStyle="{ fontSize: '1.3rem', fontWeight: 'bold' }">
+    <Accordion>
+      <AccordionTab :headerStyle="{ fontSize: '1.4rem', fontWeight: 'bold' }">
         <template #header>
-          <span>Für Private</span>
+          <span>Für Privatpersonen</span>
         </template>
         <div class="target-group" id="private">
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Ihr Computer ist defekt oder nach vielen Jahren einfach zu langsam?
           </p>
-          <p>Probleme mit dem W-Lan oder dem E-Mail-Account?</p>
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
+            Probleme mit dem W-Lan oder dem E-Mail-Account?
+          </p>
+          <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Festplatte oder Speicherkarte defekt und Sie benötigen eine
             Datenrettung?
           </p>
-          <p>Ihr Kind braucht einen passenden Laptop für die Schule?</p>
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
+            Ihr Kind braucht einen passenden Laptop für die Schule?
+          </p>
+          <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Sie wollen Ihre persönlichen Dokumente oder Fotos sicher
             aufbewahren?
+          </p>
+          <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
+            Sie wollen ein neues Gerät kaufen und benötigen eine Kaufberatung?
           </p>
           <br />
           <p>
@@ -41,29 +72,45 @@
         </div>
       </AccordionTab>
 
-      <AccordionTab :headerStyle="{ fontSize: '1.3rem', fontWeight: 'bold' }">
+      <AccordionTab :headerStyle="{ fontSize: '1.4rem', fontWeight: 'bold' }">
         <template #header>
-          <span>Für EPU</span>
+          <span>Für Selbstständige und Ein-Personen-Unternehmen (EPU)</span>
         </template>
         <div class="target-group" id="epu">
-          <p>Sie sind selbstständig oder wollen es werden?</p>
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
+            Sie sind selbstständig oder wollen es werden?
+          </p>
+          <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Sie wünschen sich einen professionellen Online-Auftritt mit Homepage
             und Mailadresse?
           </p>
-          <p>Am besten gleich mit Ihrer eigenen Domain – @IhrUnternehmen.at?</p>
           <p>
-            Sie wollen Ihre Buchhaltung oder sensible Kundendaten sicher und
-            DSGVO-konform aufbewahren?
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
+            Am besten gleich mit Ihrer eigenen Domain – @IhrUnternehmen.at?
           </p>
           <p>
-            Wir unterstützen Sie bei Hardware, Software, Ihrem Online-Auftritt
-            und sicheren Speicherlösungen.
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
+            Sie wollen Ihre Buchhaltung oder sensible Patienten- oder
+            Kundendaten sicher und DSGVO-konform aufbewahren?
           </p>
           <br />
           <p>
-            <i class="pi pi-chevron-right"></i
-            ><i class="pi pi-chevron-right"></i> Wir bieten Ihnen das
+            <i class="pi pi-chevron-right"></i>
+            <i class="pi pi-chevron-right"></i> Wir bieten Ihnen das
             IT-Komplettpaket für Ihren erfolgreichen Start
           </p>
           <p>
@@ -75,20 +122,32 @@
         </div>
       </AccordionTab>
 
-      <AccordionTab :headerStyle="{ fontSize: '1.3rem', fontWeight: 'bold' }">
+      <AccordionTab :headerStyle="{ fontSize: '1.4rem', fontWeight: 'bold' }">
         <template #header>
-          <span>Für KMU</span>
+          <span>Für kleine und mittlere Unternehmen (KMU)</span>
         </template>
         <div class="target-group" id="kmu">
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Fragen zur Digitalisierung, Industrie 4.0 oder dem Einsatz von KI in
             Ihrem Unternehmen?
           </p>
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Sie möchten Verwaltungskosten senken und Ihre Ressourcen effizienter
             nutzen?
           </p>
           <p>
+            <i
+              class="pi pi-circle-on"
+              style="font-size: 0.45rem; vertical-align: middle"
+            ></i>
             Wiederkehrende Prozesse sollen automatisiert werden – ohne teure
             Software, Schulungen und zusätzliche Lizenzkosten?
           </p>
@@ -108,10 +167,6 @@
             365 und die Power Platform.
           </p>
           <br />
-          <em
-            >„Digitalisierung ist keine einzelne Maßnahme in der IT, sondern ein
-            Prozess im ganzen Unternehmen.“</em
-          >
         </div>
       </AccordionTab>
     </Accordion>
@@ -240,7 +295,6 @@ import AccordionTab from "primevue/accordiontab";
   word-break: break-word;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .app-container {
     padding: 1.5rem 1rem;
