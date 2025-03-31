@@ -19,7 +19,7 @@
 
 <style scoped>
 .cta-container {
-  margin-top: 2rem;
+  margin-top: 0.1rem;
 }
 
 .cta-section {

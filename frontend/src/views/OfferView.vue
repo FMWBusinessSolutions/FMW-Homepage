@@ -1,9 +1,8 @@
 <template>
   <div class="app-container">
     <div class="content">
-      <!-- Preisinformation -->
-      <div class="card text-compact" style="text-align: left">
-        <h2>Leistungen & Preise</h2>
+      <div class="card text-compact">
+        <h3><u> Leistungen und Preise</u></h3>
         <p>
           Die Erstberatung per <strong>Telefon oder E-Mail</strong> sowie die
           Angebotserstellung sind grundsätzlich
@@ -36,29 +35,10 @@
         </p>
       </div>
 
-      <!-- Privatbereich -->
-      <div class="five-column-grid">
-        <div
-          v-for="(paket, index) in paketePrivat"
-          :key="'privat' + index"
-          class="category-column"
-        >
+      <div class="column-grid">
+        <div v-for="(paket, index) in pakete" class="category-column">
           <h3 class="category-title">{{ paket.titel }}</h3>
-          <div class="card angebot-card privat">
-            <p>{{ paket.beschreibung }}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- EPU / Unternehmerbereich -->
-      <div class="five-column-grid">
-        <div
-          v-for="(paket, index) in paketeEPU"
-          :key="'epu' + index"
-          class="category-column"
-        >
-          <h3 class="category-title">{{ paket.titel }}</h3>
-          <div class="card angebot-card epu">
+          <div class="card angebot-card">
             <p>{{ paket.beschreibung }}</p>
           </div>
         </div>
@@ -71,7 +51,7 @@
 <script setup lang="ts">
 import CallToAction from "@/components/CallToAction.vue";
 
-const paketePrivat = [
+const pakete = [
   {
     titel: "Warum ist mein PC so langsam?",
     beschreibung:
@@ -97,9 +77,6 @@ const paketePrivat = [
     beschreibung:
       "Wir prüfen Ihr Gerät auf Schadsoftware und richten einen verlässlichen Schutz ein – für sicheres Surfen ohne Störungen.",
   },
-];
-
-const paketeEPU = [
   {
     titel: "Welche Hard- und Software benötige ich?",
     beschreibung:
@@ -130,69 +107,66 @@ const paketeEPU = [
 
 <style scoped>
 .app-container {
-  padding-top: 5px;
+  padding: 10px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
 }
 
 .card {
   background-color: white;
-  align-self: center;
   border-radius: 30px;
-  padding: 1.5em;
+  padding: 1em;
+  padding-top: 0.2em;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  line-height: 1.6;
   max-width: 1200px;
-  width: 100%;
-  text-align: left;
-  font-size: 1.1rem;
+  width: 90%;
+  font-size: 1.2rem;
 }
 
 .card.text-compact p {
   margin-bottom: 0.5em;
+  line-height: 1.2em;
 }
 
-.five-column-grid {
+.column-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2em;
-  margin-top: 2em;
-  width: 100%;
-  max-width: 1600px;
+  gap: 1em;
+  width: 90%;
+  align-items: stretch;
 }
 
 .category-column {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   justify-content: flex-start;
+  align-items: center;
+  text-align: center;
   height: 100%;
 }
 
 .category-title {
-  text-align: center;
   font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  min-height: 3.5em;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  padding: 0 0.5em;
+  min-height: 2.5em;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .angebot-card {
-  flex: 1;
+  height: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 200px;
-  font-size: 1.05rem;
+  text-align: center;
 }
 </style>
