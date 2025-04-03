@@ -20,14 +20,17 @@
 <style scoped>
 .cta-container {
   margin-top: 0.1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .cta-section {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 20px;
   background-color: #f0f8ff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: inline-block;
 }
 
 .cta-buttons {
@@ -35,7 +38,7 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .btn {

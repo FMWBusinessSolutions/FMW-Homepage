@@ -1,42 +1,42 @@
 <template>
   <div class="app-container">
     <div class="content">
-      <div class="card text-compact">
-        <h3><u> Leistungen und Preise</u></h3>
-        <p>
-          Die Erstberatung per <strong>Telefon oder E-Mail</strong> sowie die
-          Angebotserstellung sind grundsätzlich
-          <strong>kostenlos und unverbindlich</strong>.
-        </p>
-        <p>
-          Der Stundensatz für vor Ort erbrachte Leistungen oder Arbeiten an
-          unserem Standort beträgt <strong>68 € inkl. MwSt</strong>.
-        </p>
-        <p>
-          Innerhalb eines Umkreises von
-          <strong>5 km rund um Waizenkirchen</strong> ist die An- und Abfahrt
-          kostenlos. Für weitere Entfernungen wird der zeitliche Aufwand nach
-          dem regulären Stundensatz berechnet.
-        </p>
-        <p>
-          Bei größeren Projekten behalten wir uns vor, den Aufwand für Planung
-          und Konzeption ebenfalls nach unserem Stundensatz zu verrechnen. Dies
-          erfolgt jedoch ausschließlich nach
-          <strong>vorheriger Absprache</strong> mit dem Kunden.
-        </p>
-        <p>
-          Je nach Projektumfang bieten wir flexible Modelle:
-          <strong>Stundensatz</strong>, <strong>Tagessatz</strong> oder
-          <strong>Pauschalpakete</strong>.
-        </p>
-        <p>
-          Kontaktieren Sie uns gerne – wir erstellen Ihnen ein
-          <strong>maßgeschneidertes Angebot</strong>.
-        </p>
+      <!-- Obere Preis-Card -->
+      <div class="card-preise text-compact">
+        <h3 class="text-center">
+          <p>
+            <u>Wir legen Wert auf Transparenz und faire Preise. </u>
+          </p>
+        </h3>
+        <div class="leistungen-text">
+          <p>Unser Stundensatz beträgt 68 € inkl. MwSt</p>
+          <p>
+            Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung
+            sind grundsätzlich kostenlos.
+          </p>
+          <p>
+            Bei größeren Projekten mit höherem Planungsaufwand behalten wir uns
+            vor den Aufwand in Rechnung zu stellen, dies geschieht aber nur nach
+            vorheriger Absprache.
+          </p>
+          <p>
+            Im Umkreis von 5 km um Waizenkirchen berechnen wir keinen
+            Fahrtkosten.
+          </p>
+          <p>Ab 5km berechnen wir unseren normalen Stundensatz.</p>
+        </div>
       </div>
 
+      <!-- Trennlinie -->
+      <div class="trennlinie"></div>
+
+      <!-- Angebotsübersicht -->
       <div class="column-grid">
-        <div v-for="(paket, index) in pakete" class="category-column">
+        <div
+          v-for="(paket, index) in pakete"
+          :key="index"
+          class="category-column"
+        >
           <h3 class="category-title">{{ paket.titel }}</h3>
           <div class="card angebot-card">
             <p>{{ paket.beschreibung }}</p>
@@ -116,21 +116,39 @@ const pakete = [
   align-items: center;
 }
 
-.card {
+.card-preise {
   background-color: white;
   border-radius: 30px;
   padding: 1em;
   padding-top: 0.2em;
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
   width: 90%;
   font-size: 1.2rem;
+  text-align: center;
 }
 
-.card.text-compact p {
+.card-preise.text-compact p {
   margin-bottom: 0.5em;
-  line-height: 1.2em;
+  line-height: 1em;
+}
+
+.trennlinie {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 2em 0;
+  border-radius: 1px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.leistungen-text {
+  text-align: left;
+  margin-top: 0.4em;
+  font-size: 0.9em;
 }
 
 .column-grid {
@@ -162,7 +180,10 @@ const pakete = [
 }
 
 .angebot-card {
-  height: 100%;
+  background-color: white;
+  border-radius: 30px;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
