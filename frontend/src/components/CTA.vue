@@ -1,6 +1,6 @@
 <template>
   <div class="cta-container">
-    <section class="cta-section">
+    <section class="cta-header">
       <p>
         Kontaktieren Sie uns jetzt gleich für ein unverbindliches Erstgespräch.
       </p>
@@ -10,7 +10,7 @@
         >
         <a href="tel:+4369914079312" class="btn">Jetzt anrufen</a>
       </div>
-      <div class="cta-contact-details">
+      <div class="cta-details">
         <p>Florian Mitter / office@fmw-solutions.at / +43 699 14079312</p>
       </div>
     </section>
@@ -19,14 +19,14 @@
 
 <style scoped>
 .cta-container {
-  margin-top: 0.1rem;
   display: flex;
   justify-content: center;
 }
 
-.cta-section {
+.cta-header {
   text-align: center;
-  padding: 1rem;
+  font-size: 1.2em;
+  padding: 0.5rem;
   border-radius: 20px;
   background-color: #f0f8ff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -55,7 +55,7 @@
   background-color: #0056b3;
 }
 
-.cta-contact-details p {
+.cta-details p {
   font-size: 1rem;
   color: #333;
 }

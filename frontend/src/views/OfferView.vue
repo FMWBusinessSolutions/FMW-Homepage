@@ -1,14 +1,13 @@
 <template>
   <div class="app-container">
     <div class="content">
-      <!-- Obere Preis-Card -->
-      <div class="card-preise text-compact">
+      <div class="card-offer text-compact">
         <h3 class="text-center">
           <p>
             <u>Wir legen Wert auf Transparenz und faire Preise. </u>
           </p>
         </h3>
-        <div class="leistungen-text">
+        <div class="offer-text">
           <p>Unser Stundensatz beträgt 68 € inkl. MwSt</p>
           <p>
             Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung
@@ -27,10 +26,8 @@
         </div>
       </div>
 
-      <!-- Trennlinie -->
-      <div class="trennlinie"></div>
+      <div class="separator"></div>
 
-      <!-- Angebotsübersicht -->
       <div class="column-grid">
         <div
           v-for="(paket, index) in pakete"
@@ -38,35 +35,31 @@
           class="category-column"
         >
           <h3 class="category-title">{{ paket.titel }}</h3>
-          <div class="card angebot-card">
+          <div class="card offer-card">
             <p>{{ paket.beschreibung }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <CallToAction />
+  <CTA />
 </template>
 
 <script setup lang="ts">
-import CallToAction from "@/components/CallToAction.vue";
+import CTA from "@/components/CTA.vue";
 
 const pakete = [
   {
     titel: "Warum ist mein PC so langsam?",
     beschreibung:
-      "Wir prüfen Ihr Gerät auf unnötige Programme und Systembremsen. Gemeinsam schaffen wir wieder spürbar mehr Tempo – ohne Datenverlust.",
+      "Wir prüfen Ihr Gerät auf unnötige Programme und Systembremsen. Gemeinsam schaffen wir wieder spürbar mehr Tempo.",
   },
   {
     titel: "Wie kann ich Datenverlust vermeiden?",
     beschreibung:
       "Wir richten automatische Sicherungen für Fotos, Dokumente und E-Mails ein – lokal oder in der Cloud. Damit nichts mehr verloren geht.",
   },
-  {
-    titel: "Wie merke ich mir all meine Passwörter?",
-    beschreibung:
-      "Wir zeigen Ihnen, wie Sie mit einem Passwort-Manager oder dem Microsoft Authenticator sicher und bequem alle Passwörter verwalten.",
-  },
+
   {
     titel: "Warum druckt mein Gerät nicht?",
     beschreibung:
@@ -102,6 +95,11 @@ const pakete = [
     beschreibung:
       "Wir zeigen Ihnen, wie Sie Termine digital verwalten – allein oder im Team. Mit Outlook, Teams oder auf Ihrer Website.",
   },
+  {
+    titel: "Wie merke ich mir all meine Passwörter?",
+    beschreibung:
+      "Wir zeigen Ihnen, wie Sie mit einem Passwort-Manager oder dem Microsoft Authenticator sicher und bequem alle Passwörter verwalten.",
+  },
 ];
 </script>
 
@@ -116,7 +114,7 @@ const pakete = [
   align-items: center;
 }
 
-.card-preise {
+.card-offer {
   background-color: white;
   border-radius: 30px;
   padding: 1em;
@@ -128,12 +126,12 @@ const pakete = [
   text-align: center;
 }
 
-.card-preise.text-compact p {
+.card-offer.text-compact p {
   margin-bottom: 0.5em;
   line-height: 1em;
 }
 
-.trennlinie {
+.separator {
   width: 100%;
   height: 2px;
   background-color: black;
@@ -145,16 +143,16 @@ const pakete = [
   text-align: center;
 }
 
-.leistungen-text {
+.offer-text {
   text-align: left;
   margin-top: 0.4em;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .column-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1em;
+  gap: 1.5em;
   width: 90%;
   align-items: stretch;
 }
@@ -170,7 +168,7 @@ const pakete = [
 
 .category-title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1em;
   padding: 0 0.5em;
   min-height: 2.5em;
@@ -179,7 +177,7 @@ const pakete = [
   justify-content: center;
 }
 
-.angebot-card {
+.offer-card {
   background-color: white;
   border-radius: 30px;
   padding: 1em;
@@ -188,6 +186,6 @@ const pakete = [
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: center;
+  text-align: left;
 }
 </style>

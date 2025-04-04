@@ -17,7 +17,7 @@
     <Accordion>
       <AccordionTab>
         <template #header>
-          <span>Für Privatpersonen</span>
+          <span class="accordion-header">Für Privatpersonen</span>
         </template>
         <div class="target-group" id="private">
           <p>
@@ -56,7 +56,7 @@
 
       <AccordionTab>
         <template #header>
-          <span>Für Selbstständige</span>
+          <span class="accordion-header">Für Selbstständige</span>
         </template>
         <div class="target-group" id="epu">
           <p>
@@ -93,7 +93,9 @@
 
       <AccordionTab>
         <template #header>
-          <span>Für kleine und mittlere Unternehmen</span>
+          <span class="accordion-header"
+            >Für kleine und mittlere Unternehmen</span
+          >
         </template>
         <div class="target-group" id="kmu">
           <p>Sie nutzen Microsoft Office365 in Ihrem Unternehmen?</p>
@@ -111,9 +113,9 @@
           </p>
           <br />
           <p>
-            <strong
-              >Dann holen Sie mehr aus dem heraus, wofür Sie ohnehin schon
-              bezahlen:</strong
+            <strong>
+              Dann holen Sie mehr aus dem heraus, wofür Sie ohnehin schon
+              bezahlen: </strong
             ><br />
             Microsoft Teams, SharePoint, Power Automate, Power BI, Power Apps &
             Co.
@@ -136,20 +138,19 @@
             Individuelle Lösungen mit der Microsoft Power Platform – ohne
             zusätzliche Software
           </p>
-
           <br />
         </div>
       </AccordionTab>
     </Accordion>
 
-    <CallToAction />
+    <CTA />
   </div>
 </template>
 
 <script setup>
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
-import CallToAction from "@/components/CallToAction.vue";
+import CTA from "@/components/CTA.vue";
 </script>
 
 <style scoped>
@@ -198,36 +199,9 @@ import CallToAction from "@/components/CallToAction.vue";
   margin-right: 0.1rem;
 }
 
-.p-accordion .p-accordion-header .p-accordion-header-link {
-  font-size: 1.3rem;
+/* Accordion Header Styling */
+.p-accordion-header .accordion-header {
+  font-size: 1.2rem;
   font-weight: bold;
-  word-break: break-word;
-}
-
-@media (max-width: 768px) {
-  .app-container {
-    padding: 1.5rem 1rem;
-  }
-
-  .intro h1 {
-    font-size: 1.6rem;
-  }
-
-  .intro h2 {
-    font-size: 1.3rem;
-  }
-
-  .intro h3 {
-    font-size: 1.1rem;
-  }
-
-  .target-group {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .target-group p {
-    font-size: 1rem;
-  }
 }
 </style>
