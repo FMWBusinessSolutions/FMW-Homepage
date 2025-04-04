@@ -1,9 +1,11 @@
 <template>
-  <div class="main-container">
-    <MenuBar />
-    <div class="content-container">
+  <div class="app-container">
+    <header class="menu-bar">
+      <MenuBar />
+    </header>
+    <main class="router-view">
       <router-view />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -12,13 +14,43 @@ import MenuBar from "./components/MenuBar.vue";
 </script>
 
 <style>
+/* === Global Styles === */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgba(240, 248, 255, 1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
+  color: #222;
+  line-height: 1.5;
 }
 
-.content-container {
-  padding-top: 3px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* === App Container === */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Menu Bar === */
+.menu-bar {
+  flex-shrink: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === Router Content === */
+.router-view {
+  flex-grow: 1;
 }
 </style>
