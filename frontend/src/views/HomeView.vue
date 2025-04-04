@@ -14,12 +14,14 @@
       </div>
     </section>
 
-    <Accordion class="accordion-wrapper">
+    <Accordion class="accordion-wrapper" @tab-open="onTabOpen">
       <AccordionTab>
         <template #header>
-          <span class="accordion-title">Für Privatpersonen</span>
+          <span class="accordion-title" ref="tabPrivate"
+            >Für Privatpersonen</span
+          >
         </template>
-        <div class="target-group" id="private">
+        <div class="target-group" id="private" ref="headerPrivate">
           <p>
             <i class="pi pi-circle-on icon-bullet"></i>Ihr Computer ist defekt
             oder nach vielen Jahren einfach zu langsam?
@@ -46,8 +48,8 @@
           </p>
           <br />
           <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i>
-            <i class="pi pi-chevron-right icon-arrow"></i>
+            <i class="pi pi-chevron-right icon-arrow"></i
+            ><i class="pi pi-chevron-right icon-arrow"></i>
             Wir helfen Ihnen persönlich & individuell und finden für Sie die
             passende Lösung.
           </p>
@@ -56,9 +58,9 @@
 
       <AccordionTab>
         <template #header>
-          <span class="accordion-title">Für Selbstständige</span>
+          <span class="accordion-title" ref="tabEPU">Für Selbstständige</span>
         </template>
-        <div class="target-group" id="epu">
+        <div class="target-group" id="epu" ref="headerEPU">
           <p>
             <i class="pi pi-circle-on icon-bullet"></i>Sie sind selbstständig
             oder wollen es werden?
@@ -77,29 +79,27 @@
             Kunden- oder Patientendaten sicher & DSGVO-konform aufbewahren?
           </p>
           <br />
-
           <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i>
-            <i class="pi pi-chevron-right icon-arrow"></i> Wir haben das
-            IT-Komplettpaket für Ihr Unternehmen
+            <i class="pi pi-chevron-right icon-arrow"></i
+            ><i class="pi pi-chevron-right icon-arrow"></i>
+            Wir haben das IT-Komplettpaket für Ihr Unternehmen
           </p>
-
           <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i>
-            <i class="pi pi-chevron-right icon-arrow"></i> Hardware, Software,
-            Homepage sowie die Einrichtung aller notwendigen Geräte und und
-            Accounts.
+            <i class="pi pi-chevron-right icon-arrow"></i
+            ><i class="pi pi-chevron-right icon-arrow"></i>
+            Hardware, Software, Homepage sowie die Einrichtung aller notwendigen
+            Geräte und und Accounts.
           </p>
         </div>
       </AccordionTab>
 
       <AccordionTab>
         <template #header>
-          <span class="accordion-title"
+          <span class="accordion-title" ref="tabKMU"
             >Für kleine und mittlere Unternehmen</span
           >
         </template>
-        <div class="target-group" id="kmu">
+        <div class="target-group" id="kmu" ref="headerKMU">
           <p>Sie nutzen Microsoft Office365 in Ihrem Unternehmen?</p>
           <br />
           <p>
@@ -120,7 +120,6 @@
             Co.
           </p>
           <br />
-
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
@@ -150,6 +149,41 @@
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import CTA from "@/components/CTA.vue";
+import { ref } from "vue";
+
+// Refs to content containers
+const headerPrivate = ref(null);
+const headerEPU = ref(null);
+const headerKMU = ref(null);
+
+// Refs to visible tab header elements
+const tabPrivate = ref(null);
+const tabEPU = ref(null);
+const tabKMU = ref(null);
+
+// Scroll to the visible tab header when a section is expanded
+const onTabOpen = (event) => {
+  const index = event.index ?? 0;
+  const tabHeaderRefs = [tabPrivate, tabEPU, tabKMU];
+  const target = tabHeaderRefs[index];
+
+  // Delay to wait for the accordion animation to finish
+  setTimeout(() => {
+    const el = target?.value;
+    const menu = document.getElementById("menu-bar");
+    const menuHeight = menu?.offsetHeight || 0;
+
+    if (el) {
+      const scrollTop = el.getBoundingClientRect().top + window.scrollY;
+      const scrollTo = scrollTop - menuHeight - 20;
+
+      window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
+    }
+  }, 500);
+};
 </script>
 
 <style scoped>
@@ -181,10 +215,9 @@ import CTA from "@/components/CTA.vue";
 }
 
 /* === Accordion Section === */
-
 .accordion-wrapper {
-  width: 70%;
-  margin: 0 auto 1rem auto; /* zentriert horizontal */
+  width: 80%;
+  margin: 0 auto 1rem auto;
 }
 
 .accordion-title {

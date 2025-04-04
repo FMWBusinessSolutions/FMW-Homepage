@@ -1,8 +1,9 @@
 <template>
   <div class="app-container">
-    <header class="menu-bar">
+    <header class="menu-bar" id="menu-bar">
       <MenuBar />
     </header>
+
     <main class="router-view">
       <router-view />
     </main>
