@@ -1,21 +1,23 @@
 <template>
   <div class="app-container">
     <section class="intro">
-      <h2>
-        <u><strong>Willkommen bei FMW – Business Solutions</strong></u>
-      </h2>
-      <h3>
-        Ihr Partner im Bereich Hardware, Software, IT-Infrastruktur,
-        Digitalisierung und KI.<br />
-        Für Privatpersonen, Einzelunternehmer und kleine bis mittelgroße
-        Unternehmen.
-      </h3>
+      <p>
+        <u>Willkommen bei FMW – Business Solutions</u>
+      </p>
+      <div class="intro-text">
+        <p>
+          Ihr Partner im Bereich Hardware, Software, IT-Infrastruktur,
+          Digitalisierung und Ki.<br />
+          Für Privatpersonen, Selbstständige und kleine bis mittelgroße
+          Unternehmen.
+        </p>
+      </div>
     </section>
 
     <Accordion>
       <AccordionTab>
         <template #header>
-          <span>Für Privatpersonen</span>
+          <span class="accordion-header">Für Privatpersonen</span>
         </template>
         <div class="target-group" id="private">
           <p>
@@ -39,22 +41,22 @@
             persönlichen Dokumente oder Fotos sicher aufbewahren?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie wollen ein neues
+            <i class="pi pi-circle-on icon-bullet"></i>Sie möchten ein neues
             Gerät und benötigen eine Beratung?
           </p>
           <br />
           <p>
             <i class="pi pi-chevron-right icon-arrow"></i>
             <i class="pi pi-chevron-right icon-arrow"></i>
-            Wir beraten persönlich & individuell und finden für Sie die passende
-            Lösung.
+            Wir helfen Ihnen persönlich & individuell und finden für Sie die
+            passende Lösung.
           </p>
         </div>
       </AccordionTab>
 
       <AccordionTab>
         <template #header>
-          <span>Für Selbstständige und Ein-Personen-Unternehmen (EPU)</span>
+          <span class="accordion-header">Für Selbstständige</span>
         </template>
         <div class="target-group" id="epu">
           <p>
@@ -62,23 +64,23 @@
             oder wollen es werden?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie wünschen sich einen
-            professionellen Online-Auftritt mit Homepage und Mailadresse?
+            <i class="pi pi-circle-on icon-bullet"></i>Sie möchten einen
+            professionellen Online-Auftritt mit eigener Homepage und
+            Mailadresse?
           </p>
           <p>
             <i class="pi pi-circle-on icon-bullet"></i>Am besten gleich mit
             Ihrer eigenen Domain – @IhrUnternehmen.at?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie wollen Ihre
-            Buchhaltung oder sensible Patienten- oder Kundendaten sicher und
-            DSGVO-konform aufbewahren?
+            <i class="pi pi-circle-on icon-bullet"></i>Sie wollen hochsensible
+            Patienten- oder Kundendaten sicher und DSGVO-konform aufbewahren?
           </p>
           <br />
           <p>
             <i class="pi pi-chevron-right icon-arrow"></i>
             <i class="pi pi-chevron-right icon-arrow"></i>
-            Wir bieten Ihnen das IT-Komplettpaket für Ihren erfolgreichen Start
+            Wir haben das IT-Komplettpaket für Ihr Unternehmen
           </p>
           <p>
             <i class="pi pi-chevron-right icon-arrow"></i>
@@ -91,51 +93,64 @@
 
       <AccordionTab>
         <template #header>
-          <span>Für kleine und mittlere Unternehmen (KMU)</span>
+          <span class="accordion-header"
+            >Für kleine und mittlere Unternehmen</span
+          >
         </template>
         <div class="target-group" id="kmu">
+          <p>Sie nutzen Microsoft Office365 in Ihrem Unternehmen?</p>
+          <br />
+
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Fragen zur
-            Digitalisierung, Industrie 4.0 oder dem Einsatz von KI in Ihrem
-            Unternehmen?
+            <i class="pi pi-circle-on icon-bullet"></i>
+            Sie möchten Zeit sparen, Prozesse vereinfachen und vorhandene
+            Ressourcen effizienter nutzen?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie möchten
-            Verwaltungskosten senken und Ihre Ressourcen effizienter nutzen?
+            <i class="pi pi-circle-on icon-bullet"></i>
+            Sie wünschen sich einfache, digitale Lösungen – ohne teure
+            Zusatzsoftware oder zusätzliche Kosten?
           </p>
+          <br />
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Wiederkehrende Prozesse
-            sollen automatisiert werden – ohne teure Software, Schulungen und
-            zusätzliche Lizenzkosten?
+            <strong>
+              Dann holen Sie mehr aus dem heraus, wofür Sie ohnehin schon
+              bezahlen: </strong
+            ><br />
+            Microsoft Teams, SharePoint, Power Automate, Power BI, Power Apps &
+            Co.
           </p>
           <br />
           <p>
             <i class="pi pi-chevron-right icon-arrow"></i>
             <i class="pi pi-chevron-right icon-arrow"></i>
-            Über 20 Jahre praktische Erfahrung aus dem Maschinenbau
+            Über 20 Jahre Erfahrung in Maschinenbau & Prozessoptimierung
           </p>
           <p>
             <i class="pi pi-chevron-right icon-arrow"></i>
             <i class="pi pi-chevron-right icon-arrow"></i>
-            Prozessanalyse nach REFA / Lean
+            Analyse, Optimierung und Digitalisierung Ihrer internen Abläufe –
+            praxisnah und messbar
           </p>
           <p>
             <i class="pi pi-chevron-right icon-arrow"></i>
             <i class="pi pi-chevron-right icon-arrow"></i>
-            Spezialisierung auf Microsoft 365 und die Power Platform.
+            Individuelle Lösungen mit der Microsoft Power Platform – ohne
+            zusätzliche Software
           </p>
+          <br />
         </div>
       </AccordionTab>
     </Accordion>
 
-    <CallToAction />
+    <CTA />
   </div>
 </template>
 
 <script setup>
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
-import CallToAction from "@/components/CallToAction.vue";
+import CTA from "@/components/CTA.vue";
 </script>
 
 <style scoped>
@@ -149,6 +164,15 @@ import CallToAction from "@/components/CallToAction.vue";
 .intro {
   text-align: center;
   margin-bottom: 0.5rem;
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.8em;
+  font-weight: normal;
 }
 
 .target-group {
@@ -175,36 +199,9 @@ import CallToAction from "@/components/CallToAction.vue";
   margin-right: 0.1rem;
 }
 
-.p-accordion .p-accordion-header .p-accordion-header-link {
-  font-size: 1.3rem;
+/* Accordion Header Styling */
+.p-accordion-header .accordion-header {
+  font-size: 1.2rem;
   font-weight: bold;
-  word-break: break-word;
-}
-
-@media (max-width: 768px) {
-  .app-container {
-    padding: 1.5rem 1rem;
-  }
-
-  .intro h1 {
-    font-size: 1.6rem;
-  }
-
-  .intro h2 {
-    font-size: 1.3rem;
-  }
-
-  .intro h3 {
-    font-size: 1.1rem;
-  }
-
-  .target-group {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .target-group p {
-    font-size: 1rem;
-  }
 }
 </style>

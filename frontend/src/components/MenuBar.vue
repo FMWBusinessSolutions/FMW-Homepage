@@ -62,7 +62,6 @@ const items = ref([
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  box-sizing: border-box;
 }
 
 .menubar-wrapper {
@@ -91,7 +90,7 @@ const items = ref([
   margin-left: 1em;
   padding: 0;
   box-shadow: none;
-  width: 90%;
+  width: 60%;
 }
 
 /* Menubar internal styling overrides */
@@ -102,7 +101,7 @@ const items = ref([
 }
 
 ::v-deep(.p-menuitem-link) {
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-size: clamp(1em, 1.5vw, 1.3em);
   color: black;
   padding: 0.5rem;
   display: flex;
@@ -117,5 +116,10 @@ const items = ref([
 ::v-deep(.p-menuitem-link:hover) {
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 1rem;
+}
+
+::v-deep(.p-menubar-button svg) {
+  width: 1.5em;
+  height: 1.5em;
 }
 </style>

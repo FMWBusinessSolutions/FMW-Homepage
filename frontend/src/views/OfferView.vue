@@ -1,72 +1,65 @@
 <template>
   <div class="app-container">
     <div class="content">
-      <div class="card text-compact">
-        <h3><u> Leistungen und Preise</u></h3>
-        <p>
-          Die Erstberatung per <strong>Telefon oder E-Mail</strong> sowie die
-          Angebotserstellung sind grundsätzlich
-          <strong>kostenlos und unverbindlich</strong>.
-        </p>
-        <p>
-          Der Stundensatz für vor Ort erbrachte Leistungen oder Arbeiten an
-          unserem Standort beträgt <strong>68 € inkl. MwSt</strong>.
-        </p>
-        <p>
-          Innerhalb eines Umkreises von
-          <strong>5 km rund um Waizenkirchen</strong> ist die An- und Abfahrt
-          kostenlos. Für weitere Entfernungen wird der zeitliche Aufwand nach
-          dem regulären Stundensatz berechnet.
-        </p>
-        <p>
-          Bei größeren Projekten behalten wir uns vor, den Aufwand für Planung
-          und Konzeption ebenfalls nach unserem Stundensatz zu verrechnen. Dies
-          erfolgt jedoch ausschließlich nach
-          <strong>vorheriger Absprache</strong> mit dem Kunden.
-        </p>
-        <p>
-          Je nach Projektumfang bieten wir flexible Modelle:
-          <strong>Stundensatz</strong>, <strong>Tagessatz</strong> oder
-          <strong>Pauschalpakete</strong>.
-        </p>
-        <p>
-          Kontaktieren Sie uns gerne – wir erstellen Ihnen ein
-          <strong>maßgeschneidertes Angebot</strong>.
-        </p>
+      <div class="card-offer text-compact">
+        <h3 class="text-center">
+          <p>
+            <u>Wir legen Wert auf Transparenz und faire Preise. </u>
+          </p>
+        </h3>
+        <div class="offer-text">
+          <p>Unser Stundensatz beträgt 68 € inkl. MwSt</p>
+          <p>
+            Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung
+            sind grundsätzlich kostenlos.
+          </p>
+          <p>
+            Bei größeren Projekten mit höherem Planungsaufwand behalten wir uns
+            vor den Aufwand in Rechnung zu stellen, dies geschieht aber nur nach
+            vorheriger Absprache.
+          </p>
+          <p>
+            Im Umkreis von 5 km um Waizenkirchen berechnen wir keinen
+            Fahrtkosten.
+          </p>
+          <p>Ab 5km berechnen wir unseren normalen Stundensatz.</p>
+        </div>
       </div>
 
+      <div class="separator"></div>
+
       <div class="column-grid">
-        <div v-for="(paket, index) in pakete" class="category-column">
+        <div
+          v-for="(paket, index) in pakete"
+          :key="index"
+          class="category-column"
+        >
           <h3 class="category-title">{{ paket.titel }}</h3>
-          <div class="card angebot-card">
+          <div class="card offer-card">
             <p>{{ paket.beschreibung }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <CallToAction />
+  <CTA />
 </template>
 
 <script setup lang="ts">
-import CallToAction from "@/components/CallToAction.vue";
+import CTA from "@/components/CTA.vue";
 
 const pakete = [
   {
     titel: "Warum ist mein PC so langsam?",
     beschreibung:
-      "Wir prüfen Ihr Gerät auf unnötige Programme und Systembremsen. Gemeinsam schaffen wir wieder spürbar mehr Tempo – ohne Datenverlust.",
+      "Wir prüfen Ihr Gerät auf unnötige Programme und Systembremsen. Gemeinsam schaffen wir wieder spürbar mehr Tempo.",
   },
   {
     titel: "Wie kann ich Datenverlust vermeiden?",
     beschreibung:
       "Wir richten automatische Sicherungen für Fotos, Dokumente und E-Mails ein – lokal oder in der Cloud. Damit nichts mehr verloren geht.",
   },
-  {
-    titel: "Wie merke ich mir all meine Passwörter?",
-    beschreibung:
-      "Wir zeigen Ihnen, wie Sie mit einem Passwort-Manager oder dem Microsoft Authenticator sicher und bequem alle Passwörter verwalten.",
-  },
+
   {
     titel: "Warum druckt mein Gerät nicht?",
     beschreibung:
@@ -102,6 +95,11 @@ const pakete = [
     beschreibung:
       "Wir zeigen Ihnen, wie Sie Termine digital verwalten – allein oder im Team. Mit Outlook, Teams oder auf Ihrer Website.",
   },
+  {
+    titel: "Wie merke ich mir all meine Passwörter?",
+    beschreibung:
+      "Wir zeigen Ihnen, wie Sie mit einem Passwort-Manager oder dem Microsoft Authenticator sicher und bequem alle Passwörter verwalten.",
+  },
 ];
 </script>
 
@@ -116,27 +114,45 @@ const pakete = [
   align-items: center;
 }
 
-.card {
+.card-offer {
   background-color: white;
   border-radius: 30px;
   padding: 1em;
   padding-top: 0.2em;
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
   width: 90%;
   font-size: 1.2rem;
+  text-align: center;
 }
 
-.card.text-compact p {
+.card-offer.text-compact p {
   margin-bottom: 0.5em;
-  line-height: 1.2em;
+  line-height: 1em;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 2em 0;
+  border-radius: 1px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.offer-text {
+  text-align: left;
+  margin-top: 0.4em;
+  font-size: 1em;
 }
 
 .column-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1em;
+  gap: 1.5em;
   width: 90%;
   align-items: stretch;
 }
@@ -152,7 +168,7 @@ const pakete = [
 
 .category-title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1em;
   padding: 0 0.5em;
   min-height: 2.5em;
@@ -161,12 +177,15 @@ const pakete = [
   justify-content: center;
 }
 
-.angebot-card {
-  height: 100%;
+.offer-card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: center;
+  text-align: left;
 }
 </style>
