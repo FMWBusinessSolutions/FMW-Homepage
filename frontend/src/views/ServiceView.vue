@@ -160,7 +160,8 @@ const services = [
 .service-title {
   font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 1em;
+  margin-top: 0;
+  margin-bottom: 0.2em;
   text-align: center;
   min-height: 2.5em;
   padding: 0 0.5em;

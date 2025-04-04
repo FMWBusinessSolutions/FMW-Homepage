@@ -75,7 +75,7 @@ const items = ref([
 /* === Logo === */
 .logo-wrapper {
   flex: 0 0 auto;
-  padding-left: 2rem;
+  padding-left: 1rem;
   border-left: 1px solid black;
 }
 
@@ -104,8 +104,12 @@ const items = ref([
   width: 100%;
 }
 
+::v-deep(.p-menubar-root-list) {
+  min-width: fit-content;
+}
+
 ::v-deep(.p-menuitem-link) {
-  font-size: clamp(1em, 1.5vw, 1.3em);
+  font-size: 1.17em;
   color: black;
   padding: 0.5rem;
   display: flex;

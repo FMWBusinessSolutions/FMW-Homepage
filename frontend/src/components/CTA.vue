@@ -27,7 +27,6 @@
 /* === CTA Box === */
 .cta-header {
   text-align: center;
-  font-size: 1.2em;
   padding: 0.5rem;
   border-radius: 20px;
   background-color: #f0f8ff;
@@ -46,7 +45,7 @@
 
 /* === Button Style === */
 .cta-button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 8px;
   background-color: #007bff;
   color: white;

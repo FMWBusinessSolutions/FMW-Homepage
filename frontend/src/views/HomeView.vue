@@ -168,22 +168,23 @@ import CTA from "@/components/CTA.vue";
 }
 
 .intro-title {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .intro-subtext p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: #333;
   margin: 0;
 }
 
 /* === Accordion Section === */
+
 .accordion-wrapper {
-  width: 100%;
-  margin-bottom: 2rem;
+  width: 70%;
+  margin: 0 auto 1rem auto; /* zentriert horizontal */
 }
 
 .accordion-title {
