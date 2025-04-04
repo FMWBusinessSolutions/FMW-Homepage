@@ -75,7 +75,8 @@ const items = ref([
 /* === Logo === */
 .logo-wrapper {
   flex: 0 0 auto;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.7rem;
   border-left: 1px solid black;
 }
 
