@@ -32,6 +32,10 @@ a {
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 /* === App Container === */
 .app-container {
   display: flex;

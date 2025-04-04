@@ -75,6 +75,11 @@ const services = [
       "Wir prüfen Ihr Gerät auf Schadsoftware und richten einen verlässlichen Schutz ein – für sicheres Surfen ohne Störungen.",
   },
   {
+    titel: "Wie lege ich Kunden- oder Patientendaten sicher ab?",
+    beschreibung:
+      "Wir zeigen Ihnen, wie Sie hochsensible Daten DSGVO-konform sicher und zuverlässig speichern und vor fremdem Zugriff schützen können.",
+  },
+  {
     titel: "Wie kann ich Datenverlust vermeiden?",
     beschreibung:
       "Wir richten automatische Sicherungen für Fotos, Dokumente und E-Mails ein – lokal oder in der Cloud. Damit nichts mehr verloren geht.",
@@ -105,11 +110,6 @@ const services = [
     titel: "Wie schütze ich mich vor Datenverlust & Phishing?",
     beschreibung:
       "Wir richten Schutzmechanismen ein: E-Mail-Filter, automatische Backups Ihrer Daten, Zwei-Faktor-Authentifizierung – sicher, einfach und zuverlässig.",
-  },
-  {
-    titel: "Wie lege ich Kunden- oder Patientendaten sicher ab?",
-    beschreibung:
-      "Wir zeigen Ihnen, wie Sie hochsensible Daten DSGVO-konform sicher und zuverlässig speichern und vor fremdem Zugriff schützen können.",
   },
 ];
 </script>
@@ -159,7 +159,7 @@ const services = [
 
 .service-title {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 1em;
   text-align: center;
   min-height: 2.5em;
@@ -183,7 +183,7 @@ const services = [
 }
 
 .service-description {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.4em;
 }
 
