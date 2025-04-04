@@ -31,7 +31,7 @@ const items = ref([
   {
     label: "Leistungen & Preise",
     icon: "pi pi-book",
-    command: () => router.push("/offer"),
+    command: () => router.push("/service"),
   },
   {
     label: "Kontakt",
@@ -47,6 +47,7 @@ const items = ref([
 </script>
 
 <style scoped>
+/* === Menu Container === */
 .menu-container {
   position: sticky;
   top: 0;
@@ -57,6 +58,7 @@ const items = ref([
   border-bottom: 1px solid black;
 }
 
+/* === Menubar Layout === */
 .menubar-content {
   display: flex;
   align-items: center;
@@ -70,9 +72,11 @@ const items = ref([
   justify-content: center;
 }
 
+/* === Logo === */
 .logo-wrapper {
   flex: 0 0 auto;
-  padding-left: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.7rem;
   border-left: 1px solid black;
 }
 
@@ -83,6 +87,7 @@ const items = ref([
   object-fit: contain;
 }
 
+/* === Custom Menubar === */
 .custom-menubar {
   border: none;
   background: transparent;
@@ -93,15 +98,19 @@ const items = ref([
   width: 60%;
 }
 
-/* Menubar internal styling overrides */
+/* === PrimeVue Menubar Overrides === */
 ::v-deep(.p-menubar-root) {
   background: transparent;
   border: none;
   width: 100%;
 }
 
+::v-deep(.p-menubar-root-list) {
+  min-width: fit-content;
+}
+
 ::v-deep(.p-menuitem-link) {
-  font-size: clamp(1em, 1.5vw, 1.3em);
+  font-size: 1.17em;
   color: black;
   padding: 0.5rem;
   display: flex;

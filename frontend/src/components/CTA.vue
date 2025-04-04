@@ -5,10 +5,10 @@
         Kontaktieren Sie uns jetzt gleich für ein unverbindliches Erstgespräch.
       </p>
       <div class="cta-buttons">
-        <a href="mailto:office@fmw-solutions.at" class="btn"
+        <a href="mailto:office@fmw-solutions.at" class="cta-button"
           >E-Mail schreiben</a
         >
-        <a href="tel:+4369914079312" class="btn">Jetzt anrufen</a>
+        <a href="tel:+4369914079312" class="cta-button">Jetzt anrufen</a>
       </div>
       <div class="cta-details">
         <p>Florian Mitter / office@fmw-solutions.at / +43 699 14079312</p>
@@ -18,14 +18,15 @@
 </template>
 
 <style scoped>
+/* === CTA Container === */
 .cta-container {
   display: flex;
   justify-content: center;
 }
 
+/* === CTA Box === */
 .cta-header {
   text-align: center;
-  font-size: 1.2em;
   padding: 0.5rem;
   border-radius: 20px;
   background-color: #f0f8ff;
@@ -33,6 +34,7 @@
   display: inline-block;
 }
 
+/* === CTA Buttons === */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -41,8 +43,9 @@
   margin: 1rem 0;
 }
 
-.btn {
-  padding: 0.75rem 1.5rem;
+/* === Button Style === */
+.cta-button {
+  padding: 0.6rem 1.5rem;
   border-radius: 8px;
   background-color: #007bff;
   color: white;
@@ -51,10 +54,11 @@
   transition: background-color 0.3s;
 }
 
-.btn:hover {
+.cta-button:hover {
   background-color: #0056b3;
 }
 
+/* === CTA Contact Details === */
 .cta-details p {
   font-size: 1rem;
   color: #333;

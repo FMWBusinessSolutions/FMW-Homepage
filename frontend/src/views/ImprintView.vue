@@ -64,10 +64,12 @@
 </template>
 
 <style scoped>
+/* === Page Container === */
 .app-container {
   padding-top: 3px;
 }
 
+/* === Content Layout === */
 .content {
   display: flex;
   flex-direction: column;
@@ -75,6 +77,7 @@
   justify-content: center;
 }
 
+/* === Main Card === */
 .card {
   margin-top: 0.3em;
   background-color: white;
@@ -104,6 +107,7 @@
   line-height: 1.2;
 }
 
+/* === Privacy & Legal Section === */
 .privacy-section {
   font-size: 0.95rem;
   color: #333;
@@ -114,6 +118,7 @@
   margin-top: 1.5rem;
 }
 
+/* === Footer Note === */
 .footer-note {
   font-size: 0.9rem;
   margin-top: 3rem;

@@ -1,0 +1,59 @@
+/* === Global responsive layout for mobile & tablet === */
+
+:root {
+    --font-base: 1rem;
+    --font-small: 0.9rem;
+    --font-large: 1.3rem;
+  }
+  
+  body {
+    font-size: var(--font-base);
+    line-height: 1.6;
+  }
+  
+  .home-container,
+  .contact-container,
+  .imprint-container,
+  .service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .home-container,
+    .contact-container,
+    .imprint-container,
+    .service-container {
+      padding: 1rem;
+    }
+  
+    .intro-title {
+      font-size: var(--font-large);
+      text-align: center;
+    }
+  
+    .intro-subtext p {
+      font-size: var(--font-base);
+      padding: 0 1rem;
+    }
+  
+    .accordion-title {
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 0.5rem;
+    }
+  
+    .target-group,
+    .target-group-closing {
+      font-size: var(--font-small);
+      padding: 0 1rem;
+    }
+  
+    .target-group-highlight {
+      font-size: var(--font-base);
+      padding: 0 1rem;
+      text-align: center;
+    }
+  }
+  
