@@ -22,26 +22,43 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
+const scrollToTop = () => {
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, 100);
+};
+
 const items = ref([
   {
     label: "Home",
     icon: "pi pi-home",
-    command: () => router.push("/"),
+    command: () => {
+      router.push("/").then(scrollToTop);
+    },
   },
   {
     label: "Leistungen & Preise",
     icon: "pi pi-book",
-    command: () => router.push("/service"),
+    command: () => {
+      router.push("/service").then(scrollToTop);
+    },
   },
   {
     label: "Kontakt",
     icon: "pi pi-envelope",
-    command: () => router.push("/contact"),
+    command: () => {
+      router.push("/contact").then(scrollToTop);
+    },
   },
   {
     label: "Impressum",
     icon: "pi pi-info-circle",
-    command: () => router.push("/imprint"),
+    command: () => {
+      router.push("/imprint").then(scrollToTop);
+    },
   },
 ]);
 </script>

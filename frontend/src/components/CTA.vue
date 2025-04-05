@@ -11,7 +11,7 @@
         <a href="tel:+4369914079312" class="cta-button">Jetzt anrufen</a>
       </div>
       <div class="cta-details">
-        <p>Florian Mitter / office@fmw-solutions.at / +43 699 14079312</p>
+        <p>+43 699 14079312 - office@fmw-solutions.at</p>
       </div>
     </section>
   </div>

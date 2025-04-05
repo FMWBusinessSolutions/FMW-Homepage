@@ -62,8 +62,8 @@
 .contact-card {
   background-color: white;
   border-radius: 30px;
-  padding: 2em;
-  padding-top: 1em;
+  padding: 1em;
+  padding-top: 0.5em;
   width: 90%;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -73,37 +73,51 @@
 /* === Header Section === */
 .contact-header {
   margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .contact-company {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 1rem + 1.8vw, 1.8rem);
   font-weight: bold;
-  margin: 0.2em 0;
-  margin-bottom: 0.5em;
+  margin: 0;
+  white-space: nowrap;
+  overflow: visible;
+  text-align: center;
 }
 
 .contact-name {
-  font-size: 1.4rem;
-  margin: 0.2em 0;
+  font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+  font-weight: 600;
+  margin: 0.3em 0 0.8em 0;
+  line-height: 1.8rem;
 }
 
 /* === Contact Information === */
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  align-items: center;
+  gap: 0;
+  text-align: center;
 }
 
 .contact-row {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5em;
+  align-items: center;
+  font-size: clamp(0.95rem, 1.7vw, 1.1rem);
+  line-height: 1.3;
+  margin: 0.1em 0;
 }
 
 .contact-label {
   font-weight: 600;
-  margin-bottom: 0.2em;
+  margin: 0 0.3em 0 0;
   color: #444;
 }
 
@@ -111,6 +125,8 @@
   color: #007bff;
   text-decoration: none;
   font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .contact-link:hover {
