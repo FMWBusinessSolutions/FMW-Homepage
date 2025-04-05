@@ -81,7 +81,7 @@
 }
 
 .contact-company {
-  font-size: calc(1rem + 1.8vw);
+  font-size: clamp(1.2rem, 1rem + 1.8vw, 1.8rem);
   font-weight: bold;
   margin: 0;
   white-space: nowrap;
