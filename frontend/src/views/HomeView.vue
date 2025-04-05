@@ -208,7 +208,7 @@ const onTabOpen = (event) => {
 }
 
 .intro-subtext p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   font-weight: normal;
   color: #333;
   margin: 0;
@@ -216,7 +216,7 @@ const onTabOpen = (event) => {
 
 /* === Accordion Section === */
 .accordion-wrapper {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 1rem auto;
 }
 
@@ -227,18 +227,16 @@ const onTabOpen = (event) => {
 
 /* === Target Group Content === */
 .target-group {
-  padding: 1rem;
+  padding: 0.1rem;
   padding-top: 0;
   border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   background-color: #ffffffcc;
-  margin: 0.5rem 0;
 }
 
 .target-group p {
   margin: 0.2rem 0;
   font-size: clamp(1rem, 2.1vw, 1.1rem);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .target-group-highlight {
@@ -258,9 +256,11 @@ const onTabOpen = (event) => {
   font-size: clamp(0.4rem, 1vw, 0.5rem);
   vertical-align: middle;
   margin-right: 0.3rem;
+  color: black;
 }
 
 .icon-arrow {
   margin-right: 0.2rem;
+  color: black;
 }
 </style>

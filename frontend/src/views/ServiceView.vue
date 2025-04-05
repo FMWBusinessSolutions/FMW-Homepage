@@ -10,14 +10,17 @@
           class="service-item"
         >
           <h3 class="service-title">{{ service.titel }}</h3>
-          <div class="service-content-card">
-            <p class="service-description">
-              {{ service.beschreibung }}
-            </p>
+          <div class="service-content-wrapper">
+            <div class="service-content-card">
+              <p class="service-description">
+                {{ service.beschreibung }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <div class="section-separator"></div>
 
     <section class="pricing-section">
@@ -37,7 +40,7 @@
           </p>
           <p class="pricing-info">
             Bei größeren Projekten mit höherem Planungsaufwand behalten wir uns
-            vor den Aufwand in Rechnung zu stellen. <br />Dies geschieht jedoch
+            vor den Aufwand in Rechnung zu stellen. Dies geschieht jedoch
             ausschließlich nach vorheriger Absprache.
           </p>
           <p class="pricing-info">
@@ -46,6 +49,9 @@
           </p>
           <p class="pricing-info">
             Ab 5 km berechnen wir unseren normalen Stundensatz.
+          </p>
+          <p class="pricing-info">
+            Gerne erstellen wir für Sie ein maßgeschneidertes Angebot.
           </p>
         </div>
       </div>
@@ -75,12 +81,12 @@ const services = [
       "Wir prüfen Ihr Gerät auf Schadsoftware und richten einen verlässlichen Schutz ein – für sicheres Surfen ohne Störungen.",
   },
   {
-    titel: "Wie lege ich Kunden- oder Patientendaten sicher ab?",
+    titel: "Wie lege ich Kundendaten sicher ab?",
     beschreibung:
       "Wir zeigen Ihnen, wie Sie hochsensible Daten DSGVO-konform sicher und zuverlässig speichern und vor fremdem Zugriff schützen können.",
   },
   {
-    titel: "Wie kann ich Datenverlust vermeiden?",
+    titel: "Wie vermeide ich Datenverlust?",
     beschreibung:
       "Wir richten automatische Sicherungen für Fotos, Dokumente und E-Mails ein – lokal oder in der Cloud. Damit nichts mehr verloren geht.",
   },
@@ -117,7 +123,7 @@ const services = [
 <style scoped>
 /* === Page Layout === */
 .page-wrapper {
-  padding: 2em 1em;
+  padding: 1em 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,11 +131,11 @@ const services = [
 
 /* === Section Heading === */
 .section-heading {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2.3vw, 1.7rem);
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0.5em;
-  margin-top: 0em;
+  margin-bottom: 0.8rem;
+  margin-top: 0;
   color: #333;
 }
 
@@ -149,51 +155,61 @@ const services = [
   max-width: 1200px;
 }
 
-/* === Individual Service Cards === */
+/* === Individual Service Items === */
 .service-item {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  height: 100%;
+  align-items: center;
 }
 
+/* === Title outside the card === */
 .service-title {
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 0;
-  margin-bottom: 0.2em;
+  font-size: clamp(1.3rem, 2.3vw, 1.4rem);
+  margin: 0;
+  margin-bottom: 0.5em;
   text-align: center;
-  min-height: 2.5em;
-  padding: 0 0.5em;
+  line-height: 1.3;
+  min-height: 3.3em;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0.3em;
+}
+
+/* === Wrapper to stretch card height === */
+.service-content-wrapper {
+  width: 100%;
+  display: flex;
+  height: 100%;
 }
 
 .service-content-card {
   background-color: white;
   border-radius: 30px;
-  padding: 1em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
   width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: left;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-grow: 1;
+  height: 100%;
 }
 
 .service-description {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   line-height: 1.4em;
+  padding-bottom: 0.3rem;
 }
 
-/* === Section Divider === */
+/* === Divider === */
 .section-separator {
-  width: 80%;
+  width: 90%;
   height: 2px;
   background-color: #000;
-  margin: 0em 0;
+  margin: 0;
 }
 
 /* === Pricing Section === */
@@ -217,22 +233,23 @@ const services = [
 }
 
 .pricing-header {
-  margin-bottom: 1em;
+  margin-bottom: 0.5rem;
 }
 
 .pricing-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   font-weight: bold;
   text-align: center;
+  margin: 0.5rem;
 }
 
 .pricing-details {
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.2em;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
 }
 
 .pricing-info {
-  margin-bottom: 0.6em;
+  line-height: 1.25rem;
+  margin: 0.8rem;
 }
 </style>
