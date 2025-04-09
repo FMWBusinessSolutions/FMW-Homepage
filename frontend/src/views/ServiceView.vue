@@ -1,6 +1,11 @@
 <template>
   <div class="page-wrapper">
-    <h2 class="section-heading"><u>Ihre Fragen, unsere Lösungen</u></h2>
+    <h2 class="section-heading">
+      <u
+        >Ihre Fragen. <br />
+        Unsere Lösungen.</u
+      >
+    </h2>
 
     <section class="service-section">
       <div class="service-grid">
@@ -32,7 +37,7 @@
         </div>
         <div class="pricing-details">
           <p class="pricing-info">
-            Unser Stundensatz für Dienstleistungen beträgt 68 € inkl. MwSt
+            Unser Stundensatz für Dienstleistungen beträgt 68 € inkl. MwSt.
           </p>
           <p class="pricing-info">
             Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung
