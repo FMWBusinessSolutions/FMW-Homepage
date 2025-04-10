@@ -81,11 +81,13 @@
 }
 
 .contact-company {
-  font-size: clamp(1.2rem, 1rem + 1.8vw, 1.8rem);
+  font-size: clamp(1rem, 5vw, 1.8rem);
   font-weight: bold;
   margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: unset;
   white-space: nowrap;
-  overflow: visible;
   text-align: center;
 }
 
