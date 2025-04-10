@@ -1,4 +1,34 @@
 <template>
+  <section class="pricing-section">
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <h3 class="pricing-title">
+          <u>Wir legen Wert auf Transparenz und faire Preise.</u>
+        </h3>
+      </div>
+      <div class="pricing-details">
+        <p class="pricing-info">
+          Unser Standard-Stundensatz für Dienstleistungen beträgt 68 € inkl.
+          MwSt.
+        </p>
+        <p class="pricing-info">
+          Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung sind
+          grundsätzlich kostenlos.
+        </p>
+        <p class="pricing-info">
+          Bei größeren Projekten mit höherem Planungsaufwand behalten wir uns
+          vor den Aufwand in Rechnung zu stellen. Dies geschieht jedoch
+          ausschließlich nach vorheriger Absprache.
+        </p>
+        <p class="pricing-info">
+          Gerne erstellen wir für Sie ein maßgeschneidertes Angebot.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-separator"></div>
+
   <div class="page-wrapper">
     <h2 class="section-heading">
       <u
@@ -22,42 +52,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-separator"></div>
-
-    <section class="pricing-section">
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <h3 class="pricing-title">
-            <u>Wir legen Wert auf Transparenz und faire Preise.</u>
-          </h3>
-        </div>
-        <div class="pricing-details">
-          <p class="pricing-info">
-            Unser Stundensatz für Dienstleistungen beträgt 68 € inkl. MwSt.
-          </p>
-          <p class="pricing-info">
-            Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung
-            sind grundsätzlich kostenlos.
-          </p>
-          <p class="pricing-info">
-            Bei größeren Projekten mit höherem Planungsaufwand behalten wir uns
-            vor den Aufwand in Rechnung zu stellen. Dies geschieht jedoch
-            ausschließlich nach vorheriger Absprache.
-          </p>
-          <p class="pricing-info">
-            Im Umkreis von 5 km um Waizenkirchen berechnen wir keine
-            Fahrtkosten.
-          </p>
-          <p class="pricing-info">
-            Ab 5 km berechnen wir unseren normalen Stundensatz.
-          </p>
-          <p class="pricing-info">
-            Gerne erstellen wir für Sie ein maßgeschneidertes Angebot.
-          </p>
         </div>
       </div>
     </section>
