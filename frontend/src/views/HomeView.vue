@@ -105,14 +105,14 @@
         </section>
       </AccordionTab>
     </Accordion>
-
     <!-- Internal link to services -->
-    <router-link
-      to="/service"
-      class="underline text-blue-600 block text-center mt-6"
-    >
-      Unsere Leistungen im Überblick
-    </router-link>
+    <div class="link-button-wrapper">
+      <Button
+        label="Unsere Leistungen im Überblick"
+        class="p-button p-button-primary p-button-rounded"
+        @click="router.push('/service')"
+      />
+    </div>
 
     <!-- CTA section -->
     <CTA />
@@ -126,6 +126,10 @@ import AccordionTab from "primevue/accordiontab";
 import CTA from "@/components/CTA.vue";
 import { ref } from "vue";
 import { useHead } from "@vueuse/head";
+import Button from "primevue/button";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 // Accordion tab references
 const headerPrivate = ref(null);
@@ -240,5 +244,17 @@ useHead({
 .icon-arrow {
   margin-right: 0.2rem;
   color: black;
+}
+
+.link-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.link-button-wrapper .p-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 </style>
