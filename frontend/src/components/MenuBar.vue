@@ -15,49 +15,40 @@
   </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import Menubar from "primevue/menubar";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const scrollToTop = () => {
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, 100);
-};
-
 const items = ref([
   {
     label: "Home",
     icon: "pi pi-home",
     command: () => {
-      router.push("/").then(scrollToTop);
+      router.push("/");
     },
   },
   {
     label: "Leistungen & Preise",
     icon: "pi pi-book",
     command: () => {
-      router.push("/service").then(scrollToTop);
+      router.push("/service");
     },
   },
   {
     label: "Kontakt",
     icon: "pi pi-envelope",
     command: () => {
-      router.push("/contact").then(scrollToTop);
+      router.push("/contact");
     },
   },
   {
     label: "Impressum",
     icon: "pi pi-info-circle",
     command: () => {
-      router.push("/imprint").then(scrollToTop);
+      router.push("/imprint");
     },
   },
 ]);

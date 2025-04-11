@@ -4,7 +4,6 @@ import Service from "@/views/ServiceView.vue";
 import ContactView from "@/views/ContactView.vue";
 import ImprintView from "@/views/ImprintView.vue";
 
-
 const routes = [
   { path: "/", name: "Home", component: HomeView },
   { path: "/service", name: "Service", component: Service },
@@ -15,6 +14,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { top: 0, behavior: "smooth" };
+  },
 });
 
 export default router;

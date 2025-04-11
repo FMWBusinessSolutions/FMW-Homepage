@@ -36,6 +36,7 @@
             <i class="pi pi-circle-on icon-bullet"></i> Sicherheit für Dokumente
             und Fotos gewünscht?
           </p>
+          <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
@@ -63,6 +64,7 @@
             <i class="pi pi-circle-on icon-bullet"></i> Alles aus einer Hand:
             Hardware, Software & Einrichtung
           </p>
+          <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
@@ -88,10 +90,12 @@
             <i class="pi pi-circle-on icon-bullet"></i> Automatisierung mit
             Power Automate & Co?
           </p>
+          <br />
           <p class="target-group-highlight">
             <strong>Unsere Kernkompetenz:</strong><br />
             SharePoint, Teams, Power Automate, Power BI, Power Apps
           </p>
+          <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
@@ -100,18 +104,19 @@
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Praxisnahe Digitalisierung ohne Zusatzsoftware
+            Praxisnahe Digitalisierungslösungen ohne zusätzliche Software
           </p>
         </section>
       </AccordionTab>
     </Accordion>
     <!-- Internal link to services -->
     <div class="link-button-wrapper">
-      <Button
-        label="Unsere Leistungen im Überblick"
+      <RouterLink
+        to="/service"
         class="p-button p-button-primary p-button-rounded"
-        @click="router.push('/service')"
-      />
+      >
+        Unsere Leistungen im Überblick
+      </RouterLink>
     </div>
 
     <!-- CTA section -->
@@ -128,6 +133,8 @@ import { ref } from "vue";
 import { useHead } from "@vueuse/head";
 import Button from "primevue/button";
 import { useRouter } from "vue-router";
+import { nextTick } from "vue";
+import { RouterLink } from "vue-router";
 
 const router = useRouter();
 
@@ -256,5 +263,6 @@ useHead({
   padding: 0.75rem 1.5rem;
   font-size: 1.05rem;
   font-weight: 600;
+  color: white;
 }
 </style>
