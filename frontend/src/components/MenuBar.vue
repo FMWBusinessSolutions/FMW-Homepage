@@ -1,18 +1,18 @@
 <template>
-  <div class="menu-container">
+  <nav class="menu-container" aria-label="Hauptnavigation">
     <div class="menubar-content">
-      <div class="menubar-wrapper">
+      <div class="menubar-wrapper" role="menubar">
         <Menubar :model="items" class="custom-menubar" />
       </div>
-      <div class="logo-wrapper">
+      <div class="logo-wrapper" role="banner">
         <img
           src="@/components/schrift-solo-transparent-small.png"
-          alt="Logo"
+          alt="FMW – Business Solutions Logo"
           class="logo-img"
         />
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script setup>

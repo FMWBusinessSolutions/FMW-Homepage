@@ -1,12 +1,12 @@
 <template>
-  <div class="contact-container">
-    <div class="contact-card">
-      <div class="contact-header">
-        <h2 class="contact-company">FMW – Business Solutions</h2>
+  <main class="contact-container" aria-label="Kontaktinformationen">
+    <section class="contact-card">
+      <header class="contact-header">
+        <h1 class="contact-company">FMW – Business Solutions</h1>
         <h2 class="contact-name">Florian Mitter</h2>
-      </div>
+      </header>
 
-      <div class="contact-info">
+      <address class="contact-info">
         <div class="contact-row">
           <span class="contact-label">Telefon:</span>
           <a href="tel:+4369914079312" class="contact-link"
@@ -27,6 +27,7 @@
             href="https://fmw-solutions.at/"
             class="contact-link"
             target="_blank"
+            rel="noopener"
             >fmw-solutions.at</a
           >
         </div>
@@ -37,16 +38,74 @@
             href="https://linkedin.com/company/fmw-businesssolutions/"
             class="contact-link"
             target="_blank"
+            rel="noopener"
+            >FMW – Business Solutions</a
           >
-            FMW – Business Solutions
-          </a>
         </div>
-      </div>
-    </div>
-  </div>
+      </address>
+    </section>
+  </main>
 </template>
 
-<script setup></script>
+<script setup>
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Kontakt | FMW – Business Solutions",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Kontaktiere FMW – Business Solutions: E-Mail, Telefonnummer, LinkedIn & Adresse. Beratung & IT-Service für EPUs und KMUs aus Oberösterreich.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Kontakt, Florian Mitter, FMW, EPU, KMU, Digitalisierung, IT-Beratung, Oberösterreich, Microsoft 365, Power Automate, LinkedIn",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "author",
+      content: "Florian Mitter",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://fmw-solutions.at/contact",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "FMW – Business Solutions",
+        image: "https://fmw-solutions.at/logo.png",
+        url: "https://fmw-solutions.at/",
+        telephone: "+4369914079312",
+        email: "office@fmw-solutions.at",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "AT",
+          addressRegion: "Oberösterreich",
+        },
+        sameAs: ["https://linkedin.com/company/fmw-businesssolutions/"],
+        founder: {
+          "@type": "Person",
+          name: "Florian Mitter",
+        },
+        description:
+          "FMW – Business Solutions bietet IT-Beratung, Digitalisierung und Prozessoptimierung für EPU und KMU in Oberösterreich.",
+      }),
+    },
+  ],
+});
+</script>
 
 <style scoped>
 /* === Contact Container === */

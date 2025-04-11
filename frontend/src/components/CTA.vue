@@ -1,19 +1,36 @@
 <template>
-  <div class="cta-container">
-    <section class="cta-header">
+  <div class="cta-container" aria-label="Kontakt Call-to-Action">
+    <section
+      class="cta-header"
+      itemscope
+      itemtype="https://schema.org/Organization"
+    >
+      <h2 style="display: none">Unverbindliches Erstgespräch anfragen</h2>
       <p>
         Kontaktieren Sie uns jetzt gleich für ein unverbindliches Erstgespräch.
       </p>
       <div class="cta-buttons">
-        <a href="mailto:office@fmw-solutions.at" class="cta-button"
-          >E-Mail schreiben</a
+        <a
+          href="mailto:office@fmw-solutions.at"
+          class="cta-button"
+          itemprop="email"
+          rel="noopener"
         >
-        <a href="tel:+4369914079312" class="cta-button">Jetzt anrufen</a>
+          E-Mail schreiben
+        </a>
+        <a
+          href="tel:+4369914079312"
+          class="cta-button"
+          itemprop="telephone"
+          rel="noopener"
+        >
+          Jetzt anrufen
+        </a>
       </div>
       <div class="cta-details">
         <p>
-          +43 699 14079312 <br />
-          office@fmw-solutions.at
+          <span itemprop="telephone">+43 699 14079312</span> <br />
+          <span itemprop="email">office@fmw-solutions.at</span>
         </p>
       </div>
     </section>
