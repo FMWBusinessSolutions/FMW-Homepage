@@ -6,7 +6,7 @@
       </div>
       <div class="logo-wrapper" role="banner">
         <img
-          src="@/components/schrift-solo-transparent-small.png"
+          src="/schrift-solo-transparent-small.png"
           alt="FMW – Business Solutions Logo"
           class="logo-img"
         />
