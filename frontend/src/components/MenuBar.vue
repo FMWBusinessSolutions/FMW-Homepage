@@ -2,11 +2,11 @@
   <nav class="menu-container" aria-label="Hauptnavigation">
     <div class="menubar-content">
       <div class="menubar-wrapper" role="menubar">
-        <Menubar :model="items" class="custom-menubar" />
+        <Menubar :model="enhancedItems" class="custom-menubar" />
       </div>
       <div class="logo-wrapper" role="banner">
         <img
-          src="@/components/schrift-solo-transparent-small.png"
+          src="/schrift-solo-transparent-small.png"
           alt="FMW – Business Solutions Logo"
           class="logo-img"
         />
@@ -16,42 +16,34 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Menubar from "primevue/menubar";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
+const route = useRoute();
 
+// items
 const items = ref([
-  {
-    label: "Home",
-    icon: "pi pi-home",
-    command: () => {
-      router.push("/");
-    },
-  },
-  {
-    label: "Leistungen & Preise",
-    icon: "pi pi-book",
-    command: () => {
-      router.push("/service");
-    },
-  },
-  {
-    label: "Kontakt",
-    icon: "pi pi-envelope",
-    command: () => {
-      router.push("/contact");
-    },
-  },
-  {
-    label: "Impressum",
-    icon: "pi pi-info-circle",
-    command: () => {
-      router.push("/imprint");
-    },
-  },
+  { label: "Home", icon: "pi pi-home", path: "/" },
+  { label: "Für Private", icon: "pi pi-book", path: "/service" },
+  { label: "Für EPU", icon: "pi pi-book", path: "/service-epu" },
+  { label: "Für KMU", icon: "pi pi-book", path: "/service-kmu" },
+  { label: "Kontakt", icon: "pi pi-envelope", path: "/contact" },
+  { label: "Impressum", icon: "pi pi-info-circle", path: "/imprint" },
 ]);
+
+// activeClass
+const enhancedItems = computed(() =>
+  items.value.map((item) => ({
+    ...item,
+    command: () => router.push(item.path),
+    class:
+      route.path === item.path || route.path.startsWith(item.path + "/")
+        ? "active-menu-item"
+        : "",
+  }))
+);
 </script>
 
 <style scoped>
@@ -135,6 +127,15 @@ const items = ref([
   border-radius: 1rem;
 }
 
+/* === active menu element === */
+::v-deep(.active-menu-item .p-menuitem-link) {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  font-weight: bold;
+  color: #cc5200;
+}
+
+/* === icon size === */
 ::v-deep(.p-menubar-button svg) {
   width: 1.5em;
   height: 1.5em;

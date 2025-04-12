@@ -40,7 +40,7 @@
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Leistungen & Preise"
+              label="Zu unseren Leistungen"
               href="/service"
               internal
             />
@@ -75,8 +75,8 @@
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Leistungen & Preise"
-              href="/service"
+              label="Zu unseren Leistungen"
+              href="/service-epu"
               internal
             />
           </div>
@@ -116,6 +116,13 @@
             ><i class="pi pi-chevron-right icon-arrow"></i>
             Praxisnahe Digitalisierungslösungen ohne zusätzliche Software
           </p>
+          <div class="button-row">
+            <AppLinkButton
+              label="Zu unseren Leistungen"
+              href="/service-kmu"
+              internal
+            />
+          </div>
         </section>
       </AccordionTab>
     </Accordion>
