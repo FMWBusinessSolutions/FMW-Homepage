@@ -1,63 +1,54 @@
 <template>
-  <div class="menu-container">
+  <nav class="menu-container" aria-label="Hauptnavigation">
     <div class="menubar-content">
-      <div class="menubar-wrapper">
+      <div class="menubar-wrapper" role="menubar">
         <Menubar :model="items" class="custom-menubar" />
       </div>
-      <div class="logo-wrapper">
+      <div class="logo-wrapper" role="banner">
         <img
           src="@/components/schrift-solo-transparent-small.png"
-          alt="Logo"
+          alt="FMW – Business Solutions Logo"
           class="logo-img"
         />
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import Menubar from "primevue/menubar";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const scrollToTop = () => {
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, 100);
-};
-
 const items = ref([
   {
     label: "Home",
     icon: "pi pi-home",
     command: () => {
-      router.push("/").then(scrollToTop);
+      router.push("/");
     },
   },
   {
     label: "Leistungen & Preise",
     icon: "pi pi-book",
     command: () => {
-      router.push("/service").then(scrollToTop);
+      router.push("/service");
     },
   },
   {
     label: "Kontakt",
     icon: "pi pi-envelope",
     command: () => {
-      router.push("/contact").then(scrollToTop);
+      router.push("/contact");
     },
   },
   {
     label: "Impressum",
     icon: "pi pi-info-circle",
     command: () => {
-      router.push("/imprint").then(scrollToTop);
+      router.push("/imprint");
     },
   },
 ]);

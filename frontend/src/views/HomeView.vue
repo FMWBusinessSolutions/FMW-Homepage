@@ -1,148 +1,128 @@
 <template>
-  <div class="home-container">
+  <main class="home-container">
     <section class="intro-section">
-      <p class="intro-title">
-        <u>Willkommen bei FMW – Business Solutions</u>
-      </p>
-      <div class="intro-subtext">
-        <p>
-          Ihr Partner im Bereich Hardware, Software, IT-Infrastruktur,
-          Digitalisierung und KI.<br />
-          Für Privatpersonen, Selbstständige und kleine bis mittelgroße
-          Unternehmen.
-        </p>
-      </div>
+      <h1 class="intro-title">
+        IT-Dienstleitungen für Privatpersonen, Selbstständige und KMUs
+      </h1>
     </section>
 
     <Accordion class="accordion-wrapper" @tab-open="onTabOpen">
+      <!-- Target group: Private individuals -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabPrivate"
-            >Für Privatpersonen</span
-          >
+          <span class="accordion-title" ref="tabPrivate">
+            Für Privatpersonen
+          </span>
         </template>
-        <div class="target-group" id="private" ref="headerPrivate">
+        <section class="target-group" id="private" ref="headerPrivate">
+          <h2>IT-Hilfe für Privatpersonen</h2>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Ihr Computer ist defekt
-            oder nach vielen Jahren einfach zu langsam?
+            <i class="pi pi-circle-on icon-bullet"></i> Ihr Computer ist defekt
+            oder zu langsam?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Probleme mit dem WLAN
-            oder dem E-Mail-Account?
+            <i class="pi pi-circle-on icon-bullet"></i> WLAN oder E-Mail
+            funktionieren nicht richtig?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Festplatte oder
-            Speicherkarte defekt und Sie benötigen eine Datenrettung?
+            <i class="pi pi-circle-on icon-bullet"></i> Sie benötigen eine
+            Datenrettung oder Geräteberatung?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Ihr Kind braucht einen
-            passenden Laptop für die Schule?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie wollen Ihre
-            persönlichen Dokumente oder Fotos sicher aufbewahren?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie möchten ein neues
-            Gerät und benötigen eine Beratung?
+            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten Dokumente
+            oder Fotos sicher aufbewahren?
           </p>
           <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Wir helfen Ihnen persönlich & individuell und finden für Sie die
-            passende Lösung.
+            Wir helfen Ihnen persönlich & individuell.
           </p>
-        </div>
+          <div class="button-row">
+            <AppLinkButton
+              label="Leistungen & Preise"
+              href="/service"
+              internal
+            />
+          </div>
+        </section>
       </AccordionTab>
 
+      <!-- Target group: Self-employed -->
       <AccordionTab>
         <template #header>
           <span class="accordion-title" ref="tabEPU">Für Selbstständige</span>
         </template>
-        <div class="target-group" id="epu" ref="headerEPU">
+        <section class="target-group" id="epu" ref="headerEPU">
+          <h2>IT-Lösungen für Selbstständige und EPUs</h2>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie sind selbstständig
-            oder wollen es werden?
+            <i class="pi pi-circle-on icon-bullet"></i> Professioneller Auftritt
+            mit Domain & Mailadresse?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie möchten einen
-            professionellen Online-Auftritt mit eigener Homepage und
-            Mailadresse?
+            <i class="pi pi-circle-on icon-bullet"></i> DSGVO-konforme
+            Datenverarbeitung?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Am besten gleich mit
-            Ihrer eigenen Domain – @IhrUnternehmen.at?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie wollen hochsensible
-            Kunden- oder Patientendaten sicher & DSGVO-konform aufbewahren?
+            <i class="pi pi-circle-on icon-bullet"></i> Alles aus einer Hand:
+            Hardware, Software & Einrichtung
           </p>
           <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Wir haben das IT-Komplettpaket für Ihr Unternehmen
+            Komplettlösungen für Ihre Selbstständigkeit
           </p>
-          <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i
-            ><i class="pi pi-chevron-right icon-arrow"></i>
-            Hardware, Software, Homepage sowie die Einrichtung aller notwendigen
-            Geräte und und Accounts.
-          </p>
-        </div>
+          <div class="button-row">
+            <AppLinkButton
+              label="Leistungen & Preise"
+              href="/service"
+              internal
+            />
+          </div>
+        </section>
       </AccordionTab>
 
+      <!-- Target group: SMEs -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabKMU"
-            >Für kleine und mittlere Unternehmen</span
-          >
+          <span class="accordion-title" ref="tabKMU">
+            Für kleine und mittlere Unternehmen
+          </span>
         </template>
-        <div class="target-group" id="kmu" ref="headerKMU">
-          <p>Sie nutzen Microsoft Office365 in Ihrem Unternehmen?</p>
-          <br />
+        <section class="target-group" id="kmu" ref="headerKMU">
+          <h2>Digitalisierung & Prozessoptimierung für KMUs</h2>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie möchten Zeit sparen,
-            Prozesse vereinfachen und Ressourcen effizienter nutzen?
+            <i class="pi pi-circle-on icon-bullet"></i> Mehr aus Microsoft 365
+            herausholen?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i>Sie wünschen sich
-            einfache digitale Lösungen – ohne teure Zusatzsoftware?
+            <i class="pi pi-circle-on icon-bullet"></i> Automatisierung mit
+            Power Automate & Co?
           </p>
           <br />
           <p class="target-group-highlight">
-            <strong
-              >Dann holen Sie mehr aus dem heraus, wofür Sie ohnehin schon
-              bezahlen:</strong
-            ><br />
-            Microsoft Teams, SharePoint, Power Automate, Power BI, Power Apps &
-            Co.
+            <strong>Unsere Kernkompetenz:</strong><br />
+            SharePoint, Teams, Power Automate, Power BI, Power Apps
           </p>
           <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Über 20 Jahre Erfahrung in Maschinenbau & Prozessoptimierung
+            20+ Jahre Erfahrung im Maschinenbau & in der Prozessoptimierung
           </p>
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Analyse, Optimierung und Digitalisierung Ihrer internen Abläufe –
-            praxisnah und messbar
+            Praxisnahe Digitalisierungslösungen ohne zusätzliche Software
           </p>
-          <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i
-            ><i class="pi pi-chevron-right icon-arrow"></i>
-            Individuelle Lösungen mit der Microsoft Power Platform – ohne
-            zusätzliche Software
-          </p>
-        </div>
+        </section>
       </AccordionTab>
     </Accordion>
 
+    <!-- CTA section -->
     <CTA />
-  </div>
+  </main>
 </template>
 
 <script setup>
@@ -150,24 +130,26 @@ import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import CTA from "@/components/CTA.vue";
 import { ref } from "vue";
+import { useHead } from "@vueuse/head";
+import AppLinkButton from "@/components/AppLinkButton.vue";
+import { useRouter } from "vue-router";
 
-// Refs to content containers
+const router = useRouter();
+
+// Accordion tab references
 const headerPrivate = ref(null);
 const headerEPU = ref(null);
 const headerKMU = ref(null);
-
-// Refs to visible tab header elements
 const tabPrivate = ref(null);
 const tabEPU = ref(null);
 const tabKMU = ref(null);
 
-// Scroll to the visible tab header when a section is expanded
+// Scroll behavior when opening accordion tab
 const onTabOpen = (event) => {
   const index = event.index ?? 0;
   const tabHeaderRefs = [tabPrivate, tabEPU, tabKMU];
   const target = tabHeaderRefs[index];
 
-  // Delay to wait for the accordion animation to finish
   setTimeout(() => {
     const el = target?.value;
     const menu = document.getElementById("menu-bar");
@@ -184,10 +166,27 @@ const onTabOpen = (event) => {
     }
   }, 500);
 };
+
+// SEO metadata
+useHead({
+  title: "FMW – Digitalisierung & Beratung für KMU in Oberösterreich",
+  meta: [
+    {
+      name: "description",
+      content:
+        "FMW – Business Solutions unterstützt Selbstständige & KMUs bei der Nutzung von Microsoft 365, Power Automate und SharePoint – effizient und praxisnah.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Digitalisierung, Beratung, KMU, EPU, Microsoft 365, Power Automate, SharePoint, Oberösterreich, IT-Service, Prozessoptimierung",
+    },
+  ],
+});
 </script>
 
 <style scoped>
-/* === Home Container === */
+/* === Layout Containers === */
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -202,19 +201,12 @@ const onTabOpen = (event) => {
 }
 
 .intro-title {
-  font-size: clamp(1.4rem, 2.3vw, 1.7rem);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.intro-subtext p {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  font-weight: normal;
-  color: #333;
-  margin: 0;
-}
-
-/* === Accordion Section === */
+/* === Accordion Styling === */
 .accordion-wrapper {
   width: 90%;
   margin: 0 auto 1rem auto;
@@ -225,10 +217,9 @@ const onTabOpen = (event) => {
   font-weight: bold;
 }
 
-/* === Target Group Content === */
+/* === Target Group Sections === */
 .target-group {
-  padding: 0.1rem;
-  padding-top: 0;
+  padding: 0.1rem 0 0 0;
   border-radius: 20px;
   background-color: #ffffffcc;
 }
@@ -251,7 +242,7 @@ const onTabOpen = (event) => {
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-/* === Icons === */
+/* === Icon Styling === */
 .icon-bullet {
   font-size: clamp(0.4rem, 1vw, 0.5rem);
   vertical-align: middle;
@@ -262,5 +253,15 @@ const onTabOpen = (event) => {
 .icon-arrow {
   margin-right: 0.2rem;
   color: black;
+}
+
+/* === Button Group === */
+.button-row {
+  display: flex;
+  justify-content: left;
+  padding-left: 0.5em;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 </style>

@@ -1,24 +1,37 @@
 <template>
-  <div class="cta-container">
-    <section class="cta-header">
+  <div class="cta-container" aria-label="Kontakt Call-to-Action">
+    <section
+      class="cta-header"
+      itemscope
+      itemtype="https://schema.org/Organization"
+    >
+      <h2 style="display: none">Unverbindliches Erstgespräch anfragen</h2>
       <p>
         Kontaktieren Sie uns jetzt gleich für ein unverbindliches Erstgespräch.
       </p>
-      <div class="cta-buttons">
-        <a href="mailto:office@fmw-solutions.at" class="cta-button"
-          >E-Mail schreiben</a
-        >
-        <a href="tel:+4369914079312" class="cta-button">Jetzt anrufen</a>
+
+      <div class="button-row">
+        <AppLinkButton
+          label="E-Mail schreiben"
+          href="mailto:office@fmw-solutions.at"
+        />
+        <AppLinkButton label="Anrufen" href="tel:+4369914079312" />
       </div>
+
       <div class="cta-details">
         <p>
-          +43 699 14079312 <br />
-          office@fmw-solutions.at
+          <span itemprop="email">office@fmw-solutions.at</span>
+          <br />
+          <span itemprop="telephone">+43 699 14079312</span>
         </p>
       </div>
     </section>
   </div>
 </template>
+
+<script setup>
+import AppLinkButton from "@/components/AppLinkButton.vue";
+</script>
 
 <style scoped>
 /* === CTA Container === */
@@ -37,33 +50,12 @@
   display: inline-block;
 }
 
-/* === CTA Buttons === */
-.cta-buttons {
+.button-row {
   display: flex;
   justify-content: center;
+  padding-left: 2em;
   gap: 1rem;
   flex-wrap: wrap;
-  margin: 1rem 0;
-}
-
-/* === Button Style === */
-.cta-button {
-  padding: 0.6rem 1.5rem;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #0056b3;
-}
-
-/* === CTA Contact Details === */
-.cta-details p {
-  font-size: 1rem;
-  color: #333;
+  margin-top: 1rem;
 }
 </style>
