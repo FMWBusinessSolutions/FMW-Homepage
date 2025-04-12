@@ -50,6 +50,7 @@
 <script setup>
 import { useHead } from "@vueuse/head";
 
+// SEO metadata
 useHead({
   title: "Kontakt | FMW – Business Solutions",
   meta: [
@@ -108,7 +109,7 @@ useHead({
 </script>
 
 <style scoped>
-/* === Contact Container === */
+/* === Layout Container === */
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -117,12 +118,11 @@ useHead({
   padding: 2em 1em;
 }
 
-/* === Contact Card === */
+/* === Contact Card Styling === */
 .contact-card {
   background-color: white;
   border-radius: 30px;
-  padding: 1em;
-  padding-top: 0.5em;
+  padding: 1em 1em 1.5em;
   width: 90%;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -135,7 +135,6 @@ useHead({
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -143,21 +142,17 @@ useHead({
   font-size: clamp(1rem, 5vw, 1.8rem);
   font-weight: bold;
   margin: 0;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: unset;
   white-space: nowrap;
-  text-align: center;
 }
 
 .contact-name {
   font-size: clamp(1.1rem, 3.5vw, 1.4rem);
   font-weight: 600;
-  margin: 0.3em 0 0.8em 0;
+  margin: 0.3em 0 0.8em;
   line-height: 1.8rem;
 }
 
-/* === Contact Information === */
+/* === Info Section === */
 .contact-info {
   display: flex;
   flex-direction: column;

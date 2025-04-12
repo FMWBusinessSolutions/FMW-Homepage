@@ -1,22 +1,18 @@
 <template>
-  <!-- Main page container -->
   <main class="home-container">
-    <!-- Intro section -->
     <section class="intro-section">
       <h1 class="intro-title">
-        Digitalisierung & Beratung für Privatpersonen, Selbstständige und KMUs
-        in Oberösterreich
+        IT-Dienstleitungen für Privatpersonen, Selbstständige und KMUs
       </h1>
     </section>
 
-    <!-- Accordion target groups -->
     <Accordion class="accordion-wrapper" @tab-open="onTabOpen">
       <!-- Target group: Private individuals -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabPrivate"
-            >Für Privatpersonen</span
-          >
+          <span class="accordion-title" ref="tabPrivate">
+            Für Privatpersonen
+          </span>
         </template>
         <section class="target-group" id="private" ref="headerPrivate">
           <h2>IT-Hilfe für Privatpersonen</h2>
@@ -26,22 +22,29 @@
           </p>
           <p>
             <i class="pi pi-circle-on icon-bullet"></i> WLAN oder E-Mail
-            funktioniert nicht richtig?
+            funktionieren nicht richtig?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Sie benötigen
+            <i class="pi pi-circle-on icon-bullet"></i> Sie benötigen eine
             Datenrettung oder Geräteberatung?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Sicherheit für Dokumente
-            und Fotos gewünscht?
+            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten Dokumente
+            oder Fotos sicher aufbewahren?
           </p>
           <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Wir helfen persönlich & individuell mit passenden IT-Lösungen.
+            Wir helfen Ihnen persönlich & individuell.
           </p>
+          <div class="button-row">
+            <AppLinkButton
+              label="Leistungen & Preise"
+              href="/service"
+              internal
+            />
+          </div>
         </section>
       </AccordionTab>
 
@@ -70,15 +73,22 @@
             ><i class="pi pi-chevron-right icon-arrow"></i>
             Komplettlösungen für Ihre Selbstständigkeit
           </p>
+          <div class="button-row">
+            <AppLinkButton
+              label="Leistungen & Preise"
+              href="/service"
+              internal
+            />
+          </div>
         </section>
       </AccordionTab>
 
       <!-- Target group: SMEs -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabKMU"
-            >Für kleine und mittlere Unternehmen</span
-          >
+          <span class="accordion-title" ref="tabKMU">
+            Für kleine und mittlere Unternehmen
+          </span>
         </template>
         <section class="target-group" id="kmu" ref="headerKMU">
           <h2>Digitalisierung & Prozessoptimierung für KMUs</h2>
@@ -109,15 +119,6 @@
         </section>
       </AccordionTab>
     </Accordion>
-    <!-- Internal link to services -->
-    <div class="link-button-wrapper">
-      <RouterLink
-        to="/service"
-        class="p-button p-button-primary p-button-rounded"
-      >
-        Unsere Leistungen im Überblick
-      </RouterLink>
-    </div>
 
     <!-- CTA section -->
     <CTA />
@@ -125,16 +126,13 @@
 </template>
 
 <script setup>
-// components
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import CTA from "@/components/CTA.vue";
 import { ref } from "vue";
 import { useHead } from "@vueuse/head";
-import Button from "primevue/button";
+import AppLinkButton from "@/components/AppLinkButton.vue";
 import { useRouter } from "vue-router";
-import { nextTick } from "vue";
-import { RouterLink } from "vue-router";
 
 const router = useRouter();
 
@@ -146,7 +144,7 @@ const tabPrivate = ref(null);
 const tabEPU = ref(null);
 const tabKMU = ref(null);
 
-// Scroll behavior for accordion tabs
+// Scroll behavior when opening accordion tab
 const onTabOpen = (event) => {
   const index = event.index ?? 0;
   const tabHeaderRefs = [tabPrivate, tabEPU, tabKMU];
@@ -169,7 +167,7 @@ const onTabOpen = (event) => {
   }, 500);
 };
 
-// SEO head data
+// SEO metadata
 useHead({
   title: "FMW – Digitalisierung & Beratung für KMU in Oberösterreich",
   meta: [
@@ -188,6 +186,7 @@ useHead({
 </script>
 
 <style scoped>
+/* === Layout Containers === */
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -195,6 +194,7 @@ useHead({
   box-sizing: border-box;
 }
 
+/* === Intro Section === */
 .intro-section {
   text-align: center;
   margin-bottom: 2rem;
@@ -206,6 +206,7 @@ useHead({
   margin-bottom: 0.5rem;
 }
 
+/* === Accordion Styling === */
 .accordion-wrapper {
   width: 90%;
   margin: 0 auto 1rem auto;
@@ -216,9 +217,9 @@ useHead({
   font-weight: bold;
 }
 
+/* === Target Group Sections === */
 .target-group {
-  padding: 0.1rem;
-  padding-top: 0;
+  padding: 0.1rem 0 0 0;
   border-radius: 20px;
   background-color: #ffffffcc;
 }
@@ -241,6 +242,7 @@ useHead({
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
+/* === Icon Styling === */
 .icon-bullet {
   font-size: clamp(0.4rem, 1vw, 0.5rem);
   vertical-align: middle;
@@ -253,16 +255,13 @@ useHead({
   color: black;
 }
 
-.link-button-wrapper {
+/* === Button Group === */
+.button-row {
   display: flex;
-  justify-content: center;
-  margin: 2.5rem 0 1.5rem;
-}
-
-.link-button-wrapper .p-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: white;
+  justify-content: left;
+  padding-left: 0.5em;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 </style>

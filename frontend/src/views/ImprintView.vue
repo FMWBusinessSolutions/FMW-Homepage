@@ -70,6 +70,7 @@
 </template>
 
 <script setup>
+// SEO metadata
 import { useHead } from "@vueuse/head";
 
 useHead({
@@ -143,7 +144,7 @@ useHead({
   padding-top: 3px;
 }
 
-/* === Content Layout === */
+/* === Centered Content Box === */
 .content {
   display: flex;
   flex-direction: column;
@@ -151,7 +152,7 @@ useHead({
   justify-content: center;
 }
 
-/* === Main Card === */
+/* === Card Box === */
 .card {
   margin-top: 0.3em;
   background-color: white;
@@ -184,7 +185,7 @@ useHead({
   line-height: 1.2;
 }
 
-/* === Privacy & Legal Section === */
+/* === Privacy Sections === */
 .privacy-section {
   font-size: 0.95rem;
   color: #333;

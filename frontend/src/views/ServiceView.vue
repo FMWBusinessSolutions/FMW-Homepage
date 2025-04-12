@@ -20,13 +20,7 @@
             vor den Aufwand in Rechnung zu stellen. Dies geschieht jedoch
             ausschließlich nach vorheriger Absprache.
           </p>
-          <p class="pricing-info">
-            Im Umkreis von 5 km um Waizenkirchen berechnen wir keine
-            Fahrtkosten.
-          </p>
-          <p class="pricing-info">
-            Ab 5 km berechnen wir unseren normalen Stundensatz.
-          </p>
+
           <p class="pricing-info">
             Gerne erstellen wir für Sie ein maßgeschneidertes Angebot.
           </p>
@@ -130,6 +124,8 @@ const services = [
   },
 ];
 
+// SEO metadata
+
 useHead({
   title: "Fragen & Lösungen | IT-Support & Beratung | FMW Business Solutions",
   meta: [
@@ -179,7 +175,7 @@ useHead({
 </script>
 
 <style scoped>
-/* === Page Layout === */
+/* === Page Wrapper === */
 .page-wrapper {
   padding: 1em 0.5em;
   display: flex;
@@ -187,17 +183,63 @@ useHead({
   align-items: center;
 }
 
-/* === Section Heading === */
+/* === Section Headline === */
 .section-heading {
   font-size: clamp(1.4rem, 2.3vw, 1.7rem);
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0.8rem;
-  margin-top: 0;
+  margin: 0 0 0.8rem 0;
   color: #333;
 }
 
-/* === Service Section === */
+/* === Pricing Card === */
+.pricing-section {
+  padding-top: 1.5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.pricing-card {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 1em 1em 1em;
+  max-width: 1000px;
+  width: 90%;
+  text-align: center;
+}
+
+.pricing-header {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-title {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.pricing-details {
+  text-align: left;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.pricing-info {
+  line-height: 1.25rem;
+  margin: 0.8rem;
+}
+
+/* === Divider === */
+.section-separator {
+  width: 90%;
+  height: 2px;
+  background-color: #000;
+  margin: 0;
+}
+
+/* === FAQ / Services Section === */
 .service-section {
   width: 100%;
   display: flex;
@@ -213,21 +255,17 @@ useHead({
   max-width: 1200px;
 }
 
-/* === Individual Service Items === */
 .service-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* === Title outside the card === */
 .service-title {
   font-weight: bold;
   font-size: clamp(1.3rem, 2.3vw, 1.4rem);
-  margin: 0;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em;
   text-align: center;
-  line-height: 1.3;
   min-height: 3.3em;
   display: flex;
   align-items: center;
@@ -235,7 +273,7 @@ useHead({
   padding: 0 0.3em;
 }
 
-/* === Wrapper to stretch card height === */
+/* === Card Wrapper & Content === */
 .service-content-wrapper {
   width: 100%;
   display: flex;
@@ -260,54 +298,5 @@ useHead({
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   line-height: 1.4em;
   padding-bottom: 0.3rem;
-}
-
-/* === Divider === */
-.section-separator {
-  width: 90%;
-  height: 2px;
-  background-color: #000;
-  margin: 0;
-}
-
-/* === Pricing Section === */
-.pricing-section {
-  padding-top: 1.5em;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-
-.pricing-card {
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  padding: 1em;
-  padding-top: 0;
-  max-width: 1000px;
-  width: 90%;
-  text-align: center;
-}
-
-.pricing-header {
-  margin-bottom: 0.5rem;
-}
-
-.pricing-title {
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  font-weight: bold;
-  text-align: center;
-  margin: 0.5rem;
-}
-
-.pricing-details {
-  text-align: left;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-}
-
-.pricing-info {
-  line-height: 1.25rem;
-  margin: 0.8rem;
 }
 </style>
