@@ -1,13 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="\icon-transparent.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FMW - Business Solutions</title>
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- SEO Meta Tags -->
+    <title>FMW – Digitalisierung & Beratung für KMU in Österreich</title>
+    <meta name="description" content="FMW – Business Solutions unterstützt Selbstständige & KMUs bei der Nutzung von Microsoft 365, Power Automate und SharePoint – effizient und praxisnah." />
+    <meta name="keywords" content="Digitalisierung, Beratung, KMU, EPU, Microsoft 365, Power Automate, SharePoint, Oberösterreich, IT-Service, Prozessoptimierung" />
+    <meta name="author" content="FMW – Business Solutions" />
+
+    <!-- Open Graph Tags (for LinkedIn, WhatsApp, Slack etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FMW – Business Solutions" />
+    <meta property="og:description" content="Ihr Partner für Digitalisierung und Prozessoptimierung in Oberösterreich." />
+    <meta property="og:url" content="https://fmw-solutions.at/" />
+    <meta property="og:image" content="https://fmw-solutions.at/assets/fmw-logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icon-transparent.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/icon-transparent.png" />
+    <link rel="icon" href="/favicon.ico" />
+
+    
+    <!-- Structured Data with JSON-LD (for Google Rich Results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FMW – Business Solutions",
+        "url": "https://fmw-solutions.at/",
+        "logo": "https://fmw-solutions.at/assets/fmw-logo.png",
+        "sameAs": [
+          "https://www.linkedin.com/company/fmw-businesssolutions"
+        ]
+      }
+    </script>
+
+    <!-- Entry point for the Vue app -->
+    <script type="module" crossorigin src="/src/main.js"></script>
   </head>
+
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
