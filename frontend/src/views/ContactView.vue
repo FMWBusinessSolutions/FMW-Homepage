@@ -59,6 +59,34 @@
         </span>
       </div>
     </section>
+
+    <section class="pricing-section">
+      <div class="pricing-card">
+        <header class="pricing-header">
+          <h1 class="pricing-title">
+            <u>Wir legen Wert auf Transparenz und faire Preise.</u>
+          </h1>
+        </header>
+        <div class="pricing-details">
+          <p class="pricing-info">
+            Unser Stundensatz für Dienstleistungen beträgt 68 € inkl. MwSt.
+          </p>
+          <p class="pricing-info">
+            Die Erstberatung per Telefon oder E-Mail sowie die Angebotslegung
+            sind grundsätzlich kostenlos.
+          </p>
+          <p class="pricing-info">
+            Bei größeren Projekten mit höherem Planungsaufwand behalten wir uns
+            vor den Aufwand in Rechnung zu stellen. Dies geschieht jedoch
+            ausschließlich nach vorheriger Absprache.
+          </p>
+
+          <p class="pricing-info">
+            Gerne erstellen wir für Sie ein maßgeschneidertes Angebot.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -202,5 +230,44 @@ useHead({
 
 .contact-link:hover {
   text-decoration: underline;
+}
+
+/* === Pricing Card === */
+.pricing-section {
+  padding-top: 1.5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.pricing-card {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 1em 1em 1em;
+  max-width: 1000px;
+  width: 90%;
+  text-align: center;
+}
+
+.pricing-header {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-title {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.pricing-details {
+  text-align: left;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.pricing-info {
+  line-height: 1.25rem;
+  margin: 0.8rem;
 }
 </style>

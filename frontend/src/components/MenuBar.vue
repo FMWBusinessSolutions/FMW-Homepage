@@ -31,12 +31,27 @@ const items = ref([
     },
   },
   {
-    label: "Leistungen & Preise",
+    label: "Für Private",
     icon: "pi pi-book",
     command: () => {
       router.push("/service");
     },
   },
+  {
+    label: "Für EPU",
+    icon: "pi pi-book",
+    command: () => {
+      router.push("/service-epu");
+    },
+  },
+  {
+    label: "Für KMU",
+    icon: "pi pi-book",
+    command: () => {
+      router.push("/service-kmu");
+    },
+  },
+
   {
     label: "Kontakt",
     icon: "pi pi-envelope",
