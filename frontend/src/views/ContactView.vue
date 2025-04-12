@@ -8,27 +8,16 @@
 
       <address class="contact-info">
         <div class="contact-row">
-          <span class="contact-label">Telefon:</span>
-          <a href="tel:+4369914079312" class="contact-link"
-            >+43 699 140 79 312</a
-          >
-        </div>
-
-        <div class="contact-row">
-          <span class="contact-label">E-Mail:</span>
+          <span class="contact-label">Mail:</span>
           <a href="mailto:office@fmw-solutions.at" class="contact-link"
             >office@fmw-solutions.at</a
           >
         </div>
 
         <div class="contact-row">
-          <span class="contact-label">Web:</span>
-          <a
-            href="https://fmw-solutions.at/"
-            class="contact-link"
-            target="_blank"
-            rel="noopener"
-            >fmw-solutions.at</a
+          <span class="contact-label">Telefon:</span>
+          <a href="tel:+4369914079312" class="contact-link"
+            >+43 699 140 79 312</a
           >
         </div>
 
@@ -42,7 +31,33 @@
             >FMW – Business Solutions</a
           >
         </div>
+
+        <div class="contact-row">
+          <span class="contact-label">Web:</span>
+          <a
+            href="https://fmw-solutions.at/"
+            class="contact-link"
+            target="_blank"
+            rel="noopener"
+            >fmw-solutions.at</a
+          >
+        </div>
       </address>
+      <br />
+      <div class="contact-row">
+        <span class="contact-label"></span>
+        <span>
+          Oder schreiben Sie uns über unser
+          <a
+            href="https://forms.office.com/e/cLG0ksBG09"
+            class="contact-link"
+            target="_blank"
+            rel="noopener"
+          >
+            Kontaktformular
+          </a>
+        </span>
+      </div>
     </section>
   </main>
 </template>
