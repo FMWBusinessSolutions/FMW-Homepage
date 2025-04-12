@@ -53,7 +53,6 @@ import AppLinkButton from "@/components/AppLinkButton.vue";
 .button-row {
   display: flex;
   justify-content: center;
-  padding-left: 2em;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1rem;
