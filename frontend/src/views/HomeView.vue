@@ -1,46 +1,55 @@
 <template>
-  <main class="home-container">
+  <main
+    class="home-container"
+    aria-label="Startseite – IT-Lösungen für Private, EPU & KMU"
+  >
+    <!-- Intro -->
     <section class="intro-section">
       <h1 class="intro-title">
-        IT-Dienstleitungen für Privatpersonen, Selbstständige und KMUs
+        IT-Dienstleistungen für Privatpersonen, Selbstständige und KMUs
       </h1>
     </section>
 
     <Accordion class="accordion-wrapper" @tab-open="onTabOpen">
-      <!-- Target group: Private individuals -->
+      <!-- Privatpersonen -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabPrivate">
+          <span
+            class="accordion-title"
+            ref="tabPrivate"
+            aria-label="Accordion: IT-Hilfe für Privatpersonen in Waizenkirchen"
+          >
             Für Privatpersonen
           </span>
         </template>
         <section class="target-group" id="private" ref="headerPrivate">
           <h2>IT-Hilfe für Privatpersonen</h2>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Ihr Computer ist defekt
-            oder zu langsam?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> WLAN oder E-Mail
-            funktionieren nicht richtig?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Sie benötigen eine
-            Datenrettung oder Geräteberatung?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten Dokumente
-            oder Fotos sicher aufbewahren?
-          </p>
-          <br />
+          <ul>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Computer defekt oder
+              zu langsam?
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> WLAN oder E-Mail
+              funktioniert nicht?
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Datenrettung oder
+              Beratung beim Gerätekauf?
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Fotos & Dokumente
+              sicher speichern?
+            </li>
+          </ul>
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Wir helfen Ihnen persönlich & individuell.
+            Persönliche IT-Unterstützung – unkompliziert und verständlich.
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Zu unseren Leistungen"
+              label="IT-Service für Privatpersonen entdecken"
               href="/service"
               internal
             />
@@ -48,34 +57,41 @@
         </section>
       </AccordionTab>
 
-      <!-- Target group: Self-employed -->
+      <!-- Selbstständige -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabEPU">Für Selbstständige</span>
+          <span
+            class="accordion-title"
+            ref="tabEPU"
+            aria-label="Accordion: IT-Lösungen für Selbstständige & EPU"
+          >
+            Für Selbstständige & EPU
+          </span>
         </template>
         <section class="target-group" id="epu" ref="headerEPU">
-          <h2>IT-Lösungen für Selbstständige und EPUs</h2>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten eine eigene
-            Domain & Mailadresse?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Kundendaten
-            DSGVO-konform verarbeiten?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Alles aus einer Hand:
-            Hardware, Software & Einrichtung?
-          </p>
-          <br />
+          <h2>IT-Lösungen für Selbstständige & EPUs</h2>
+          <ul>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Eigene Domain &
+              Mailadresse einrichten
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> DSGVO-konforme
+              Kundendatenverwaltung
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Komplettpakete:
+              Hardware, Software & Support
+            </li>
+          </ul>
           <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i>
-            <i class="pi pi-chevron-right icon-arrow"></i>
-            Wir haben die IT-Komplettlösungen für Ihr Unternehmen.
+            <i class="pi pi-chevron-right icon-arrow"></i
+            ><i class="pi pi-chevron-right icon-arrow"></i>
+            Digitale Lösungen für Einzelunternehmer.
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Zu unseren Leistungen"
+              label="Mehr über unsere EPU-Services"
               href="/service-epu"
               internal
             />
@@ -83,42 +99,45 @@
         </section>
       </AccordionTab>
 
-      <!-- Target group: SMEs -->
+      <!-- KMU -->
       <AccordionTab>
         <template #header>
-          <span class="accordion-title" ref="tabKMU">
-            Für kleine und mittlere Unternehmen
+          <span
+            class="accordion-title"
+            ref="tabKMU"
+            aria-label="Accordion: Digitalisierung für KMU"
+          >
+            IT-Lösungen für KMU
           </span>
         </template>
         <section class="target-group" id="kmu" ref="headerKMU">
           <h2>Digitalisierung & Prozessoptimierung für KMUs</h2>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten mehr aus
-            Microsoft 365 herausholen?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Wiederkehrende Aufgaben
-            automatisieren?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Verwaltungskosten
-            nachhaltig senken?
-          </p>
-          <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Abläufe im Unternehmen
-            effizienter gestalten?
-          </p>
-
-          <br />
+          <ul>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Microsoft 365 optimal
+              nutzen
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Wiederkehrende
+              Aufgaben automatisieren
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Verwaltungskosten
+              nachhaltig senken
+            </li>
+            <li>
+              <i class="pi pi-circle-on icon-bullet"></i> Schulungen für Ihre
+              Mitarbeiter:innen
+            </li>
+          </ul>
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Praxisnahe Digitalisierungslösungen ohne teure Software und
-            Lizenzkosten.
+            Praxisnahe Lösungen – individuell & ohne teure Software.
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Zu unseren Leistungen"
+              label="Lösungen für KMU entdecken"
               href="/service-kmu"
               internal
             />
@@ -127,7 +146,7 @@
       </AccordionTab>
     </Accordion>
 
-    <!-- CTA section -->
+    <!-- Call-to-Action -->
     <CTA />
   </main>
 </template>
@@ -143,7 +162,6 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-// Accordion tab references
 const headerPrivate = ref(null);
 const headerEPU = ref(null);
 const headerKMU = ref(null);
@@ -151,49 +169,75 @@ const tabPrivate = ref(null);
 const tabEPU = ref(null);
 const tabKMU = ref(null);
 
-// Scroll behavior when opening accordion tab
+// Smooth scroll to opened tab
 const onTabOpen = (event) => {
   const index = event.index ?? 0;
   const tabHeaderRefs = [tabPrivate, tabEPU, tabKMU];
   const target = tabHeaderRefs[index];
-
   setTimeout(() => {
     const el = target?.value;
     const menu = document.getElementById("menu-bar");
     const menuHeight = menu?.offsetHeight || 0;
-
     if (el) {
       const scrollTop = el.getBoundingClientRect().top + window.scrollY;
       const scrollTo = scrollTop - menuHeight - 20;
-
-      window.scrollTo({
-        top: scrollTo,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: scrollTo, behavior: "smooth" });
     }
   }, 500);
 };
 
-// SEO metadata
+// SEO head data
 useHead({
-  title: "FMW – Digitalisierung & Beratung für KMU in Oberösterreich",
+  title: "IT-Lösungen für Privatpersonen, EPUs & KMUs in Oberösterreich | FMW",
   meta: [
     {
       name: "description",
       content:
-        "FMW – Business Solutions unterstützt Selbstständige & KMUs bei der Nutzung von Microsoft 365, Power Automate und SharePoint – effizient und praxisnah.",
+        "FMW – Ihre IT-Beratung in Waizenkirchen. Wir helfen Privatpersonen, Selbstständigen und KMUs bei IT-Problemen, Microsoft 365, Digitalisierung und Prozessoptimierung.",
     },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: "FMW – Business Solutions" },
+  ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/" }],
+  script: [
     {
-      name: "keywords",
-      content:
-        "Digitalisierung, Beratung, KMU, EPU, Microsoft 365, Power Automate, SharePoint, Oberösterreich, IT-Service, Prozessoptimierung",
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Welche IT-Dienstleistungen bieten Sie für Privatpersonen an?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Wir helfen bei defekten Computern, WLAN-Problemen, E-Mail, Datensicherung, Gerätekauf und vielem mehr.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Was bieten Sie für Selbstständige (EPUs)?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Wir unterstützen Sie bei Domain & Mail, Microsoft 365, DSGVO, Datenablage, Cloudlösungen und IT-Einrichtung.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Wie helfen Sie kleinen Unternehmen (KMUs) konkret?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Wir digitalisieren Prozesse mit Microsoft 365, Power Automate & SharePoint und reduzieren Verwaltungskosten nachhaltig.",
+            },
+          },
+        ],
+      }),
     },
   ],
 });
 </script>
 
 <style scoped>
-/* === Layout Containers === */
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -201,7 +245,6 @@ useHead({
   box-sizing: border-box;
 }
 
-/* === Intro Section === */
 .intro-section {
   text-align: center;
   margin-bottom: 2rem;
@@ -213,7 +256,6 @@ useHead({
   margin-bottom: 0.5rem;
 }
 
-/* === Accordion Styling === */
 .accordion-wrapper {
   width: 90%;
   margin: 0 auto 1rem auto;
@@ -224,23 +266,21 @@ useHead({
   font-weight: bold;
 }
 
-/* === Target Group Sections === */
 .target-group {
   padding: 0.1rem 0 0 0;
   border-radius: 20px;
   background-color: #ffffffcc;
 }
 
-.target-group p {
+.target-group ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.target-group li {
   margin: 0.2rem 0;
   font-size: clamp(1rem, 2.1vw, 1.1rem);
   line-height: 1.6;
-}
-
-.target-group-highlight {
-  margin: 1rem 0;
-  font-size: clamp(1rem, 2.1vw, 1.1rem);
-  color: #222;
 }
 
 .target-group-closing {
@@ -249,7 +289,6 @@ useHead({
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-/* === Icon Styling === */
 .icon-bullet {
   font-size: clamp(0.4rem, 1vw, 0.5rem);
   vertical-align: middle;
@@ -262,7 +301,6 @@ useHead({
   color: black;
 }
 
-/* === Button Group === */
 .button-row {
   display: flex;
   justify-content: left;

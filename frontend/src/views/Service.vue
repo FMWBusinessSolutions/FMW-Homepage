@@ -1,21 +1,20 @@
 <template>
-  <main class="page-wrapper" aria-label="Fragen und IT-Lösungen">
+  <main class="page-wrapper" aria-label="IT-Hilfe & Fragen von Privatpersonen">
     <h1 class="section-heading">
-      <u>IT-Unterstützung für Privatpersonen</u>
+      <u>IT-Hilfe für Private</u>
     </h1>
 
     <div class="intro-text">
       <p>
         Technik soll Ihnen das Leben erleichtern – nicht komplizierter machen.
         Egal ob langsamer PC, WLAN-Probleme oder Unsicherheiten beim
-        Online-Banking: Wir unterstützen Sie persönlich und individuell, ohne
-        Fachchinesisch. <br />
-        Verschaffen Sie sich hier einen Überblick über häufige Fragen und
-        praktische Lösungen.
+        Online-Banking: <br />Wir helfen individuell, persönlich und
+        verständlich.
       </p>
     </div>
+
     <div class="button-row">
-      <AppLinkButton label="Jetzt anfragen" href="/contact" internal />
+      <AppLinkButton label="Unverbindlich anfragen" href="/contact" internal />
     </div>
 
     <div class="separator"></div>
@@ -30,7 +29,7 @@
           itemprop="mainEntity"
           itemtype="https://schema.org/Question"
         >
-          <h3 class="service-title" itemprop="name">{{ service.title }}</h3>
+          <h2 class="service-title" itemprop="name">{{ service.title }}</h2>
           <div
             class="service-content-wrapper"
             itemprop="acceptedAnswer"
@@ -99,34 +98,19 @@ const services = [
   },
 ];
 
+// SEO-Daten inkl. vollständiger FAQPage mit allen Services
 useHead({
-  title: "Fragen & Lösungen | IT-Support & Beratung | FMW Business Solutions",
+  title: "IT-Hilfe für Zuhause: WLAN, PC & Sicherheit | FMW Waizenkirchen",
   meta: [
     {
       name: "description",
       content:
-        "Häufige IT-Fragen und praxisnahe Lösungen für Privatpersonen, Selbstständige & KMUs. Professionelle Beratung, Datenschutz & IT-Sicherheit. FMW Business Solutions.",
+        "Verlässliche IT-Hilfe für Privatpersonen: PC-Probleme, Online-Banking, WLAN, Gerätekauf, Datensicherheit – verständlich & direkt vor Ort in Oberösterreich.",
     },
-    {
-      name: "keywords",
-      content:
-        "Fragen, IT-Probleme, Beratung, Support, Datenschutz, Power Automate, Outlook, Microsoft, KMU, IT-Lösungen, DSGVO, FMW",
-    },
-    {
-      name: "robots",
-      content: "index, follow",
-    },
-    {
-      name: "author",
-      content: "Florian Mitter",
-    },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: "Florian Mitter" },
   ],
-  link: [
-    {
-      rel: "canonical",
-      href: "https://fmw-solutions.at/service",
-    },
-  ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service" }],
   script: [
     {
       type: "application/ld+json",
@@ -141,6 +125,63 @@ useHead({
             text: s.text,
           },
         })),
+      }),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "IT-Hilfe für Privatpersonen",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "FMW – Business Solutions",
+          url: "https://fmw-solutions.at/service",
+          areaServed: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              addressRegion: "Oberösterreich",
+              addressCountry: "AT",
+            },
+          },
+        },
+        description:
+          "PC- und Internet-Hilfe für zuhause: Einrichtung, Reparatur, Beratung & Sicherheit – professionell & persönlich in Waizenkirchen.",
+        availableChannel: {
+          "@type": "ServiceChannel",
+          serviceLocation: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Waizenkirchen",
+              addressRegion: "Oberösterreich",
+              postalCode: "4730",
+              addressCountry: "AT",
+            },
+          },
+        },
+      }),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Startseite",
+            item: "https://fmw-solutions.at/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "IT-Hilfe für Privatpersonen",
+            item: "https://fmw-solutions.at/service",
+          },
+        ],
       }),
     },
   ],

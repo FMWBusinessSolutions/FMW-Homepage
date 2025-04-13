@@ -91,6 +91,7 @@
   .service-description {
     font-size: clamp(1rem, 1.8vw, 1.2rem);
     line-height: 1.4em;
+    margin: 0.2em;
   }
   
   /* === Button Group === */

@@ -1,68 +1,78 @@
 <template>
-  <main class="app-container" aria-label="Impressum und Datenschutz">
+  <main class="app-container" aria-label="Impressum und Datenschutzerklärung">
     <div class="content">
       <div class="card">
-        <section>
-          <h1>Gewerbeberechtigte Person & Inhaber</h1>
+        <section aria-labelledby="impressum-heading">
+          <h1 id="impressum-heading"><u>Impressum & Datenschutz</u></h1>
+
+          <h2>Gewerbeberechtigte Person & Inhaber</h2>
           <address>
             <p>Florian Mitter</p>
             <p>Hausleiten 58</p>
-            <p>A-4730 Waizenkirchen</p>
-          </address>
-        </section>
-
-        <div class="privacy-section">
-          <section>
-            <h2>Zweck der Datenverarbeitung</h2>
+            <p>A-4730 Waizenkirchen, Österreich</p>
             <p>
-              Personenbezogene Daten (z. B. Name, E-Mail-Adresse) werden
-              ausschließlich zur Bearbeitung Ihrer Anfrage gespeichert und
-              verarbeitet. Es erfolgt keine Weitergabe an Dritte.
-            </p>
-            <p>
-              Die Verarbeitung erfolgt im Einklang mit der
-              <a
-                href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597"
-                target="_blank"
-                rel="noopener"
-                >Datenschutz-Grundverordnung (DSGVO)</a
-              >
-              sowie dem
-              <a
-                href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=bundesnormen&Gesetzesnummer=20011678"
-                target="_blank"
-                rel="noopener"
-                >Telekommunikationsgesetz 2021 (TKG 2021)</a
-              >.
-            </p>
-          </section>
-
-          <section>
-            <h2>Rechtsgrundlage</h2>
-            <p>
-              Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b
-              (Vertragserfüllung) und/oder Art. 6 Abs. 1 lit. f DSGVO
-              (berechtigtes Interesse).
-            </p>
-          </section>
-
-          <section>
-            <h2>Ihre Rechte</h2>
-            <p>
-              Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
-              Einschränkung, Datenübertragbarkeit und Widerspruch. Bei
-              Beschwerden können Sie sich an
+              E-Mail:
               <a href="mailto:office@fmw-solutions.at"
                 >office@fmw-solutions.at</a
               >
-              oder die Datenschutzbehörde wenden.
             </p>
-          </section>
+          </address>
+        </section>
 
-          <p class="footer-note">Stand: März 2025 • Änderungen vorbehalten</p>
-        </div>
+        <section class="privacy-section" aria-labelledby="zweck-heading">
+          <h2 id="zweck-heading">Zweck der Datenverarbeitung</h2>
+          <p>
+            Personenbezogene Daten (z. B. Name, E-Mail-Adresse) werden
+            ausschließlich zur Bearbeitung Ihrer Anfrage gespeichert und
+            verarbeitet. Eine Weitergabe an Dritte erfolgt nicht.
+          </p>
+          <p>
+            Die Verarbeitung erfolgt im Einklang mit der
+            <a
+              href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597"
+              target="_blank"
+              rel="noopener"
+              >Datenschutz-Grundverordnung (DSGVO)</a
+            >
+            sowie dem
+            <a
+              href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=bundesnormen&Gesetzesnummer=20011678"
+              target="_blank"
+              rel="noopener"
+              >Telekommunikationsgesetz 2021 (TKG 2021)</a
+            >.
+          </p>
+        </section>
 
-        <br />
+        <section
+          class="privacy-section"
+          aria-labelledby="rechtsgrundlage-heading"
+        >
+          <h2 id="rechtsgrundlage-heading">Rechtsgrundlage</h2>
+          <p>
+            Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b
+            (Vertragserfüllung) und/oder Art. 6 Abs. 1 lit. f DSGVO
+            (berechtigtes Interesse).
+          </p>
+        </section>
+
+        <section class="privacy-section" aria-labelledby="rechte-heading">
+          <h2 id="rechte-heading">Ihre Rechte gemäß DSGVO</h2>
+          <ul>
+            <li>Auskunft über gespeicherte Daten</li>
+            <li>Berichtigung oder Löschung Ihrer Daten</li>
+            <li>Einschränkung der Verarbeitung</li>
+            <li>Datenübertragbarkeit</li>
+            <li>Widerspruch gegen die Verarbeitung</li>
+          </ul>
+          <p>
+            Bei Fragen oder Beschwerden wenden Sie sich bitte an
+            <a href="mailto:office@fmw-solutions.at">office@fmw-solutions.at</a>
+            oder an die österreichische Datenschutzbehörde.
+          </p>
+        </section>
+
+        <p class="footer-note">Stand: März 2025 • Änderungen vorbehalten</p>
         <p><small>© Florian Mitter – Alle Rechte vorbehalten.</small></p>
       </div>
     </div>
@@ -70,37 +80,20 @@
 </template>
 
 <script setup>
-// SEO metadata
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Datenschutz & Impressum | FMW – Florian Mitter",
+  title: "Impressum & Datenschutz | FMW – Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "Rechtliche Hinweise, Datenschutzinformationen und Impressum der Website fmw-solutions.at. Angaben gemäß ECG & DSGVO.",
+        "Impressum und Datenschutzerklärung von FMW – Business Solutions in Waizenkirchen. Angaben gemäß ECG, DSGVO und TKG 2021.",
     },
-    {
-      name: "keywords",
-      content:
-        "Impressum, DSGVO, Datenschutz, Florian Mitter, FMW, Waizenkirchen, Gewerbe, Einzelunternehmer, Legal, Rechte, Österreich",
-    },
-    {
-      name: "robots",
-      content: "index, follow",
-    },
-    {
-      name: "author",
-      content: "Florian Mitter",
-    },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: "Florian Mitter" },
   ],
-  link: [
-    {
-      rel: "canonical",
-      href: "https://fmw-solutions.at/impressum",
-    },
-  ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/impressum" }],
   script: [
     {
       type: "application/ld+json",
@@ -108,8 +101,10 @@ useHead({
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "FMW – Business Solutions",
+        legalName: "FMW – Business Solutions – Florian Mitter",
         url: "https://fmw-solutions.at/",
         email: "office@fmw-solutions.at",
+        foundingDate: "2025-03-01",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Hausleiten 58",
@@ -121,6 +116,7 @@ useHead({
           "@type": "Person",
           name: "Florian Mitter",
         },
+        sameAs: ["https://linkedin.com/company/fmw-businesssolutions/"],
         areaServed: {
           "@type": "Place",
           address: {
@@ -129,9 +125,8 @@ useHead({
             addressCountry: "AT",
           },
         },
-        sameAs: ["https://linkedin.com/company/fmw-businesssolutions/"],
         description:
-          "Impressum & Datenschutzinformation für FMW – Business Solutions, Einzelunternehmen von Florian Mitter mit Sitz in Waizenkirchen (AT).",
+          "Impressum und Datenschutzerklärung der Website von FMW – Business Solutions mit Sitz in Waizenkirchen, Oberösterreich.",
       }),
     },
   ],
@@ -139,12 +134,10 @@ useHead({
 </script>
 
 <style scoped>
-/* === Page Container === */
 .app-container {
   padding-top: 3px;
 }
 
-/* === Centered Content Box === */
 .content {
   display: flex;
   flex-direction: column;
@@ -152,13 +145,12 @@ useHead({
   justify-content: center;
 }
 
-/* === Card Box === */
 .card {
   margin-top: 0.3em;
   background-color: white;
   border-radius: 30px;
   padding: 2em;
-  max-width: 600px;
+  max-width: 700px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: left;
 }
@@ -167,7 +159,6 @@ useHead({
   color: #007bff;
   text-decoration: none;
 }
-
 .card a:hover {
   text-decoration: underline;
 }
@@ -178,25 +169,30 @@ useHead({
   font-size: 1.2rem;
 }
 
+.card ul {
+  margin-left: 1.2rem;
+  padding-left: 0.5rem;
+  list-style-type: disc;
+}
+
 .card p,
 .card h1,
 .card h2,
 .card small {
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
-/* === Privacy Sections === */
 .privacy-section {
   font-size: 0.95rem;
   color: #333;
+  margin-top: 1.2rem;
 }
 
 .privacy-section h2 {
   font-size: 1.1rem;
-  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* === Footer Note === */
 .footer-note {
   font-size: 0.9rem;
   margin-top: 3rem;
