@@ -9,6 +9,14 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://fmw-solutions.at/service-epu</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fmw-solutions.at/service-kmu</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fmw-solutions.at/contact</loc>
     <priority>0.8</priority>
   </url>

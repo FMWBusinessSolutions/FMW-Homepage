@@ -56,22 +56,22 @@
         <section class="target-group" id="epu" ref="headerEPU">
           <h2>IT-Lösungen für Selbstständige und EPUs</h2>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Professioneller Auftritt
-            mit Domain & Mailadresse?
+            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten eine eigene
+            Domain & Mailadresse?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> DSGVO-konforme
-            Datenverarbeitung?
+            <i class="pi pi-circle-on icon-bullet"></i> Kundendaten
+            DSGVO-konform verarbeiten?
           </p>
           <p>
             <i class="pi pi-circle-on icon-bullet"></i> Alles aus einer Hand:
-            Hardware, Software & Einrichtung
+            Hardware, Software & Einrichtung?
           </p>
           <br />
           <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i
-            ><i class="pi pi-chevron-right icon-arrow"></i>
-            Komplettlösungen für Ihre Selbstständigkeit
+            <i class="pi pi-chevron-right icon-arrow"></i>
+            <i class="pi pi-chevron-right icon-arrow"></i>
+            Wir haben die IT-Komplettlösungen für Ihr Unternhemen.
           </p>
           <div class="button-row">
             <AppLinkButton
@@ -93,28 +93,27 @@
         <section class="target-group" id="kmu" ref="headerKMU">
           <h2>Digitalisierung & Prozessoptimierung für KMUs</h2>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Mehr aus Microsoft 365
-            herausholen?
+            <i class="pi pi-circle-on icon-bullet"></i> Sie möchten mehr aus
+            Microsoft 365 herausholen?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Automatisierung mit
-            Power Automate & Co?
+            <i class="pi pi-circle-on icon-bullet"></i> Wiederkehrende Aufgaben
+            automatisieren?
           </p>
-          <br />
-          <p class="target-group-highlight">
-            <strong>Unsere Kernkompetenz:</strong><br />
-            SharePoint, Teams, Power Automate, Power BI, Power Apps
+          <p>
+            <i class="pi pi-circle-on icon-bullet"></i> Verwaltungskosten
+            nachhaltig senken?
+          </p>
+          <p>
+            <i class="pi pi-circle-on icon-bullet"></i> Verwaltungskosten
+            nachhaltig senken?
           </p>
           <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            20+ Jahre Erfahrung im Maschinenbau & in der Prozessoptimierung
-          </p>
-          <p class="target-group-closing">
-            <i class="pi pi-chevron-right icon-arrow"></i
-            ><i class="pi pi-chevron-right icon-arrow"></i>
-            Praxisnahe Digitalisierungslösungen ohne zusätzliche Software
+            Praxisnahe Digitalisierungslösungen ohne teure Software und
+            Lizenzkosten.
           </p>
           <div class="button-row">
             <AppLinkButton

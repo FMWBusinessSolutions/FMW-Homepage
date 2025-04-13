@@ -4,6 +4,24 @@
       <u>IT-Beratung & Digitalisierung für Selbstständige</u>
     </h1>
 
+    <div class="intro-text">
+      <p>
+        Als Selbstständige oder Einzelunternehmer kennen Sie das: Sie sind
+        Vertrieb, Buchhaltung und Technikabteilung in einem. Damit Sie sich auf
+        Ihr Kerngeschäft konzentrieren können, unterstützen wir Sie bei allen
+        Fragen rund um IT, Prozesse und digitale Werkzeuge.
+        <br />
+        Hier finden Sie typische Themen aus dem Arbeitsalltag von EPUs – mit
+        praxisnahen Lösungen.
+      </p>
+    </div>
+
+    <div class="button-row">
+      <AppLinkButton label="Jetzt anfragen" href="/contact" internal />
+    </div>
+
+    <div class="separator"></div>
+
     <section class="service-section">
       <div class="service-grid">
         <article
@@ -38,52 +56,48 @@
 <script setup lang="ts">
 import CTA from "@/components/CTA.vue";
 import { useHead } from "@vueuse/head";
+import AppLinkButton from "@/components/AppLinkButton.vue";
 
 const services = [
   {
-    title: "IT-Basics für Selbstständige",
-    text: "Wir unterstützen Sie bei Geräteeinrichtung, Lizenzberatung, E-Mail-Signaturen und Sicherheitskonzepten.",
-  },
-  {
-    title: "Microsoft 365 Business Beratung",
-    text: "Wir zeigen Ihnen, wie Sie Outlook, OneDrive und Teams optimal nutzen – effizient, sicher und praxisnah.",
-  },
-  {
-    title: "Datensicherung für Selbstständige",
-    text: "Wir unterstützen Sie bei der Einrichtung sicherer Backups – sowohl lokal als auch in der Cloud.",
-  },
-  {
-    title: "Digitale Ablage & Struktur",
-    text: "Wir helfen Ihnen dabei, Ihre Dateien, Rechnungen und Kundendaten klar strukturiert zu organisieren.",
-  },
-  {
-    title: "Workflows & Automatisierung",
-    text: "Mit Power Automate automatisieren wir gemeinsam wiederkehrende Aufgaben – effizient und zeitsparend.",
-  },
-  {
-    title: "Digitale Buchhaltung vorbereiten",
-    text: "Wir unterstützen Sie bei der strukturierten Ablage Ihrer Belege, Rechnungen und Dokumente – optimal für Steuerberatung und Prüfung.",
-  },
-  {
-    title: "Professionelle E-Mail-Signatur & Kommunikation",
-    text: "Wir gestalten gemeinsam mit Ihnen eine einheitliche E-Mail-Signatur und optimieren Ihre Kommunikation in Outlook.",
-  },
-  {
-    title: "Microsoft Forms & Power Automate für Kundenanfragen",
-    text: "Wir zeigen Ihnen, wie Sie mit Microsoft Forms Anfragen sammeln und diese automatisiert verarbeiten können.",
-  },
-  {
-    title: "Geräte- und Lizenzberatung für Selbstständige",
+    title: "IT-Basics",
     text: "Wir helfen Ihnen bei der Auswahl von Hardware und Software – abgestimmt auf Ihr Business und Budget.",
   },
   {
-    title: "Einfache Projektverwaltung mit Planner & To Do",
+    title: "Datensicherung",
+    text: "Wir unterstützen Sie bei der Einrichtung sicherer Backups – sowohl lokal als auch in der Cloud.",
+  },
+  {
+    title: "Kunden- und Patientendaten",
+    text: "Wir zeigen Ihnen, wie Sie hochsensible Daten sicher und DSGVO-Konform speichern und gegen unbefugten Zugriff schützen können.",
+  },
+  {
+    title: "Digitale Buchhaltung",
+    text: "Wir unterstützen Sie bei der strukturierten Ablage Ihrer Belege, Rechnungen und Dokumente – optimal für Steuerberatung und Prüfung.",
+  },
+  {
+    title: "Microsoft 365 Business",
+    text: "Wir zeigen Ihnen wie Outlook, OneDrive und Sharepoint Ihren Alltag erleichtern können.",
+  },
+  {
+    title: "E-Mail & Kommunikation",
+    text: "Wir gestalten gemeinsam mit Ihnen eine einheitliche E-Mail-Signatur und optimieren Ihre Kommunikation in Outlook.",
+  },
+  {
+    title: "Kundenanfragen",
+    text: "Wir zeigen Ihnen, wie Sie mit Microsoft Forms Anfragen sammeln und diese automatisiert verarbeiten können.",
+  },
+  {
+    title: "Automatisierung",
+    text: "Mit Power Automate automatisieren wir gemeinsam wiederkehrende Aufgaben – effizient und zeitsparend.",
+  },
+  {
+    title: "Projektverwaltung mit Planner & To Do",
     text: "Wir richten für Sie eine klare Struktur für Aufgaben, Deadlines und Prioritäten ein – damit Sie stets den Überblick behalten.",
   },
 ];
 
 // SEO metadata
-
 useHead({
   title: "Fragen & Lösungen | IT-Support & Beratung | FMW Business Solutions",
   meta: [
@@ -132,83 +146,4 @@ useHead({
 });
 </script>
 
-<style scoped>
-/* === Page Wrapper === */
-.page-wrapper {
-  padding: 1em 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* === Section Headline === */
-.section-heading {
-  font-size: clamp(1.4rem, 2.3vw, 1.7rem);
-  font-weight: bold;
-  text-align: center;
-  margin: 0 0 0.8rem 0;
-  color: #333;
-  padding-bottom: 1em;
-}
-
-/* === FAQ / Services Section === */
-.service-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1.5em;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5em;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.service-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-title {
-  font-weight: bold;
-  font-size: clamp(1.3rem, 2.3vw, 1.4rem);
-  margin: 0 0 0.5em;
-  text-align: center;
-  min-height: 3.3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.3em;
-}
-
-/* === Card Wrapper & Content === */
-.service-content-wrapper {
-  width: 100%;
-  display: flex;
-  height: 100%;
-}
-
-.service-content-card {
-  background-color: white;
-  border-radius: 30px;
-  padding: 0.5rem;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
-  height: 100%;
-}
-
-.service-description {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.4em;
-  padding-bottom: 0.3rem;
-}
-</style>
+<style src="@/assets/styles/serviceSection.css"></style>

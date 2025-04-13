@@ -4,6 +4,24 @@
       <u>IT-Beratung & Digitalisierung für KMU</u>
     </h1>
 
+    <div class="intro-text">
+      <p>
+        Im Tagesgeschäft kleiner und mittlerer Unternehmen bleibt oft keine
+        Zeit, sich mit IT-Prozessen oder Digitalisierung zu beschäftigen. Genau
+        hier setzen wir an: Wir helfen Ihnen, wiederkehrende Abläufe effizienter
+        zu gestalten – mit praxistauglichen Tools und verständlicher Beratung.
+        <br />
+        Werfen Sie einen Blick auf typische IT-Themen, die wir gemeinsam mit
+        Ihnen erfolgreich umsetzen können.
+      </p>
+    </div>
+
+    <div class="button-row">
+      <AppLinkButton label="Jetzt anfragen" href="/contact" internal />
+    </div>
+
+    <div class="separator"></div>
+
     <section class="service-section">
       <div class="service-grid">
         <article
@@ -38,6 +56,7 @@
 <script setup lang="ts">
 import CTA from "@/components/CTA.vue";
 import { useHead } from "@vueuse/head";
+import AppLinkButton from "@/components/AppLinkButton.vue";
 
 const services = [
   {
@@ -51,10 +70,6 @@ const services = [
   {
     title: "Moderne Dateiablage & Cloud-Integration",
     text: "Wir begleiten Sie beim Umstieg auf eine zentrale, digitale Ablage – mit klaren Prozessen und Schulung für Ihr Team.",
-  },
-  {
-    title: "IT-Beratung für den Mittelstand",
-    text: "Wir begleiten Sie individuell bei technischen Fragen – von Gerätekauf bis Digitalisierungskonzept.",
   },
   {
     title: "Formulare & Freigabeprozesse digitalisieren",
@@ -79,6 +94,10 @@ const services = [
   {
     title: "Standortübergreifendes Arbeiten in der Cloud",
     text: "Wir richten für Sie eine Lösung ein, mit der mehrere Standorte oder Außendienst effizient zusammenarbeiten.",
+  },
+  {
+    title: "IT-Beratung für den Mittelstand",
+    text: "Wir begleiten Sie individuell bei technischen Fragen – von Gerätekauf bis Digitalisierungskonzept.",
   },
 ];
 
@@ -131,83 +150,4 @@ useHead({
 });
 </script>
 
-<style scoped>
-/* === Page Wrapper === */
-.page-wrapper {
-  padding: 1em 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* === Section Headline === */
-.section-heading {
-  font-size: clamp(1.4rem, 2.3vw, 1.7rem);
-  font-weight: bold;
-  text-align: center;
-  margin: 0 0 0.8rem 0;
-  color: #333;
-  padding-bottom: 1em;
-}
-
-/* === FAQ / Services Section === */
-.service-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1.5em;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5em;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.service-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-title {
-  font-weight: bold;
-  font-size: clamp(1.3rem, 2.3vw, 1.4rem);
-  margin: 0 0 0.5em;
-  text-align: center;
-  min-height: 3.3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.3em;
-}
-
-/* === Card Wrapper & Content === */
-.service-content-wrapper {
-  width: 100%;
-  display: flex;
-  height: 100%;
-}
-
-.service-content-card {
-  background-color: white;
-  border-radius: 30px;
-  padding: 0.5rem;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
-  height: 100%;
-}
-
-.service-description {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.4em;
-  padding-bottom: 0.3rem;
-}
-</style>
+<style src="@/assets/styles/serviceSection.css"></style>
