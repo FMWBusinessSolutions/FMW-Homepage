@@ -6,16 +6,10 @@
       itemtype="https://schema.org/Organization"
     >
       <h2 style="display: none">Unverbindliches Erstgespräch anfragen</h2>
-      <p>
-        Kontaktieren Sie uns jetzt gleich für ein unverbindliches Erstgespräch.
-      </p>
+      <p>Kontaktieren Sie uns für ein unverbindliches Erstgespräch.</p>
 
       <div class="button-row">
-        <AppLinkButton
-          label="E-Mail schreiben"
-          href="mailto:office@fmw-solutions.at"
-        />
-        <AppLinkButton label="Anrufen" href="tel:+4369914079312" />
+        <AppLinkButton label="Jetzt anfragen" href="/contact" internal />
       </div>
 
       <div class="cta-details">

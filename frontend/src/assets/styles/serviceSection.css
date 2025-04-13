@@ -1,0 +1,106 @@
+/* === Page Wrapper === */
+.page-wrapper {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* === Section Headline === */
+  .section-heading {
+    font-size: clamp(1.4rem, 2.3vw, 1.7rem);
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 0.8rem 0;
+    color: #333;
+  }
+  
+  .intro-text {
+    max-width: 800px;
+    text-align: center;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    color: #444;
+    line-height: 1.6em;
+    padding: 0 1em;
+    margin-bottom: 1em;
+  }
+  
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2em 0;
+    border-radius: 1px;
+  }
+  
+  /* === FAQ / Services Section === */
+  .service-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5em;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5em;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-title {
+    font-weight: bold;
+    font-size: clamp(1.3rem, 2.3vw, 1.4rem);
+    margin: 0 0 0.5em;
+    text-align: center;
+    min-height: 3.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.3em;
+  }
+  
+  /* === Card Wrapper & Content === */
+  .service-content-wrapper {
+    width: 100%;
+    display: flex;
+    height: 100%;
+  }
+  
+  .service-content-card {
+    background-color: white;
+    border-radius: 30px;
+    padding: 0.5rem;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    height: 100%;
+  }
+  
+  .service-description {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.4em;
+    margin: 0.2em;
+  }
+  
+  /* === Button Group === */
+.button-row {
+  display: flex;
+  justify-content: left;
+  padding-left: 0.5em;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+  

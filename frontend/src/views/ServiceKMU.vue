@@ -1,8 +1,28 @@
 <template>
-  <main class="page-wrapper" aria-label="Fragen und IT-Lösungen">
+  <main
+    class="page-wrapper"
+    aria-label="IT-Beratung und Digitalisierung für KMU"
+  >
     <h1 class="section-heading">
-      <u>IT-Beratung & Digitalisierung für KMU</u>
+      <u>IT-Beratung für KMU in Oberösterreich</u>
     </h1>
+
+    <div class="intro-text">
+      <p>
+        Im Unternehmen fehlt oft die Zeit, sich neben dem Tagesgeschäft auch um
+        IT-Strukturen, digitale Abläufe oder moderne Zusammenarbeit zu kümmern.
+        <br />
+        Wir helfen Ihnen dabei, wiederkehrende Aufgaben effizient zu
+        digitalisieren – mit Microsoft 365, Power Automate & SharePoint.
+        Praxisnah. Verständlich. Lokal.
+      </p>
+    </div>
+
+    <div class="button-row">
+      <AppLinkButton label="Beratung anfragen" href="/contact" internal />
+    </div>
+
+    <div class="separator"></div>
 
     <section class="service-section">
       <div class="service-grid">
@@ -14,7 +34,7 @@
           itemprop="mainEntity"
           itemtype="https://schema.org/Question"
         >
-          <h3 class="service-title" itemprop="name">{{ service.title }}</h3>
+          <h2 class="service-title" itemprop="name">{{ service.title }}</h2>
           <div
             class="service-content-wrapper"
             itemprop="acceptedAnswer"
@@ -38,80 +58,67 @@
 <script setup lang="ts">
 import CTA from "@/components/CTA.vue";
 import { useHead } from "@vueuse/head";
+import AppLinkButton from "@/components/AppLinkButton.vue";
 
 const services = [
   {
-    title: "Digitalisierung von Arbeitsprozessen",
-    text: "Wir analysieren Ihre Abläufe und entwickeln individuelle Lösungen mit Microsoft 365, SharePoint & Power Automate.",
+    title: "Prozesse digitalisieren mit Microsoft 365",
+    text: "Wir analysieren Ihre Arbeitsabläufe und digitalisieren diese effizient mit SharePoint, Teams & Power Automate.",
   },
   {
-    title: "Benutzer- & Rechtemanagement",
-    text: "Wir strukturieren Ihre Zugriffsrechte für Ordner, Teams und Daten – sicher und nachvollziehbar.",
+    title: "Rechtemanagement & Benutzerverwaltung",
+    text: "Wir schaffen Struktur und Sicherheit bei der Verwaltung von Zugriffsrechten für Dateien, Ordner & Teams.",
   },
   {
-    title: "Moderne Dateiablage & Cloud-Integration",
-    text: "Wir begleiten Sie beim Umstieg auf eine zentrale, digitale Ablage – mit klaren Prozessen und Schulung für Ihr Team.",
+    title: "Moderne Dateiablage in der Cloud",
+    text: "Wir helfen beim Umstieg auf eine zentrale Dateiablage in OneDrive & SharePoint – inklusive Schulung für Ihre Mitarbeiter:innen.",
   },
   {
-    title: "IT-Beratung für den Mittelstand",
-    text: "Wir begleiten Sie individuell bei technischen Fragen – von Gerätekauf bis Digitalisierungskonzept.",
+    title: "Digitale Formulare & Genehmigungen",
+    text: "Urlaubsanträge, Angebotsfreigaben, Reklamationen: Wir digitalisieren Ihre Abläufe – einfach & nachvollziehbar.",
   },
   {
-    title: "Formulare & Freigabeprozesse digitalisieren",
-    text: "Wir entwickeln mit Ihnen digitale Prozesse – z. B. für Urlaubsanträge, Angebotsfreigaben oder Kundenanfragen.",
-  },
-  {
-    title: "Mitarbeiterschulung zu Microsoft 365",
-    text: "Wir schulen Ihr Team in Outlook, SharePoint, Teams und OneDrive – praxisnah und verständlich.",
+    title: "Office-Schulungen für Ihr Team",
+    text: "Wir schulen Ihre Mitarbeiter:innen in Outlook, Teams, SharePoint & Co – effizient und verständlich.",
   },
   {
     title: "IT-Dokumentation & Wissensmanagement",
-    text: "Wir erstellen eine klare Dokumentation für Prozesse, Abläufe, Zuständigkeiten und IT-Standards.",
+    text: "Wir dokumentieren Ihre IT-Strukturen und Prozesse zentral – für mehr Klarheit, Effizienz und Übersicht.",
   },
   {
-    title: "Sicherheitskonzepte für kleine Teams",
-    text: "Wir unterstützen Sie bei Zugriffskonzepten, Passwortmanagement und DSGVO-konformen Maßnahmen.",
+    title: "Datenschutz & Sicherheit",
+    text: "Wir helfen beim Aufbau von Passwortkonzepten, Zugriffsbeschränkungen und DSGVO-konformen Prozessen.",
   },
   {
     title: "SharePoint-Struktur für Abteilungen",
-    text: "Wir entwickeln mit Ihnen eine SharePoint-Ablage mit klarer Rechtevergabe, Logik und Suchfunktion.",
+    text: "Wir entwickeln mit Ihnen eine SharePoint-Lösung, die logisch aufgebaut ist und Rechte klar trennt.",
   },
   {
-    title: "Standortübergreifendes Arbeiten in der Cloud",
-    text: "Wir richten für Sie eine Lösung ein, mit der mehrere Standorte oder Außendienst effizient zusammenarbeiten.",
+    title: "Standortübergreifend arbeiten",
+    text: "Mehrere Standorte? Außendienst? Wir richten Lösungen ein, damit alle effizient & sicher zusammenarbeiten.",
+  },
+  {
+    title: "Technische Beratung für KMU",
+    text: "Ob Gerätekauf, Prozessanalyse oder Digitalisierungskonzept – wir beraten neutral und lösungsorientiert.",
   },
 ];
 
-// SEO metadata
+// SEO-Daten & strukturierte Daten
 useHead({
-  title: "Fragen & Lösungen | IT-Support & Beratung | FMW Business Solutions",
+  title:
+    "IT-Beratung für KMU in Oberösterreich | Microsoft 365 & Digitalisierung | FMW",
   meta: [
     {
       name: "description",
       content:
-        "Häufige IT-Fragen und praxisnahe Lösungen für Privatpersonen, Selbstständige & KMUs. Professionelle Beratung, Datenschutz & IT-Sicherheit. FMW Business Solutions.",
+        "IT-Beratung für KMU: Microsoft 365, Power Automate, Teams, SharePoint & Prozessoptimierung – verständlich, praxisnah & in Oberösterreich vor Ort.",
     },
-    {
-      name: "keywords",
-      content:
-        "Fragen, IT-Probleme, Beratung, Support, Datenschutz, Power Automate, Outlook, Microsoft, KMU, IT-Lösungen, DSGVO, FMW",
-    },
-    {
-      name: "robots",
-      content: "index, follow",
-    },
-    {
-      name: "author",
-      content: "Florian Mitter",
-    },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: "FMW – Business Solutions" },
   ],
-  link: [
-    {
-      rel: "canonical",
-      href: "https://fmw-solutions.at/service",
-    },
-  ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service-kmu" }],
   script: [
+    // FAQPage – automatisch aus Service-Liste generiert
     {
       type: "application/ld+json",
       children: JSON.stringify({
@@ -127,87 +134,89 @@ useHead({
         })),
       }),
     },
+    // Service – für Google Business & Branchenverzeichnisse
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: "IT-Beratung & Digitalisierung für KMU",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "FMW – Business Solutions",
+          url: "https://fmw-solutions.at/service-kmu",
+        },
+        description:
+          "Digitalisierung, Microsoft 365, Automatisierung & moderne Dateiablage für kleine und mittlere Unternehmen in Oberösterreich.",
+        areaServed: {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            addressRegion: "Oberösterreich",
+            addressCountry: "AT",
+          },
+        },
+        availableChannel: {
+          "@type": "ServiceChannel",
+          serviceLocation: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Waizenkirchen",
+              addressRegion: "Oberösterreich",
+              postalCode: "4730",
+              addressCountry: "AT",
+            },
+          },
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Digitalisierungslösungen für KMU",
+          itemListElement: services.map((s) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: s.title,
+              description: s.text,
+            },
+          })),
+        },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "EUR",
+          price: "68.00",
+          availability: "https://schema.org/InStock",
+          itemOffered: {
+            "@type": "Service",
+            name: "Beratung & Umsetzung für KMU",
+          },
+        },
+      }),
+    },
+    // Breadcrumb – SEO Navigation
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Startseite",
+            item: "https://fmw-solutions.at/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "IT-Beratung für KMU",
+            item: "https://fmw-solutions.at/service-kmu",
+          },
+        ],
+      }),
+    },
   ],
 });
 </script>
 
-<style scoped>
-/* === Page Wrapper === */
-.page-wrapper {
-  padding: 1em 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* === Section Headline === */
-.section-heading {
-  font-size: clamp(1.4rem, 2.3vw, 1.7rem);
-  font-weight: bold;
-  text-align: center;
-  margin: 0 0 0.8rem 0;
-  color: #333;
-  padding-bottom: 1em;
-}
-
-/* === FAQ / Services Section === */
-.service-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1.5em;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5em;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.service-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-title {
-  font-weight: bold;
-  font-size: clamp(1.3rem, 2.3vw, 1.4rem);
-  margin: 0 0 0.5em;
-  text-align: center;
-  min-height: 3.3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.3em;
-}
-
-/* === Card Wrapper & Content === */
-.service-content-wrapper {
-  width: 100%;
-  display: flex;
-  height: 100%;
-}
-
-.service-content-card {
-  background-color: white;
-  border-radius: 30px;
-  padding: 0.5rem;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
-  height: 100%;
-}
-
-.service-description {
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.4em;
-  padding-bottom: 0.3rem;
-}
-</style>
+<style src="@/assets/styles/serviceSection.css"></style>

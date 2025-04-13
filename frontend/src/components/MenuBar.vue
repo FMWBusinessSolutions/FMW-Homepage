@@ -1,15 +1,15 @@
 <template>
   <nav class="menu-container" aria-label="Hauptnavigation">
     <div class="menubar-content">
-      <div class="menubar-wrapper" role="menubar">
-        <Menubar :model="enhancedItems" class="custom-menubar" />
-      </div>
       <div class="logo-wrapper" role="banner">
         <img
           src="/schrift-solo-transparent-small.png"
           alt="FMW – Business Solutions Logo"
           class="logo-img"
         />
+      </div>
+      <div class="menubar-wrapper" role="menubar">
+        <Menubar :model="enhancedItems" class="custom-menubar" />
       </div>
     </div>
   </nav>
@@ -63,13 +63,13 @@ const enhancedItems = computed(() =>
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1em;
 }
 
 .menubar-wrapper {
   flex: 1 1 auto;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 /* === Logo === */
