@@ -69,7 +69,7 @@ const services = [
   },
   {
     title: "Kunden- und Patientendaten",
-    text: "Wir zeigen Ihnen, wie Sie hochsensible Daten sicher und DSGVO-Konform speichern und gegen unbefugten Zugriff schützen können.",
+    text: "Wir zeigen Ihnen, wie Sie hochsensible Daten sicher und DSGVO-konform speichern und gegen unbefugten Zugriff schützen können.",
   },
   {
     title: "Digitale Buchhaltung",
@@ -99,17 +99,18 @@ const services = [
 
 // SEO metadata
 useHead({
-  title: "Fragen & Lösungen | IT-Support & Beratung | FMW Business Solutions",
+  title:
+    "IT-Beratung für Selbstständige | Praxisnahe Lösungen | FMW Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "Häufige IT-Fragen und praxisnahe Lösungen für Privatpersonen, Selbstständige & KMUs. Professionelle Beratung, Datenschutz & IT-Sicherheit. FMW Business Solutions.",
+        "IT-Support, Automatisierung & digitale Werkzeuge für EPUs. Entlastung im Arbeitsalltag – verständlich, sicher & individuell. FMW Business Solutions.",
     },
     {
       name: "keywords",
       content:
-        "Fragen, IT-Probleme, Beratung, Support, Datenschutz, Power Automate, Outlook, Microsoft, KMU, IT-Lösungen, DSGVO, FMW",
+        "EPU, IT-Beratung, Digitalisierung, Microsoft 365, Power Automate, Outlook, DSGVO, Automatisierung, Selbstständige, FMW Business Solutions",
     },
     {
       name: "robots",
@@ -123,7 +124,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://fmw-solutions.at/service",
+      href: "https://fmw-solutions.at/service-epu",
     },
   ],
   script: [

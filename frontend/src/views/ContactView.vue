@@ -6,7 +6,10 @@
         <h2 class="contact-name">Florian Mitter</h2>
       </header>
 
-      <address class="contact-info">
+      <address
+        class="contact-info"
+        aria-label="Firmenadresse und Kontaktmöglichkeiten"
+      >
         <div class="contact-row">
           <span class="contact-label">Mail:</span>
           <a href="mailto:office@fmw-solutions.at" class="contact-link"
@@ -17,7 +20,7 @@
         <div class="contact-row">
           <span class="contact-label">Telefon:</span>
           <a href="tel:+4369914079312" class="contact-link"
-            >+43 699 140 79 312</a
+            >+43 699 140 79 312</a
           >
         </div>
 
@@ -43,7 +46,9 @@
           >
         </div>
       </address>
+
       <br />
+
       <div class="contact-row">
         <span class="contact-label"></span>
         <span>
@@ -80,7 +85,6 @@
             vor den Aufwand in Rechnung zu stellen. Dies geschieht jedoch
             ausschließlich nach vorheriger Absprache.
           </p>
-
           <p class="pricing-info">
             Gerne erstellen wir für Sie ein maßgeschneidertes Angebot.
           </p>
@@ -100,7 +104,7 @@ useHead({
     {
       name: "description",
       content:
-        "Kontaktiere FMW – Business Solutions: E-Mail, Telefonnummer, LinkedIn & Adresse. Beratung & IT-Service für EPUs und KMUs aus Oberösterreich.",
+        "Kontaktieren Sie FMW – Business Solutions: E-Mail, Telefonnummer, LinkedIn & Adresse. Beratung & IT-Service für EPUs und KMUs aus Oberösterreich.",
     },
     {
       name: "keywords",

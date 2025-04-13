@@ -71,7 +71,7 @@
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i>
             <i class="pi pi-chevron-right icon-arrow"></i>
-            Wir haben die IT-Komplettlösungen für Ihr Unternhemen.
+            Wir haben die IT-Komplettlösungen für Ihr Unternehmen.
           </p>
           <div class="button-row">
             <AppLinkButton
@@ -105,9 +105,10 @@
             nachhaltig senken?
           </p>
           <p>
-            <i class="pi pi-circle-on icon-bullet"></i> Verwaltungskosten
-            nachhaltig senken?
+            <i class="pi pi-circle-on icon-bullet"></i> Abläufe im Unternehmen
+            effizienter gestalten?
           </p>
+
           <br />
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i

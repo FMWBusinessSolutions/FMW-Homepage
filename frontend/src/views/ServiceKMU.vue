@@ -103,17 +103,18 @@ const services = [
 
 // SEO metadata
 useHead({
-  title: "Fragen & Lösungen | IT-Support & Beratung | FMW Business Solutions",
+  title:
+    "IT-Lösungen für KMU | Digitalisierung & Beratung | FMW Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "Häufige IT-Fragen und praxisnahe Lösungen für Privatpersonen, Selbstständige & KMUs. Professionelle Beratung, Datenschutz & IT-Sicherheit. FMW Business Solutions.",
+        "Digitale Abläufe, Microsoft 365 & Prozessoptimierung für KMU. Wir unterstützen Sie bei SharePoint, Teams, Power Automate und Schulung Ihres Teams.",
     },
     {
       name: "keywords",
       content:
-        "Fragen, IT-Probleme, Beratung, Support, Datenschutz, Power Automate, Outlook, Microsoft, KMU, IT-Lösungen, DSGVO, FMW",
+        "KMU, Digitalisierung, Microsoft 365, Power Automate, SharePoint, Teams, Cloud, IT-Beratung, Prozessoptimierung, IT-Sicherheit, FMW Business Solutions",
     },
     {
       name: "robots",
@@ -127,7 +128,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://fmw-solutions.at/service",
+      href: "https://fmw-solutions.at/service-kmu",
     },
   ],
   script: [

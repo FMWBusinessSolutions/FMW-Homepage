@@ -106,7 +106,7 @@ useHead({
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LegalService",
+        "@type": "Organization",
         name: "FMW – Business Solutions",
         url: "https://fmw-solutions.at/",
         email: "office@fmw-solutions.at",
