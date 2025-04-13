@@ -49,7 +49,7 @@
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="IT-Service für Privatpersonen entdecken"
+              label="Zu den IT-Services für Privatpersonen"
               href="/service"
               internal
             />
@@ -91,7 +91,7 @@
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Mehr über unsere EPU-Services"
+              label="Mehr über unsere Services für EPU"
               href="/service-epu"
               internal
             />
@@ -137,7 +137,7 @@
           </p>
           <div class="button-row">
             <AppLinkButton
-              label="Lösungen für KMU entdecken"
+              label="Zu den Lösungen für KMU"
               href="/service-kmu"
               internal
             />
