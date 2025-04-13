@@ -4,7 +4,7 @@
     aria-label="IT-Beratung und Digitalisierung für KMU"
   >
     <h1 class="section-heading">
-      <u>IT-Beratung für KMU in Oberösterreich</u>
+      <u>IT-Beratung & Digitalisierung für KMUs</u>
     </h1>
 
     <div class="intro-text">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="button-row">
-      <AppLinkButton label="Beratung anfragen" href="/contact" internal />
+      <AppLinkButton label="Unverbindlich anfragen" href="/contact" internal />
     </div>
 
     <div class="separator"></div>

@@ -4,7 +4,7 @@
     aria-label="IT-Beratung und Lösungen für Selbstständige & EPUs"
   >
     <h1 class="section-heading">
-      <u>IT-Beratung & Digitalisierung für EPUs</u>
+      <u>IT-Beratung für EPUs</u>
     </h1>
 
     <div class="intro-text">
