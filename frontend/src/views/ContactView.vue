@@ -82,6 +82,28 @@
         </div>
       </div>
     </section>
+    <section class="review-section">
+      <div class="review-card">
+        <h2 class="review-title">Bewerten Sie uns auf Google</h2>
+
+        <div class="review-content">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://g.page/r/Ce2e8lGkbFW4EBM/review"
+            alt="QR-Code zur Google-Bewertung"
+            class="review-qr"
+          />
+          QR-Code scannen oder
+          <a
+            href="https://g.page/r/Ce2e8lGkbFW4EBM/review"
+            target="_blank"
+            rel="noopener"
+            class="review-link"
+          >
+            über den Direktlink
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -146,7 +168,7 @@ useHead({
 .contact-card {
   background-color: white;
   border-radius: 30px;
-  padding: 1em 1.5em 1.5em;
+  padding: 0.5em;
   width: 90%;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -209,9 +231,9 @@ useHead({
   background-color: white;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  padding: 1.5em;
+  padding: 0.5em;
   max-width: 1000px;
-  width: 90%;
+  width: 80%;
   text-align: center;
 }
 
@@ -232,5 +254,53 @@ useHead({
 
 .pricing-info {
   margin: 0.6rem 0;
+}
+
+.review-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.review-card {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.review-title {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.review-qr {
+  width: 150px;
+  height: 150px;
+}
+
+.review-link {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.review-link:hover {
+  text-decoration: underline;
 }
 </style>
