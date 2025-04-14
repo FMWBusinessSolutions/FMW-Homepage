@@ -83,53 +83,9 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Impressum & Datenschutz | FMW – Business Solutions",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Impressum und Datenschutzerklärung von FMW – Business Solutions in Waizenkirchen. Angaben gemäß ECG, DSGVO und TKG 2021.",
-    },
-    { name: "robots", content: "index, follow" },
-    { name: "author", content: "Florian Mitter" },
-  ],
+  title: "Impressum | FMW – Business Solutions",
+  meta: [{ name: "robots", content: "noindex, follow" }],
   link: [{ rel: "canonical", href: "https://fmw-solutions.at/impressum" }],
-  script: [
-    {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "FMW – Business Solutions",
-        legalName: "FMW – Business Solutions – Florian Mitter",
-        url: "https://fmw-solutions.at/",
-        email: "office@fmw-solutions.at",
-        foundingDate: "2025-03-01",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Hausleiten 58",
-          addressLocality: "Waizenkirchen",
-          postalCode: "4730",
-          addressCountry: "AT",
-        },
-        founder: {
-          "@type": "Person",
-          name: "Florian Mitter",
-        },
-        sameAs: ["https://linkedin.com/company/fmw-businesssolutions/"],
-        areaServed: {
-          "@type": "Place",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "Oberösterreich",
-            addressCountry: "AT",
-          },
-        },
-        description:
-          "Impressum und Datenschutzerklärung der Website von FMW – Business Solutions mit Sitz in Waizenkirchen, Oberösterreich.",
-      }),
-    },
-  ],
 });
 </script>
 

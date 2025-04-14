@@ -186,54 +186,28 @@ const onTabOpen = (event) => {
   }, 500);
 };
 
-// SEO head data
 useHead({
-  title: "IT-Lösungen für Privatpersonen, EPUs & KMUs in Oberösterreich | FMW",
+  title: "FMW – Business Solutions | Digitalisierung für EPU, KMU & Privat",
   meta: [
     {
       name: "description",
       content:
-        "FMW – Ihre IT-Beratung in Waizenkirchen. Wir helfen Privatpersonen, Selbstständigen und KMUs bei IT-Problemen, Microsoft 365, Digitalisierung und Prozessoptimierung.",
+        "Individuelle IT-Beratung & Digitalisierung für Selbstständige, KMU und Privatpersonen im Raum Waizenkirchen. Jetzt informieren!",
     },
     { name: "robots", content: "index, follow" },
-    { name: "author", content: "FMW – Business Solutions" },
-  ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/" }],
-  script: [
+    { property: "og:title", content: "FMW – Business Solutions" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Welche IT-Dienstleistungen bieten Sie für Privatpersonen an?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Wir helfen bei defekten Computern, WLAN-Problemen, E-Mail, Datensicherung, Gerätekauf und vielem mehr.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Was bieten Sie für Selbstständige (EPUs)?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Wir unterstützen Sie bei Domain & Mail, Microsoft 365, DSGVO, Datenablage, Cloudlösungen und IT-Einrichtung.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Wie helfen Sie kleinen Unternehmen (KMUs) konkret?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Wir digitalisieren Prozesse mit Microsoft 365, Power Automate & SharePoint und reduzieren Verwaltungskosten nachhaltig.",
-            },
-          },
-        ],
-      }),
+      property: "og:description",
+      content:
+        "Digitalisierung & IT-Beratung für Oberösterreich – effizient, professionell und persönlich.",
+    },
+    { property: "og:url", content: "https://fmw-solutions.at/" },
+    {
+      property: "og:image",
+      content: "https://fmw-solutions.at/social-preview.png",
     },
   ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/" }],
 });
 </script>
 
