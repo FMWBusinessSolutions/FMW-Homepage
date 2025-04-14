@@ -103,119 +103,28 @@ const services = [
   },
 ];
 
-// SEO-Daten & strukturierte Daten
 useHead({
-  title:
-    "IT-Beratung für KMU in Oberösterreich | Microsoft 365 & Digitalisierung | FMW",
+  title: "IT-Beratung & Digitalisierung für KMU | FMW – Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "IT-Beratung für KMU: Microsoft 365, Power Automate, Teams, SharePoint & Prozessoptimierung – verständlich, praxisnah & in Oberösterreich vor Ort.",
+        "Effiziente IT-Konzepte für kleine und mittlere Unternehmen – inkl. Schulungen, SharePoint, Microsoft 365 und Prozessoptimierung.",
     },
     { name: "robots", content: "index, follow" },
-    { name: "author", content: "FMW – Business Solutions" },
-  ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service-kmu" }],
-  script: [
-    // FAQPage – automatisch aus Service-Liste generiert
+    { property: "og:title", content: "IT-Lösungen für KMU" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: services.map((s) => ({
-          "@type": "Question",
-          name: s.title,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: s.text,
-          },
-        })),
-      }),
+      property: "og:description",
+      content:
+        "Digitale Prozesse für Ihren Betrieb – verständlich und skalierbar.",
     },
-    // Service – für Google Business & Branchenverzeichnisse
+    { property: "og:url", content: "https://fmw-solutions.at/kmu" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "IT-Beratung & Digitalisierung für KMU",
-        provider: {
-          "@type": "LocalBusiness",
-          name: "FMW – Business Solutions",
-          url: "https://fmw-solutions.at/service-kmu",
-        },
-        description:
-          "Digitalisierung, Microsoft 365, Automatisierung & moderne Dateiablage für kleine und mittlere Unternehmen in Oberösterreich.",
-        areaServed: {
-          "@type": "Place",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "Oberösterreich",
-            addressCountry: "AT",
-          },
-        },
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceLocation: {
-            "@type": "Place",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Waizenkirchen",
-              addressRegion: "Oberösterreich",
-              postalCode: "4730",
-              addressCountry: "AT",
-            },
-          },
-        },
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Digitalisierungslösungen für KMU",
-          itemListElement: services.map((s) => ({
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: s.title,
-              description: s.text,
-            },
-          })),
-        },
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "EUR",
-          price: "68.00",
-          availability: "https://schema.org/InStock",
-          itemOffered: {
-            "@type": "Service",
-            name: "Beratung & Umsetzung für KMU",
-          },
-        },
-      }),
-    },
-    // Breadcrumb – SEO Navigation
-    {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Startseite",
-            item: "https://fmw-solutions.at/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "IT-Beratung für KMU",
-            item: "https://fmw-solutions.at/service-kmu",
-          },
-        ],
-      }),
+      property: "og:image",
+      content: "https://fmw-solutions.at/assets/social-preview.jpg",
     },
   ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/kmu" }],
 });
 </script>
 

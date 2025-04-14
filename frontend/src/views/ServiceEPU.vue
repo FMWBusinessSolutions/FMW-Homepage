@@ -98,106 +98,26 @@ const services = [
 ];
 
 useHead({
-  title: "IT-Beratung für Selbstständige & EPUs | FMW Waizenkirchen",
+  title: "IT-Service für Selbstständige & EPUs | FMW – Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "IT-Unterstützung für Selbstständige: Microsoft 365, Automatisierung, Datensicherung, DSGVO & digitale Ablage. Persönlich & verständlich für EPUs in Oberösterreich.",
+        "Smarte IT-Lösungen für EPU – Beratung, Microsoft 365, Automatisierung und mehr. Schnell, verständlich und individuell.",
     },
     { name: "robots", content: "index, follow" },
-    { name: "author", content: "FMW – Business Solutions" },
-  ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service-epu" }],
-  script: [
-    // Dynamische FAQPage mit allen Einträgen
+    { property: "og:title", content: "IT-Service für EPUs" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: services.map((s) => ({
-          "@type": "Question",
-          name: s.title,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: s.text,
-          },
-        })),
-      }),
+      property: "og:description",
+      content: "Digitalisierung für Selbstständige – einfach & effizient.",
     },
-    // Servicebeschreibung für Google Local & Branchenportale
+    { property: "og:url", content: "https://fmw-solutions.at/epu" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "IT-Beratung für Selbstständige & EPUs",
-        provider: {
-          "@type": "LocalBusiness",
-          name: "FMW – Business Solutions",
-          url: "https://fmw-solutions.at/service-epu",
-        },
-        description:
-          "Beratung & Lösungen für Microsoft 365, Datensicherung, Automatisierung und digitale Ablage für Einzelunternehmer:innen in Oberösterreich.",
-        areaServed: {
-          "@type": "Place",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "Oberösterreich",
-            addressCountry: "AT",
-          },
-        },
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceLocation: {
-            "@type": "Place",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Waizenkirchen",
-              addressRegion: "Oberösterreich",
-              postalCode: "4730",
-              addressCountry: "AT",
-            },
-          },
-        },
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "IT-Lösungen für EPUs",
-          itemListElement: services.map((s) => ({
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: s.title,
-              description: s.text,
-            },
-          })),
-        },
-      }),
-    },
-    // Breadcrumb für SEO-Navigation
-    {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Startseite",
-            item: "https://fmw-solutions.at/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "IT-Beratung für Selbstständige",
-            item: "https://fmw-solutions.at/service-epu",
-          },
-        ],
-      }),
+      property: "og:image",
+      content: "https://fmw-solutions.at/assets/social-preview.jpg",
     },
   ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/epu" }],
 });
 </script>
 

@@ -111,48 +111,26 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Kontakt & Preise | FMW – IT-Beratung in Oberösterreich",
+  title: "Kontakt | FMW – Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "So erreichen Sie uns: E-Mail, Telefon, LinkedIn oder Kontaktformular. Persönliche IT-Beratung für Private, Selbstständige & KMUs in Waizenkirchen und Umgebung.",
+        "Kontaktieren Sie uns für individuelle Beratung zur Digitalisierung, Prozessoptimierung und IT-Unterstützung.",
     },
     { name: "robots", content: "index, follow" },
-    { name: "author", content: "FMW – Business Solutions" },
-  ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/contact" }],
-  script: [
+    { property: "og:title", content: "Kontakt | FMW – Business Solutions" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        name: "FMW – Business Solutions",
-        url: "https://fmw-solutions.at/",
-        email: "office@fmw-solutions.at",
-        telephone: "+43 699 140 79 312",
-        image: "https://fmw-solutions.at/logo.png",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Hausleiten 58",
-          addressLocality: "Waizenkirchen",
-          postalCode: "4730",
-          addressRegion: "Oberösterreich",
-          addressCountry: "AT",
-        },
-        sameAs: ["https://linkedin.com/company/fmw-businesssolutions/"],
-        founder: {
-          "@type": "Person",
-          name: "Florian Mitter",
-        },
-        description:
-          "IT-Beratung, Digitalisierung und Support für Privatpersonen, EPUs und KMUs in Oberösterreich – persönlich, flexibel und zuverlässig.",
-        areaServed: "Oberösterreich",
-        openingHours: "Mo-So 08:00-22:00",
-      }),
+      property: "og:description",
+      content: "So erreichen Sie uns – wir freuen uns auf Ihre Anfrage.",
+    },
+    { property: "og:url", content: "https://fmw-solutions.at/kontakt" },
+    {
+      property: "og:image",
+      content: "https://fmw-solutions.at/social-preview.png",
     },
   ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/kontakt" }],
 });
 </script>
 

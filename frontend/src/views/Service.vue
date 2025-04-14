@@ -98,93 +98,31 @@ const services = [
   },
 ];
 
-// SEO-Daten inkl. vollständiger FAQPage mit allen Services
 useHead({
-  title: "IT-Hilfe für Zuhause: WLAN, PC & Sicherheit | FMW Waizenkirchen",
+  title: "Unsere Leistungen für Privat, EPU und KMU | FMW – Business Solutions",
   meta: [
     {
       name: "description",
       content:
-        "Verlässliche IT-Hilfe für Privatpersonen: PC-Probleme, Online-Banking, WLAN, Gerätekauf, Datensicherheit – verständlich & direkt vor Ort in Oberösterreich.",
+        "IT-Dienstleistungen für Privatpersonen, Selbstständige und Unternehmen in Oberösterreich – individuell & lösungsorientiert.",
     },
     { name: "robots", content: "index, follow" },
-    { name: "author", content: "Florian Mitter" },
-  ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service" }],
-  script: [
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: services.map((s) => ({
-          "@type": "Question",
-          name: s.title,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: s.text,
-          },
-        })),
-      }),
+      property: "og:title",
+      content: "Unsere Leistungen | FMW – Business Solutions",
     },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "IT-Hilfe für Privatpersonen",
-        provider: {
-          "@type": "LocalBusiness",
-          name: "FMW – Business Solutions",
-          url: "https://fmw-solutions.at/service",
-          areaServed: {
-            "@type": "Place",
-            address: {
-              "@type": "PostalAddress",
-              addressRegion: "Oberösterreich",
-              addressCountry: "AT",
-            },
-          },
-        },
-        description:
-          "PC- und Internet-Hilfe für zuhause: Einrichtung, Reparatur, Beratung & Sicherheit – professionell & persönlich in Waizenkirchen.",
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceLocation: {
-            "@type": "Place",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Waizenkirchen",
-              addressRegion: "Oberösterreich",
-              postalCode: "4730",
-              addressCountry: "AT",
-            },
-          },
-        },
-      }),
+      property: "og:description",
+      content:
+        "Von Microsoft 365 bis Prozessautomatisierung – erfahren Sie, wie wir Sie unterstützen können.",
     },
+    { property: "og:url", content: "https://fmw-solutions.at/services" },
     {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Startseite",
-            item: "https://fmw-solutions.at/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "IT-Hilfe für Privatpersonen",
-            item: "https://fmw-solutions.at/service",
-          },
-        ],
-      }),
+      property: "og:image",
+      content: "https://fmw-solutions.at/assets/social-preview.jpg",
     },
   ],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/services" }],
 });
 </script>
 
