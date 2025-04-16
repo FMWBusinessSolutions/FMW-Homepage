@@ -85,7 +85,7 @@ import { useHead } from "@vueuse/head";
 useHead({
   title: "Impressum | FMW – Business Solutions",
   meta: [{ name: "robots", content: "noindex, follow" }],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/impressum" }],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/imprint" }],
 });
 </script>
 
