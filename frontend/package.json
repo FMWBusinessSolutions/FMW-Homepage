@@ -3,14 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "sitemap": "node generate-sitemap.js",
-  "indexnow": "node send-indexnow-from-sitemap.js",
-  "deploy": "npm run build && npm run sitemap && npm run indexnow && npx gh-pages -d dist"
-}
-,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "sitemap": "node generate-sitemap.js",
+    "indexnow": "node send-indexnow-from-sitemap.js",
+    "deploy": "npm run build && npm run sitemap && npm run indexnow && npx gh-pages -d dist"
+  },
   "dependencies": {
     "@primevue/themes": "^4.3.3",
     "@vueuse/head": "^2.0.0",
