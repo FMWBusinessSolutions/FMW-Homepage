@@ -14,7 +14,6 @@ import "primeicons/primeicons.css";
 
 import './assets/MobileResponsive.css';
 
-
 const app = createApp(App);
 
 app.use(router);
@@ -25,4 +24,6 @@ app.component("Avatar", Avatar);
 app.component("Badge", Badge);
 app.component("InputText", InputText);
 
-app.mount("#app");
+router.isReady().then(() => {
+  app.mount("#app");
+});
