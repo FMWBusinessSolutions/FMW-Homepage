@@ -1,5 +1,8 @@
 <template>
-  <nav class="menu-container" aria-label="Hauptnavigation">
+  <nav
+    class="menu-container"
+    aria-label="Hauptnavigation – FMW Solutions Waizenkirchen"
+  >
     <div class="menubar-content">
       <div class="logo-wrapper" role="banner">
         <img
@@ -23,14 +26,43 @@ import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
 const route = useRoute();
 
-// items
 const items = ref([
-  { label: "Home", icon: "pi pi-home", path: "/" },
-  { label: "Für Private", icon: "pi pi-book", path: "/service" },
-  { label: "Für EPU", icon: "pi pi-book", path: "/service-epu" },
-  { label: "Für KMU", icon: "pi pi-book", path: "/service-kmu" },
-  { label: "Kontakt", icon: "pi pi-envelope", path: "/contact" },
-  { label: "Impressum", icon: "pi pi-info-circle", path: "/imprint" },
+  {
+    label: "Home",
+    icon: "pi pi-home",
+    path: "/",
+    title: "Startseite – FMW Solutions",
+  },
+  {
+    label: "Für Private",
+    icon: "pi pi-book",
+    path: "/service",
+    title: "IT-Hilfe für Privatpersonen",
+  },
+  {
+    label: "Für EPU",
+    icon: "pi pi-book",
+    path: "/service-epu",
+    title: "IT-Unterstützung für Selbstständige",
+  },
+  {
+    label: "Für KMU",
+    icon: "pi pi-book",
+    path: "/service-kmu",
+    title: "IT-Lösungen für KMU",
+  },
+  {
+    label: "Kontakt",
+    icon: "pi pi-envelope",
+    path: "/contact",
+    title: "Kontaktieren Sie uns",
+  },
+  {
+    label: "Impressum",
+    icon: "pi pi-info-circle",
+    path: "/imprint",
+    title: "Impressum & Datenschutz",
+  },
 ]);
 
 // activeClass
@@ -77,7 +109,6 @@ const enhancedItems = computed(() =>
   flex: 0 0 auto;
   padding-left: 0.5rem;
   padding-right: 0.7rem;
-  border-left: 1px solid black;
 }
 
 .logo-img {

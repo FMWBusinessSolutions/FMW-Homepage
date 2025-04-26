@@ -1,10 +1,10 @@
 <template>
   <main
     class="page-wrapper"
-    aria-label="IT-Beratung und Digitalisierung für KMU"
+    aria-label="IT-Lösungen, Digitalisierung und Beratung für KMU in Waizenkirchen"
   >
     <h1 class="section-heading">
-      <u>IT-Beratung & Digitalisierung für KMUs</u>
+      <u>IT-Beratung & Digitalisierung für KMU in Waizenkirchen</u>
     </h1>
 
     <div class="intro-text">
@@ -14,12 +14,16 @@
         <br />
         Wir helfen Ihnen dabei, wiederkehrende Aufgaben effizient zu
         digitalisieren – mit Microsoft 365, Power Automate & SharePoint.
-        Praxisnah. Verständlich. Lokal.
+        Praxisnah. Verständlich. Für KMU in Waizenkirchen und Umgebung.
       </p>
     </div>
 
     <div class="button-row">
-      <AppLinkButton label="Unverbindlich anfragen" href="/contact" internal />
+      <AppLinkButton
+        label="Jetzt unverbindlich anfragen"
+        href="/contact"
+        internal
+      />
     </div>
 
     <div class="separator"></div>
@@ -104,27 +108,30 @@ const services = [
 ];
 
 useHead({
-  title: "IT-Beratung & Digitalisierung für KMU | FMW – Business Solutions",
+  title: "Digitalisierung & IT-Beratung für KMU in Waizenkirchen",
   meta: [
     {
       name: "description",
       content:
-        "Effiziente IT-Konzepte für kleine und mittlere Unternehmen – inkl. Schulungen, SharePoint, Microsoft 365 und Prozessoptimierung.",
+        "Effiziente IT-Konzepte und Digitalisierung von Geschäftsprozessen für kleine und mittlere Unternehmen in Waizenkirchen.",
     },
     { name: "robots", content: "index, follow" },
-    { property: "og:title", content: "IT-Lösungen für KMU" },
+    {
+      property: "og:title",
+      content: "IT-Lösungen für KMU | FMW Solutions Waizenkirchen",
+    },
     {
       property: "og:description",
       content:
-        "Digitale Prozesse für Ihren Betrieb – verständlich und skalierbar.",
+        "Digitalisierung, Microsoft 365 und moderne IT-Strukturen für KMUs in Waizenkirchen – verständlich und effizient umgesetzt.",
     },
-    { property: "og:url", content: "https://fmw-solutions.at/kmu" },
+    { property: "og:url", content: "https://fmw-solutions.at/service-kmu" },
     {
       property: "og:image",
-      content: "https://fmw-solutions.at/assets/social-preview.jpg",
+      content: "https://fmw-solutions.at/social-preview.png",
     },
   ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/kmu" }],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service-kmu" }],
 });
 </script>
 
