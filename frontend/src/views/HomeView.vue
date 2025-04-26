@@ -1,12 +1,13 @@
 <template>
   <main
     class="home-container"
-    aria-label="Startseite – IT-Lösungen für Private, EPU & KMU"
+    aria-label="Startseite – IT-Dienstleistungen für Privatpersonen, Selbstständige & KMUs in Waizenkirchen"
   >
     <!-- Intro -->
     <section class="intro-section">
       <h1 class="intro-title">
-        IT-Dienstleistungen für Privatpersonen, Selbstständige und KMUs
+        Ihr IT-Servicepartner für Privatpersonen und Unternehmen in
+        Waizenkirchen
       </h1>
     </section>
 
@@ -23,29 +24,26 @@
           </span>
         </template>
         <section class="target-group" id="private" ref="headerPrivate">
-          <h2>IT-Hilfe für Privatpersonen</h2>
+          <h2>IT-Hilfe für Private in Waizenkirchen und Umgebung</h2>
           <ul>
             <li>
-              <i class="pi pi-circle-on icon-bullet"></i> Computer defekt oder
-              zu langsam?
+              <i class="pi pi-circle-on icon-bullet"></i>
+              Computer/Laptop/Tablet/Handy defekt oder zu langsam?
             </li>
             <li>
-              <i class="pi pi-circle-on icon-bullet"></i> WLAN oder E-Mail
-              funktioniert nicht?
+              <i class="pi pi-circle-on icon-bullet"></i> WLAN funktioniert
+              nicht?
             </li>
             <li>
-              <i class="pi pi-circle-on icon-bullet"></i> Datenrettung oder
-              Beratung beim Gerätekauf?
-            </li>
-            <li>
-              <i class="pi pi-circle-on icon-bullet"></i> Fotos & Dokumente
-              sicher speichern?
+              <i class="pi pi-circle-on icon-bullet"></i> Oder benötigen Sie
+              eine Beratung beim Gerätekauf?
             </li>
           </ul>
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Persönliche IT-Unterstützung – unkompliziert und verständlich.
+            Wir bieten Ihnen persönliche Unterstützung – unkompliziert und
+            verständlich.
           </p>
           <div class="button-row">
             <AppLinkButton
@@ -63,13 +61,13 @@
           <span
             class="accordion-title"
             ref="tabEPU"
-            aria-label="Accordion: IT-Lösungen für Selbstständige & EPU"
+            aria-label="Accordion: IT-Lösungen für Selbstständige & EPUs in Waizenkirchen"
           >
             Für Selbstständige & EPU
           </span>
         </template>
         <section class="target-group" id="epu" ref="headerEPU">
-          <h2>IT-Lösungen für Selbstständige & EPUs</h2>
+          <h2>IT-Lösungen für Selbstständige & EPUs in Waizenkirchen</h2>
           <ul>
             <li>
               <i class="pi pi-circle-on icon-bullet"></i> Eigene Domain &
@@ -87,7 +85,7 @@
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Digitale Lösungen für Einzelunternehmer.
+            Effiziente IT-Unterstützung für Selbstständige in Waizenkirchen.
           </p>
           <div class="button-row">
             <AppLinkButton
@@ -105,13 +103,15 @@
           <span
             class="accordion-title"
             ref="tabKMU"
-            aria-label="Accordion: Digitalisierung für KMU"
+            aria-label="Accordion: Digitalisierung und IT-Beratung für KMUs in Waizenkirchen"
           >
             IT-Lösungen für KMU
           </span>
         </template>
         <section class="target-group" id="kmu" ref="headerKMU">
-          <h2>Digitalisierung & Prozessoptimierung für KMUs</h2>
+          <h2>
+            Digitalisierung & Prozessoptimierung für KMUs in Waizenkirchen
+          </h2>
           <ul>
             <li>
               <i class="pi pi-circle-on icon-bullet"></i> Microsoft 365 optimal
@@ -133,7 +133,7 @@
           <p class="target-group-closing">
             <i class="pi pi-chevron-right icon-arrow"></i
             ><i class="pi pi-chevron-right icon-arrow"></i>
-            Praxisnahe Lösungen – individuell & ohne teure Software.
+            Praxisnahe IT-Lösungen für KMU – verständlich und effektiv.
           </p>
           <div class="button-row">
             <AppLinkButton
@@ -187,19 +187,22 @@ const onTabOpen = (event) => {
 };
 
 useHead({
-  title: "FMW – Business Solutions | Digitalisierung für EPU, KMU & Privat",
+  title: "IT-Service und Digitalisierung für Waizenkirchen – FMW Solutions",
   meta: [
     {
       name: "description",
       content:
-        "Individuelle IT-Beratung & Digitalisierung für Selbstständige, KMU und Privatpersonen im Raum Waizenkirchen. Jetzt informieren!",
+        "IT-Dienstleistungen, Digitalisierung und Prozessoptimierung für Privatpersonen, Selbstständige und KMUs in Waizenkirchen und Umgebung.",
     },
     { name: "robots", content: "index, follow" },
-    { property: "og:title", content: "FMW – Business Solutions" },
+    {
+      property: "og:title",
+      content: "FMW Solutions – IT-Unterstützung in Waizenkirchen",
+    },
     {
       property: "og:description",
       content:
-        "Digitalisierung & IT-Beratung für Oberösterreich – effizient, professionell und persönlich.",
+        "IT-Service, Microsoft 365 und Digitalisierung für Unternehmen und Privatpersonen in Waizenkirchen.",
     },
     { property: "og:url", content: "https://fmw-solutions.at/" },
     {
@@ -225,7 +228,7 @@ useHead({
 }
 
 .intro-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: bold;
   margin-bottom: 0.5rem;
 }

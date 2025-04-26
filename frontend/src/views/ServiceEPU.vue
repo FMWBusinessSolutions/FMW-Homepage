@@ -1,23 +1,27 @@
 <template>
   <main
     class="page-wrapper"
-    aria-label="IT-Beratung und Lösungen für Selbstständige & EPUs"
+    aria-label="IT-Beratung und Digitalisierung für Selbstständige & EPUs in Waizenkirchen"
   >
     <h1 class="section-heading">
-      <u>IT-Beratung für EPUs</u>
+      <u>IT-Unterstützung für Selbstständige & EPUs in Waizenkirchen</u>
     </h1>
 
     <div class="intro-text">
       <p>
         Als Einzelunternehmer:in sind Sie Vertrieb, Buchhaltung und Technik in
         einer Person. Damit Sie sich auf Ihr Kerngeschäft konzentrieren können,
-        unterstützen wir Sie bei IT-Fragen, Tools, Prozessen und
-        Automatisierung.
+        unterstützen wir Sie bei IT-Fragen, Tools, Prozessen und Automatisierung
+        – speziell für EPUs in Waizenkirchen und Umgebung.
       </p>
     </div>
 
     <div class="button-row">
-      <AppLinkButton label="Unverbindlich anfragen" href="/contact" internal />
+      <AppLinkButton
+        label="Jetzt unverbindlich anfragen"
+        href="/contact"
+        internal
+      />
     </div>
 
     <div class="separator"></div>
@@ -98,26 +102,32 @@ const services = [
 ];
 
 useHead({
-  title: "IT-Service für Selbstständige & EPUs | FMW – Business Solutions",
+  title:
+    "IT-Lösungen & Digitalisierung für Selbstständige und EPUs in Waizenkirchen",
   meta: [
     {
       name: "description",
       content:
-        "Smarte IT-Lösungen für EPU – Beratung, Microsoft 365, Automatisierung und mehr. Schnell, verständlich und individuell.",
+        "Beratung, Microsoft 365, sichere Datenspeicherung und Prozessoptimierung für Selbstständige in Waizenkirchen.",
     },
     { name: "robots", content: "index, follow" },
-    { property: "og:title", content: "IT-Service für EPUs" },
+    {
+      property: "og:title",
+      content:
+        "IT-Unterstützung für Selbstständige | FMW Solutions Waizenkirchen",
+    },
     {
       property: "og:description",
-      content: "Digitalisierung für Selbstständige – einfach & effizient.",
+      content:
+        "Individuelle IT-Beratung und Digitalisierungslösungen für EPUs in Waizenkirchen und Umgebung. Jetzt informieren!",
     },
-    { property: "og:url", content: "https://fmw-solutions.at/epu" },
+    { property: "og:url", content: "https://fmw-solutions.at/service-epu" },
     {
       property: "og:image",
-      content: "https://fmw-solutions.at/assets/social-preview.jpg",
+      content: "https://fmw-solutions.at/social-preview.png",
     },
   ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/epu" }],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service-epu" }],
 });
 </script>
 

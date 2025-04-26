@@ -1,5 +1,8 @@
 <template>
-  <main class="app-container" aria-label="Impressum und Datenschutzerklärung">
+  <main
+    class="app-container"
+    aria-label="Impressum und Datenschutz – FMW Solutions Waizenkirchen"
+  >
     <div class="content">
       <div class="card">
         <section aria-labelledby="impressum-heading">
@@ -36,7 +39,7 @@
             >
             sowie dem
             <a
-              href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=bundesnormen&Gesetzesnummer=20011678"
+              href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011678"
               target="_blank"
               rel="noopener"
               >Telekommunikationsgesetz 2021 (TKG 2021)</a
@@ -83,9 +86,19 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Impressum | FMW – Business Solutions",
-  meta: [{ name: "robots", content: "noindex, follow" }],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/imprint" }],
+  title: "Impressum & Datenschutz | FMW Solutions Waizenkirchen",
+  meta: [
+    {
+      name: "robots",
+      content: "noindex, follow",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://fmw-solutions.at/imprint",
+    },
+  ],
 });
 </script>
 

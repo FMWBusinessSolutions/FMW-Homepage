@@ -1,5 +1,8 @@
 <template>
-  <div class="cta-container" aria-label="Kontakt Call-to-Action">
+  <div
+    class="cta-container"
+    aria-label="Kontakt Call-to-Action für Waizenkirchen"
+  >
     <section
       class="cta-header"
       itemscope

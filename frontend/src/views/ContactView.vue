@@ -1,7 +1,7 @@
 <template>
   <main
     class="contact-container"
-    aria-label="Kontakt – FMW Business Solutions in Oberösterreich"
+    aria-label="Kontaktseite – IT-Service in Waizenkirchen"
   >
     <section class="contact-card">
       <header class="contact-header">
@@ -9,7 +9,7 @@
         <h2 class="contact-name">Florian Mitter</h2>
       </header>
 
-      <address class="contact-info" aria-label="Kontaktdaten & Adresse">
+      <address class="contact-info" aria-label="Kontaktdaten FMW Solutions">
         <div class="contact-row">
           <span class="contact-label">E-Mail:</span>
           <a href="mailto:office@fmw-solutions.at" class="contact-link"
@@ -48,8 +48,8 @@
       </address>
 
       <div class="contact-row" style="margin-top: 1rem">
-        <span
-          >Oder nutzen Sie unser
+        <span>
+          Oder nutzen Sie unser
           <a
             href="https://forms.office.com/e/cLG0ksBG09"
             class="contact-link"
@@ -64,7 +64,7 @@
     <section class="pricing-section">
       <div class="pricing-card">
         <header class="pricing-header">
-          <h2 class="pricing-title">Transparente Preise & faire Beratung</h2>
+          <h2 class="pricing-title">Transparente Preise & echte Beratung</h2>
         </header>
         <div class="pricing-details">
           <ul>
@@ -82,6 +82,7 @@
         </div>
       </div>
     </section>
+
     <section class="review-section">
       <div class="review-card">
         <h2 class="review-title">Bewerten Sie uns auf Google</h2>
@@ -111,26 +112,30 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Kontakt | FMW – Business Solutions",
+  title: "Kontakt – FMW Solutions | Ihr IT-Servicepartner in Waizenkirchen",
   meta: [
     {
       name: "description",
       content:
-        "Kontaktieren Sie uns für individuelle Beratung zur Digitalisierung, Prozessoptimierung und IT-Unterstützung.",
+        "Nehmen Sie Kontakt auf mit FMW Solutions – Ihrem Partner für IT-Unterstützung, Digitalisierung und Prozessoptimierung in Waizenkirchen und Umgebung.",
     },
     { name: "robots", content: "index, follow" },
-    { property: "og:title", content: "Kontakt | FMW – Business Solutions" },
+    {
+      property: "og:title",
+      content: "Kontakt – FMW Solutions Waizenkirchen",
+    },
     {
       property: "og:description",
-      content: "So erreichen Sie uns – wir freuen uns auf Ihre Anfrage.",
+      content:
+        "Jetzt anfragen: persönliche IT-Hilfe und Digitalisierungslösungen für Privatpersonen und Unternehmen in Waizenkirchen.",
     },
-    { property: "og:url", content: "https://fmw-solutions.at/kontakt" },
+    { property: "og:url", content: "https://fmw-solutions.at/contact" },
     {
       property: "og:image",
       content: "https://fmw-solutions.at/social-preview.png",
     },
   ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/kontakt" }],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/contact" }],
 });
 </script>
 

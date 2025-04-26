@@ -1,20 +1,28 @@
 <template>
-  <main class="page-wrapper" aria-label="IT-Hilfe & Fragen von Privatpersonen">
+  <main
+    class="page-wrapper"
+    aria-label="IT-Service und Computerhilfe für Privatpersonen in Waizenkirchen"
+  >
     <h1 class="section-heading">
-      <u>IT-Hilfe für Private</u>
+      <u>IT-Hilfe für Privatpersonen in Waizenkirchen</u>
     </h1>
 
     <div class="intro-text">
       <p>
         Technik soll Ihnen das Leben erleichtern – nicht komplizierter machen.
         Egal ob langsamer PC, WLAN-Probleme oder Unsicherheiten beim
-        Online-Banking: <br />Wir helfen individuell, persönlich und
-        verständlich.
+        Online-Banking:<br />
+        Wir helfen individuell, persönlich und verständlich – direkt in
+        Waizenkirchen und Umgebung.
       </p>
     </div>
 
     <div class="button-row">
-      <AppLinkButton label="Unverbindlich anfragen" href="/contact" internal />
+      <AppLinkButton
+        label="Jetzt unverbindlich anfragen"
+        href="/contact"
+        internal
+      />
     </div>
 
     <div class="separator"></div>
@@ -99,30 +107,30 @@ const services = [
 ];
 
 useHead({
-  title: "Unsere Leistungen für Privat, EPU und KMU | FMW – Business Solutions",
+  title: "IT-Hilfe & Computerreparatur für Privatpersonen in Waizenkirchen",
   meta: [
     {
       name: "description",
       content:
-        "IT-Dienstleistungen für Privatpersonen, Selbstständige und Unternehmen in Oberösterreich – individuell & lösungsorientiert.",
+        "Persönliche Unterstützung bei PC-Problemen, WLAN, Cloud und Microsoft 365 für Privatpersonen in Waizenkirchen.",
     },
     { name: "robots", content: "index, follow" },
     {
       property: "og:title",
-      content: "Unsere Leistungen | FMW – Business Solutions",
+      content: "IT-Hilfe für Privatpersonen | FMW Solutions Waizenkirchen",
     },
     {
       property: "og:description",
       content:
-        "Von Microsoft 365 bis Prozessautomatisierung – erfahren Sie, wie wir Sie unterstützen können.",
+        "Schnelle Hilfe bei IT-Problemen für Privatpersonen in Waizenkirchen – freundlich, verständlich und individuell.",
     },
-    { property: "og:url", content: "https://fmw-solutions.at/services" },
+    { property: "og:url", content: "https://fmw-solutions.at/service" },
     {
       property: "og:image",
-      content: "https://fmw-solutions.at/assets/social-preview.jpg",
+      content: "https://fmw-solutions.at/social-preview.png",
     },
   ],
-  link: [{ rel: "canonical", href: "https://fmw-solutions.at/services" }],
+  link: [{ rel: "canonical", href: "https://fmw-solutions.at/service" }],
 });
 </script>
 
