@@ -3,13 +3,9 @@
     class="cta-container"
     aria-label="Kontakt Call-to-Action für Waizenkirchen"
   >
-    <section
-      class="cta-header"
-      itemscope
-      itemtype="https://schema.org/Organization"
-    >
-      <h2 style="display: none">Unverbindliches Erstgespräch anfragen</h2>
-      <p>Kontaktieren Sie uns für ein unverbindliches Erstgespräch.</p>
+    <section class="cta-header">
+      <h2 style="display: none">Unverbindliche Beratung anfragen</h2>
+      <p>Kontaktieren Sie uns für eine unverbindliche Beratung.</p>
 
       <div class="button-row">
         <AppLinkButton label="Jetzt anfragen" href="/contact" internal />
@@ -17,9 +13,9 @@
 
       <div class="cta-details">
         <p>
-          <span itemprop="email">office@fmw-solutions.at</span>
+          <span>office@fmw-solutions.at</span>
           <br />
-          <span itemprop="telephone">+43 699 14079312</span>
+          <span>+43 699 14079312</span>
         </p>
       </div>
     </section>
@@ -43,7 +39,6 @@ import AppLinkButton from "@/components/AppLinkButton.vue";
   padding: 0.5rem;
   border-radius: 20px;
   background-color: #f0f8ff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   display: inline-block;
 }
 
